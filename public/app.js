@@ -200,8 +200,8 @@ function eventCard(event) {
     extra = `<p class="detail">Through to the ${esc(event.nextRound.toLowerCase())}</p>`;
     if (event.nextMatch) {
       const next = event.nextMatch;
-      const when = [formatDay(next.date), next.time, next.court, next.opponent ? `vs ${next.opponent}` : ""].filter(Boolean);
-      extra += `<p class="detail">Next match: ${esc(when.join(" · "))}</p>`;
+      const when = [formatDay(next.date), next.opponent ? `vs ${next.opponent}` : ""].filter(Boolean);
+      extra += `<p class="detail">Next match: ${esc(when.join(" "))}</p>`;
     } else {
       extra += `<p class="detail">Next match: the ${esc(event.nextRound.toLowerCase())} is not on the order of play yet.</p>`;
     }
