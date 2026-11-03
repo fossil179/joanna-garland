@@ -600,30 +600,47 @@ def upcoming_match(group_id: int, year: int, finished_names: set[str]) -> dict |
         schedule = json.loads(raw[0])
     except json.JSONDecodeError:
         return None
+    try:
+        return upcoming_from_schedule(schedule, finished_names)
+    except (AttributeError, TypeError, KeyError):
+        return None
+
+
+def upcoming_from_schedule(schedule: dict, finished_names: set[str]) -> dict | None:
     days = as_list((((schedule.get("OOP") or {}).get("Schedule") or {}).get("Day")))
     found = []
     for day in days:
+        if not isinstance(day, dict):
+            continue
         for court in as_list(day.get("Court")):
-            matches = as_list((court.get("Matches") or {}).get("Match"))
+            if not isinstance(court, dict):
+                continue
+            match_node = court.get("Matches")
+            matches = as_list(match_node.get("Match") if isinstance(match_node, dict) else match_node)
             for match in matches:
-                players = as_list(match.get("Players"))
-                names = []
-                ids = set()
-                for side in players:
-                    player = side.get("Player") or {}
-                    ids.add(str(player.get("id") or ""))
-                    names.append(player.get("PlayerDisplayLine") or player.get("SurName") or "")
-                possible = as_list((match.get("PossiblePlayersIdsInMatch") or {}).get("playerid"))
-                ids.update(str(item) for item in possible)
+                if not isinstance(match, dict):
+                    continue
+                sides = []
+                for side in as_list(match.get("Players")):
+                    if not isinstance(side, dict):
+                        continue
+                    people = [player for player in as_list(side.get("Player")) if isinstance(player, dict)]
+                    if people:
+                        sides.append(people)
+                ids = {str(player.get("id") or "") for people in sides for player in people}
+                possible = match.get("PossiblePlayersIdsInMatch")
+                possible_ids = as_list(possible.get("playerid") if isinstance(possible, dict) else possible)
+                ids.update(str(item) for item in possible_ids)
                 if WTA_ID not in ids:
                     continue
                 opponent = ""
-                for side in players:
-                    player = side.get("Player") or {}
-                    if str(player.get("id") or "") != WTA_ID:
-                        opponent = " ".join(
-                            part for part in (player.get("FirstName") or "", player.get("SurName") or "") if part
-                        )
+                for people in sides:
+                    if any(str(player.get("id") or "") == WTA_ID for player in people):
+                        continue
+                    opponent = " / ".join(
+                        " ".join(part for part in (player.get("FirstName") or "", player.get("SurName") or "") if part)
+                        for player in people
+                    )
                 if not opponent:
                     line = match.get("MatchupDisplayLine") or ""
                     opponent = line
