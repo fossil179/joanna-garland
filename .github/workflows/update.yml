@@ -28,6 +28,10 @@ jobs:
           python-version: "3.12"
       - name: Refresh schedule
         id: refresh
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          FROM_EMAIL: ${{ secrets.FROM_EMAIL }}
+          MAILING_ADDRESS: ${{ secrets.MAILING_ADDRESS }}
         run: python3 refresh.py
         continue-on-error: true
       - name: Note a missed refresh
@@ -41,7 +45,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/data/joanna.json
+          git add public/data/joanna.json public/data/alerts-sent.json
           if git diff --staged --quiet; then
             echo "Schedule is unchanged."
           else
