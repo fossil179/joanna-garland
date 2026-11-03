@@ -466,6 +466,7 @@ def build_history(matches: list[dict]) -> list[dict]:
                     "score": format_score(match, won),
                     "won": won,
                     "date": "",
+                    "matchId": "",
                     "retirement": match.get("reason_code") == "R",
                     "order": int(match.get("tourn_round") or 0),
                 }
@@ -650,14 +651,14 @@ def saved_match_dates() -> dict:
     found = {}
     for tournament in saved.get("tournaments") or []:
         for match in tournament.get("matches") or []:
-            if match.get("date"):
+            if match.get("date") or match.get("matchId"):
                 key = (
                     tournament.get("id"),
                     match.get("round"),
                     (match.get("opponent") or "").casefold(),
                     bool(match.get("qualifying")),
                 )
-                found[key] = match["date"]
+                found[key] = {"date": match.get("date") or "", "matchId": match.get("matchId") or ""}
     return found
 
 
@@ -683,11 +684,13 @@ def dates_by_opponent(year: str, number: str) -> dict:
         else:
             name = match.get("PlayerNameLastB") or ""
         played = iso_date(match.get("MatchTimeStamp"))
-        if name and played:
+        match_id = match.get("MatchID") or ""
+        if name and (played or match_id):
+            record = {"date": played or "", "matchId": match_id}
             for key in name_keys(name):
-                found.setdefault(key, []).append(played)
-    for dates in found.values():
-        dates.sort()
+                found.setdefault(key, []).append(record)
+    for records in found.values():
+        records.sort(key=lambda record: record.get("date") or "")
     return found
 
 
@@ -702,9 +705,18 @@ def attach_match_dates(tournaments: list[dict]) -> None:
                 (match.get("opponent") or "").casefold(),
                 bool(match.get("qualifying")),
             )
-            if key in known and not match.get("date"):
-                match["date"] = known[key]
-        if any(not match.get("date") for match in tournament.get("matches") or []):
+            saved = known.get(key) or {}
+            if isinstance(saved, str):
+                saved = {"date": saved, "matchId": ""}
+            if saved.get("date") and not match.get("date"):
+                match["date"] = saved["date"]
+            if saved.get("matchId") and not match.get("matchId"):
+                match["matchId"] = saved["matchId"]
+        needs_id = tournament.get("level") != "ITF"
+        if any(
+            not match.get("date") or (needs_id and not match.get("matchId"))
+            for match in tournament.get("matches") or []
+        ):
             pending.append(tournament)
     if not pending:
         return
@@ -720,21 +732,24 @@ def attach_match_dates(tournaments: list[dict]) -> None:
     for tournament in pending:
         used = {}
         for match in tournament.get("matches") or []:
-            if match.get("date"):
-                continue
             lookup = looked_up.get(tournament["id"], {})
             keys = name_keys(match.get("opponent") or "")
             chosen = ""
-            dates = []
+            records = []
             for key in reversed(keys):
                 if lookup.get(key):
                     chosen = key
-                    dates = lookup[key]
+                    records = lookup[key]
                     break
             index = used.get(chosen, 0)
-            if chosen and index < len(dates):
-                match["date"] = dates[index]
-                used[chosen] = index + 1
+            if not chosen or index >= len(records):
+                continue
+            record = records[index]
+            if record.get("date") and not match.get("date"):
+                match["date"] = record["date"]
+            if record.get("matchId") and not match.get("matchId"):
+                match["matchId"] = record["matchId"]
+            used[chosen] = index + 1
 
 
 def build_schedule(wta_entries: list[dict], itf_entries: list[dict], history_ids: set[str]) -> list[dict]:
@@ -789,6 +804,7 @@ def build_schedule(wta_entries: list[dict], itf_entries: list[dict], history_ids
                         "order": int(match.get("RoundID") or 0),
                         "stamp": match.get("MatchTimeStamp") or "",
                         "date": iso_date(match.get("MatchTimeStamp")) or "",
+                        "matchId": match.get("MatchID") or "",
                     }
                 )
             parsed.sort(key=lambda match: (match["order"], match["stamp"]))
@@ -909,6 +925,7 @@ def merge_live_results(tournaments: list[dict], schedule: list[dict]) -> list[di
                     "score": match.get("score") or "",
                     "won": match["won"],
                     "date": match.get("date") or "",
+                    "matchId": match.get("matchId") or "",
                     "retirement": "ret" in (match.get("score") or "").lower(),
                     "order": match["order"],
                 }

@@ -154,14 +154,24 @@ function renderSnapshot() {
   `;
 }
 
-function matchList(matches) {
+function matchHref(item, match) {
+  const scores = wtaScoresUrl(item);
+  if (match.matchId && scores) return `${scores}/${encodeURIComponent(match.matchId)}`;
+  if (scores) return scores;
+  if (item.level === "ITF") return data.player.links.itfActivity || "";
+  return item.url || "";
+}
+
+function matchList(matches, item) {
   if (!matches || !matches.length) return "";
-  return `<ul class="matches">${matches.map((match) => `
-    <li>
+  return `<ul class="matches">${matches.map((match) => {
+    const href = item ? matchHref(item, match) : "";
+    const body = `
       <span class="mark ${match.won ? "win" : "loss"}">${match.won ? "W" : "L"}</span>
       <span><strong>${esc(match.roundLabel)}</strong>${match.date ? ` · ${esc(formatDay(match.date))}` : ""} vs ${esc(match.opponent)}${match.opponentCountry ? ` (${esc(match.opponentCountry)})` : ""}${match.opponentRank ? ` · No. ${esc(match.opponentRank)}` : ""}</span>
-      <span class="score">${esc(match.score)}</span>
-    </li>`).join("")}</ul>`;
+      <span class="score">${esc(match.score)}</span>`;
+    return `<li>${href ? `<a class="match-link" href="${esc(href)}" target="_blank" rel="noreferrer">${body}</a>` : body}</li>`;
+  }).join("")}</ul>`;
 }
 
 function eventCard(event) {
@@ -209,7 +219,7 @@ function eventCard(event) {
         <p class="meta">${esc(bits.join(" · "))}</p>
         <p class="detail">${esc(status)}</p>
         ${extra}
-        ${matchList(event.liveMatches)}
+        ${matchList(event.liveMatches, event)}
         <p class="links"><a href="${esc(event.url)}" target="_blank" rel="noreferrer">${event.tour === "ITF" ? "ITF page" : "WTA page"}</a></p>
       </div>
     </article>`;
@@ -267,7 +277,7 @@ function resultCards(filtered) {
         <p class="meta">${esc([item.city, countryName(item.country), formatRange(item.start, item.end)].filter(Boolean).join(" · "))}</p>
         <p class="expand-hint">${item.matches.length} match${item.matches.length === 1 ? "" : "es"}</p>
       </summary>
-      ${matchList(item.matches)}
+      ${matchList(item.matches, item)}
       <p class="links">${resultLinks(item)}</p>
     </details>`).join("");
 }
