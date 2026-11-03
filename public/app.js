@@ -170,24 +170,20 @@ function matchList(matches, item) {
       <span class="mark ${match.won ? "win" : "loss"}">${match.won ? "W" : "L"}</span>
       <span><strong>${esc(match.roundLabel)}</strong>${match.date ? ` · ${esc(formatDay(match.date))}` : ""} vs ${esc(match.opponent)}${match.opponentCountry ? ` (${esc(match.opponentCountry)})` : ""}${match.opponentRank ? ` · No. ${esc(match.opponentRank)}` : ""}</span>
       <span class="score">${esc(match.score)}</span>`;
-    const videos = videoEmbeds(match);
+    const videos = videoLinks(match);
     return `<li>${href ? `<a class="match-link" href="${esc(href)}" target="_blank" rel="noreferrer">${body}</a>` : body}${videos}</li>`;
   }).join("")}</ul>`;
 }
 
-function videoEmbeds(match) {
+function videoLinks(match) {
   const videos = match.videos || [];
   if (!videos.length) return "";
-  return `<div class="match-videos">${videos.map((video) => `
-    <figure>
-      <figcaption>${esc(video.kind === "full" ? "Full match" : "Highlights")}</figcaption>
-      <iframe
-        src="https://www.youtube-nocookie.com/embed/${esc(video.id)}"
-        title="${esc(video.title)}"
-        loading="lazy"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
-    </figure>`).join("")}</div>`;
+  const links = videos.map((video) => {
+    const label = video.kind === "full" ? "Full match" : "Highlights";
+    const href = `https://www.youtube.com/watch?v=${encodeURIComponent(video.id)}`;
+    return `<a href="${esc(href)}" target="_blank" rel="noreferrer" title="${esc(video.title)}">${label}</a>`;
+  });
+  return `<p class="match-videos">${links.join(" · ")}</p>`;
 }
 
 function eventCard(event) {

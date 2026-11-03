@@ -445,30 +445,11 @@ main { margin-bottom: 28px; }
 .match-link:hover .score { color: var(--accent); }
 
 .match-videos {
-  grid-column: 1 / -1;
-  display: grid;
-  gap: 12px;
-  margin: 4px 0 10px;
-}
-
-.match-videos figure { margin: 0; }
-
-.match-videos figcaption {
-  margin: 0 0 6px;
-  color: var(--muted);
-  font-size: 0.82rem;
+  margin: 0 0 8px 36px;
   font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
 }
 
-.match-videos iframe {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border: 0;
-  border-radius: 12px;
-  background: #111;
-}
+.match-videos a { color: var(--accent); }
 
 .mark { font-weight: 800; }
 .mark.win { color: var(--win); }
@@ -512,6 +493,7 @@ main { margin-bottom: 28px; }
 .search { min-width: min(280px, 100%); border-radius: 12px; font: inherit; }
 
 .result { margin-bottom: 10px; }
+.result:not([open]) > :not(summary) { display: none; }
 .result summary {
   cursor: pointer;
   list-style: none;
