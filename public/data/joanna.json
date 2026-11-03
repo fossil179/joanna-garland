@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-03T16:47:12+00:00",
+  "updatedAt": "2026-11-03T17:01:26+00:00",
   "player": {
     "name": "Joanna Garland",
     "country": "TPE",
@@ -8622,7 +8622,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 3
+          "order": 3,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -8656,7 +8658,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R16",
@@ -8670,7 +8674,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 2
+          "order": 2,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -8704,7 +8710,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R16",
@@ -8718,7 +8726,9 @@
           "date": "",
           "matchId": "",
           "retirement": true,
-          "order": 2
+          "order": 2,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R32",
@@ -8732,7 +8742,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R16",
@@ -8746,7 +8758,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 2
+          "order": 2,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -8780,7 +8794,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R16",
@@ -8794,7 +8810,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 2
+          "order": 2,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R32",
@@ -8808,7 +8826,9 @@
           "date": "",
           "matchId": "",
           "retirement": true,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R16",
@@ -8822,7 +8842,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 2
+          "order": 2,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "QF",
@@ -8836,7 +8858,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 3
+          "order": 3,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -8870,7 +8894,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R16",
@@ -8884,7 +8910,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 2
+          "order": 2,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R32",
@@ -8898,7 +8926,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -8932,7 +8962,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R16",
@@ -8946,7 +8978,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 2
+          "order": 2,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R32",
@@ -8960,7 +8994,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -8994,7 +9030,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 2
+          "order": 2,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R32",
@@ -9008,7 +9046,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -9042,7 +9082,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -9076,7 +9118,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -9110,7 +9154,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R16",
@@ -9124,7 +9170,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 2
+          "order": 2,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R32",
@@ -9138,7 +9186,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R16",
@@ -9152,7 +9202,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 2
+          "order": 2,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "QF",
@@ -9166,7 +9218,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 3
+          "order": 3,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -9200,7 +9254,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R16",
@@ -9214,7 +9270,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 2
+          "order": 2,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -9248,7 +9306,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R16",
@@ -9262,7 +9322,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 2
+          "order": 2,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -9296,7 +9358,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -9330,7 +9394,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R16",
@@ -9344,7 +9410,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 2
+          "order": 2,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -9378,7 +9446,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R16",
@@ -9392,7 +9462,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 2
+          "order": 2,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "QF",
@@ -9406,7 +9478,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 3
+          "order": 3,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "SF",
@@ -9420,7 +9494,9 @@
           "date": "",
           "matchId": "",
           "retirement": true,
-          "order": 4
+          "order": 4,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "F",
@@ -9434,7 +9510,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 5
+          "order": 5,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -9468,7 +9546,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R16",
