@@ -63,3 +63,20 @@ jobs:
       - name: Publish website
         id: deployment
         uses: actions/deploy-pages@v4
+
+  status:
+    needs: deploy
+    if: always() && (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && needs.deploy.result != 'cancelled'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Email the site check
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          FROM_EMAIL: ${{ secrets.FROM_EMAIL }}
+          STATUS_EMAIL: ${{ secrets.STATUS_EMAIL }}
+        run: python3 status_mail.py
