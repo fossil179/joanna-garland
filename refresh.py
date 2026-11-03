@@ -1091,21 +1091,18 @@ def build_schedule(wta_entries: list[dict], itf_entries: list[dict], history_ids
                     }
                 )
             parsed.sort(key=lambda match: (match["order"], match["stamp"]))
-            live_matches = parsed
-            if parsed and still_in:
-                last = parsed[-1]
-                if last["won"] and last["state"] == "F" and last["round"] != "F":
+            played = [match for match in parsed if match.get("state") == "F" or match.get("score")]
+            live_matches = played
+            if played and still_in:
+                last = played[-1]
+                if last["won"] and last["round"] != "F":
                     ladder = DRAW_LADDER.get(draw_size or 32, DRAW_LADDER[32])
                     if last["round"] in ladder:
                         index = ladder.index(last["round"])
                         if index + 1 < len(ladder):
                             next_round = ROUND_LABEL[ladder[index + 1]]
             if still_in:
-                finished = {
-                    last_name(match["opponent"])
-                    for match in parsed
-                    if match.get("state") == "F" or match.get("score")
-                }
+                finished = {last_name(match["opponent"]) for match in played}
                 next_match = upcoming_match(group_id, year, finished)
         seed = (entry.get("seed") or "").strip() or None
         schedule.append(
