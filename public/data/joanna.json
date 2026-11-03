@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-03T16:43:12+00:00",
+  "updatedAt": "2026-11-03T16:47:12+00:00",
   "player": {
     "name": "Joanna Garland",
     "country": "TPE",
@@ -27,20 +27,20 @@
     "season": 2026,
     "seasonRecord": {
       "wins": 21,
-      "losses": 15,
+      "losses": 14,
       "titles": 2,
       "played": 17
     },
     "careerRecord": {
       "wins": 293,
-      "losses": 141,
+      "losses": 140,
       "titles": 18,
       "played": 156
     },
     "seasonSurfaces": {
       "Hard": {
         "wins": 18,
-        "losses": 9
+        "losses": 8
       },
       "Grass": {
         "wins": 2,
@@ -54,7 +54,7 @@
     "seasonLevels": {
       "WTA 250": {
         "wins": 4,
-        "losses": 4
+        "losses": 3
       },
       "WTA 500": {
         "wins": 3,
@@ -98,7 +98,7 @@
       "note": "",
       "eliminated": false,
       "stillIn": true,
-      "nextRound": null,
+      "nextRound": "Round of 16",
       "nextMatch": {
         "date": "2026-11-04",
         "time": "Followed By",
@@ -119,20 +119,6 @@
           "stamp": "2026-11-03T05:13:32.17+00:00",
           "date": "2026-11-03",
           "matchId": "LS017"
-        },
-        {
-          "round": "SF",
-          "roundLabel": "Semifinal",
-          "qualifying": false,
-          "opponent": "Janice Tjen",
-          "opponentCountry": "INA",
-          "score": "",
-          "won": false,
-          "state": "U",
-          "order": 4,
-          "stamp": "2026-11-04T23:59+05:30",
-          "date": "2026-11-04",
-          "matchId": "LS008"
         }
       ],
       "historyId": null,
@@ -265,8 +251,8 @@
       "start": "2026-11-02",
       "end": "2026-11-08",
       "wins": 1,
-      "losses": 1,
-      "outcome": "In progress",
+      "losses": 0,
+      "outcome": "In the round of 16",
       "champion": false,
       "inProgress": true,
       "url": "https://www.wtatennis.com/tournaments/1148/chennai-open/2026",
@@ -284,22 +270,6 @@
           "matchId": "LS017",
           "retirement": false,
           "order": 1,
-          "videos": [],
-          "videosChecked": "2026-11-03"
-        },
-        {
-          "round": "SF",
-          "roundLabel": "Semifinal",
-          "qualifying": false,
-          "opponent": "Janice Tjen",
-          "opponentCountry": "INA",
-          "opponentRank": null,
-          "score": "",
-          "won": false,
-          "date": "2026-11-04",
-          "matchId": "LS008",
-          "retirement": false,
-          "order": 4,
           "videos": [],
           "videosChecked": "2026-11-03"
         }
@@ -7772,7 +7742,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R16",
@@ -7786,7 +7758,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 2
+          "order": 2,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "QF",
@@ -7800,7 +7774,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 3
+          "order": 3,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "SF",
@@ -7814,7 +7790,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 4
+          "order": 4,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "F",
@@ -7828,7 +7806,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 5
+          "order": 5,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -7862,7 +7842,9 @@
           "date": "",
           "matchId": "",
           "retirement": true,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R16",
@@ -7876,7 +7858,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 2
+          "order": 2,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "QF",
@@ -7890,7 +7874,9 @@
           "date": "",
           "matchId": "",
           "retirement": true,
-          "order": 3
+          "order": 3,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -7924,7 +7910,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R16",
@@ -7938,7 +7926,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 2
+          "order": 2,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "QF",
@@ -7952,7 +7942,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 3
+          "order": 3,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "SF",
@@ -7966,7 +7958,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 4
+          "order": 4,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "F",
@@ -7980,7 +7974,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 5
+          "order": 5,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -8014,7 +8010,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R16",
@@ -8028,7 +8026,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 2
+          "order": 2,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "QF",
@@ -8042,7 +8042,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 3
+          "order": 3,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "SF",
@@ -8056,7 +8058,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 4
+          "order": 4,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "F",
@@ -8070,7 +8074,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 5
+          "order": 5,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -8104,7 +8110,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R16",
@@ -8118,7 +8126,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 2
+          "order": 2,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -8152,7 +8162,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R16",
@@ -8166,7 +8178,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 2
+          "order": 2,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -8200,7 +8214,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -8234,7 +8250,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R16",
@@ -8248,7 +8266,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 2
+          "order": 2,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R32",
@@ -8262,7 +8282,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -8296,7 +8318,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R16",
@@ -8310,7 +8334,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 2
+          "order": 2,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "QF",
@@ -8324,7 +8350,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 3
+          "order": 3,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -8358,7 +8386,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R16",
@@ -8372,7 +8402,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 2
+          "order": 2,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -8406,7 +8438,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R16",
@@ -8420,7 +8454,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 2
+          "order": 2,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "QF",
@@ -8434,7 +8470,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 3
+          "order": 3,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "SF",
@@ -8448,7 +8486,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 4
+          "order": 4,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -8482,7 +8522,9 @@
           "date": "2019-11-12",
           "matchId": "LS025",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -8516,7 +8558,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R16",
@@ -8530,7 +8574,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 2
+          "order": 2,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R32",
@@ -8544,7 +8590,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R16",
@@ -8558,7 +8606,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 2
+          "order": 2,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "QF",
