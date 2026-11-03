@@ -1,6 +1,7 @@
 name = "joanna-garland-alerts"
 main = "worker/index.js"
 compatibility_date = "2026-11-03"
+workers_dev = true
 
 [vars]
 SEGMENT_ID = "1761733b-184b-4d58-a846-af05b8adda8a"
