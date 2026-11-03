@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-03T12:44:47+00:00",
+  "updatedAt": "2026-11-03T12:51:17+00:00",
   "player": {
     "name": "Joanna Garland",
     "country": "TPE",
@@ -16,10 +16,10 @@
     "tournamentsPlayed": 16,
     "links": {
       "wta": "https://www.wtatennis.com/players/326512/joanna-garland",
-      "itf": "https://www.world.tennis/en/players/joanna-garland/800446517/tpe/wt/s/overview/",
-      "itfEntries": "https://itf-entries.netlify.app/player/800446517",
       "wtaMatches": "https://www.wtatennis.com/players/326512/joanna-garland/matches",
-      "itfActivity": "https://www.itftennis.com/en/players/joanna-garland/800446517/tpe/wt/s/activity/"
+      "itf": "https://www.world.tennis/en/players/joanna-garland/800446517/tpe/wt/s/overview/",
+      "itfActivity": "https://www.itftennis.com/en/players/joanna-garland/800446517/tpe/wt/s/activity/",
+      "itfEntries": "https://itf-entries.netlify.app/player/800446517"
     }
   },
   "summary": {
@@ -216,7 +216,7 @@
       "outcome": "In the round of 16",
       "champion": false,
       "inProgress": true,
-      "url": "https://www.wtatennis.com/tournaments/1148/chennai-open/2026/scores",
+      "url": "https://www.wtatennis.com/tournaments/1148/chennai-open/2026",
       "matches": [
         {
           "round": "R32",
@@ -1293,7 +1293,7 @@
       "outcome": "Lost in the round of 16",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/1142/2025-international-womens-tennis-huzhou-open/scores",
+      "url": "https://www.wtatennis.com/tournaments/1142/2025-international-womens-tennis-huzhou-open/2025/scores",
       "matches": [
         {
           "round": "R32",
