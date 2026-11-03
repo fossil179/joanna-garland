@@ -210,7 +210,7 @@ function eventCard(event) {
         <p class="detail">${esc(status)}</p>
         ${extra}
         ${matchList(event.liveMatches)}
-        <p class="links"><a href="${esc(event.url)}" target="_blank" rel="noreferrer">Tournament page</a></p>
+        <p class="links"><a href="${esc(event.url)}" target="_blank" rel="noreferrer">${event.tour === "ITF" ? "ITF page" : "WTA page"}</a></p>
       </div>
     </article>`;
 }
@@ -268,8 +268,27 @@ function resultCards(filtered) {
         <p class="expand-hint">${item.matches.length} match${item.matches.length === 1 ? "" : "es"}</p>
       </summary>
       ${matchList(item.matches)}
-      <p class="links"><a href="${esc(item.url)}" target="_blank" rel="noreferrer">Tournament page</a></p>
+      <p class="links">${resultLinks(item)}</p>
     </details>`).join("");
+}
+
+function wtaScoresUrl(item) {
+  const url = (item.url || "").replace(/\/$/, "");
+  if (!url.includes("wtatennis.com/tournaments/")) return url;
+  if (url.endsWith("/scores")) return url;
+  const year = item.year ? String(item.year) : "";
+  const withYear = year && !url.includes(`/${year}`) ? `${url}/${year}` : url;
+  return `${withYear}/scores`;
+}
+
+function resultLinks(item) {
+  const links = [];
+  const scores = wtaScoresUrl(item);
+  if (scores) links.push(`<a href="${esc(scores)}" target="_blank" rel="noreferrer">WTA scores</a>`);
+  if (item.level === "ITF" && data.player.links.itfActivity) {
+    links.push(`<a href="${esc(data.player.links.itfActivity)}" target="_blank" rel="noreferrer">ITF results</a>`);
+  }
+  return links.join(" · ");
 }
 
 function paintResults() {
@@ -304,6 +323,11 @@ function renderResults() {
       ${levels.map((level) => `<button type="button" data-level="${esc(level)}">${esc(level)}</button>`).join("")}
     </div>
     <p class="meta" id="result-count"></p>
+    <p class="links official-results">
+      <a href="${esc(data.player.links.wtaMatches || data.player.links.wta)}" target="_blank" rel="noreferrer">Her results on the WTA</a>
+      ·
+      <a href="${esc(data.player.links.itfActivity || data.player.links.itf)}" target="_blank" rel="noreferrer">Her results on the ITF</a>
+    </p>
     <div class="cards" id="result-list"></div>
   `;
   paintResults();

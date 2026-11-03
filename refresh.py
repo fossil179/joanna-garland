@@ -29,7 +29,9 @@ TODAY = date.today()
 LOOKAHEAD_DAYS = 140
 
 WTA_PROFILE = "https://www.wtatennis.com/players/326512/joanna-garland"
+WTA_MATCHES = "https://www.wtatennis.com/players/326512/joanna-garland/matches"
 ITF_PROFILE = "https://www.world.tennis/en/players/joanna-garland/800446517/tpe/wt/s/overview/"
+ITF_ACTIVITY = "https://www.itftennis.com/en/players/joanna-garland/800446517/tpe/wt/s/activity/"
 ITF_ENTRIES = f"https://itf-entries.netlify.app/api/player/{ITF_ID}"
 
 ROUND_LABEL = {
@@ -118,8 +120,14 @@ def slugify(value: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", name).strip("-")
 
 
-def wta_tournament_url(group_id: int, title: str) -> str:
-    return f"https://www.wtatennis.com/tournaments/{group_id}/{slugify(title)}"
+def wta_tournament_url(group_id: int, title: str, year: int | str | None = None, page: str = "") -> str:
+    slug = slugify(title) or "tournament"
+    url = f"https://www.wtatennis.com/tournaments/{int(str(group_id).strip())}/{slug}"
+    if year:
+        url = f"{url}/{year}"
+    if page:
+        url = f"{url}/{page}"
+    return url
 
 
 def age_on(dob: str, on: date) -> int:
@@ -496,7 +504,12 @@ def build_history(matches: list[dict]) -> list[dict]:
                 "outcome": outcome,
                 "champion": won_final,
                 "inProgress": False,
-                "url": wta_tournament_url(int(number), tournament.get("title") or sample.get("TournamentName") or ""),
+                "url": wta_tournament_url(
+                    number,
+                    tournament.get("title") or sample.get("TournamentName") or "",
+                    year,
+                    "scores",
+                ),
                 "matches": parsed,
             }
         )
@@ -820,7 +833,7 @@ def build_schedule(wta_entries: list[dict], itf_entries: list[dict], history_ids
                 "nextMatch": next_match,
                 "liveMatches": live_matches,
                 "historyId": f"{year}-{group_id}" if f"{year}-{group_id}" in history_ids else None,
-                "url": wta_tournament_url(group_id, tournament.get("title") or ""),
+                "url": wta_tournament_url(group_id, tournament.get("title") or "", year),
             }
         )
 
@@ -964,7 +977,9 @@ def build() -> dict:
             **ranking,
             "links": {
                 "wta": WTA_PROFILE,
+                "wtaMatches": WTA_MATCHES,
                 "itf": ITF_PROFILE,
+                "itfActivity": ITF_ACTIVITY,
                 "itfEntries": f"https://itf-entries.netlify.app/player/{ITF_ID}",
             },
         },

@@ -440,6 +440,7 @@ main { margin-bottom: 28px; }
 
 .links { margin: 12px 0 0; }
 .links a { color: var(--accent); font-weight: 700; }
+.official-results { margin: 0 0 14px; }
 
 .empty {
   padding: 28px;

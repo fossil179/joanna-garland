@@ -17,7 +17,9 @@
     "links": {
       "wta": "https://www.wtatennis.com/players/326512/joanna-garland",
       "itf": "https://www.world.tennis/en/players/joanna-garland/800446517/tpe/wt/s/overview/",
-      "itfEntries": "https://itf-entries.netlify.app/player/800446517"
+      "itfEntries": "https://itf-entries.netlify.app/player/800446517",
+      "wtaMatches": "https://www.wtatennis.com/players/326512/joanna-garland/matches",
+      "itfActivity": "https://www.itftennis.com/en/players/joanna-garland/800446517/tpe/wt/s/activity/"
     }
   },
   "summary": {
@@ -113,7 +115,7 @@
         }
       ],
       "historyId": null,
-      "url": "https://www.wtatennis.com/tournaments/1148/chennai-open"
+      "url": "https://www.wtatennis.com/tournaments/1148/chennai-open/2026"
     },
     {
       "id": "itf-w-itf-aus-2026-015",
@@ -214,7 +216,7 @@
       "outcome": "In the round of 16",
       "champion": false,
       "inProgress": true,
-      "url": "https://www.wtatennis.com/tournaments/1148/chennai-open",
+      "url": "https://www.wtatennis.com/tournaments/1148/chennai-open/2026/scores",
       "matches": [
         {
           "round": "R32",
@@ -247,7 +249,7 @@
       "outcome": "Lost in qualifying",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/1023/guangzhou-open",
+      "url": "https://www.wtatennis.com/tournaments/1023/guangzhou-open/2026/scores",
       "matches": [
         {
           "round": "R32",
@@ -293,7 +295,7 @@
       "outcome": "Lost in the round of 16",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/1152/singapore-tennis-open-presented-by-bnp-paribas",
+      "url": "https://www.wtatennis.com/tournaments/1152/singapore-tennis-open-presented-by-bnp-paribas/2026/scores",
       "matches": [
         {
           "round": "R16",
@@ -365,7 +367,7 @@
       "outcome": "Lost in the round of 32",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4209/wtt-w50",
+      "url": "https://www.wtatennis.com/tournaments/4209/wtt-w50/2026/scores",
       "matches": [
         {
           "round": "R32",
@@ -398,7 +400,7 @@
       "outcome": "Champion",
       "champion": true,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4986/wtt-w75",
+      "url": "https://www.wtatennis.com/tournaments/4986/wtt-w75/2026/scores",
       "matches": [
         {
           "round": "R32",
@@ -483,7 +485,7 @@
       "outcome": "Lost in qualifying",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/905/us-open",
+      "url": "https://www.wtatennis.com/tournaments/905/us-open/2026/scores",
       "matches": [
         {
           "round": "R128",
@@ -542,7 +544,7 @@
       "outcome": "Lost in qualifying",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/904/the-championships-wimbledon",
+      "url": "https://www.wtatennis.com/tournaments/904/the-championships-wimbledon/2026/scores",
       "matches": [
         {
           "round": "R128",
@@ -588,7 +590,7 @@
       "outcome": "Lost in qualifying",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/822/lib-ma-open",
+      "url": "https://www.wtatennis.com/tournaments/822/lib-ma-open/2026/scores",
       "matches": [
         {
           "round": "R16",
@@ -634,7 +636,7 @@
       "outcome": "Lost in the round of 32",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/1126/lexus-birmingham-open",
+      "url": "https://www.wtatennis.com/tournaments/1126/lexus-birmingham-open/2026/scores",
       "matches": [
         {
           "round": "R32",
@@ -667,7 +669,7 @@
       "outcome": "Lost in the round of 16",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/587/wtt-w75",
+      "url": "https://www.wtatennis.com/tournaments/587/wtt-w75/2026/scores",
       "matches": [
         {
           "round": "R32",
@@ -713,7 +715,7 @@
       "outcome": "Lost in qualifying",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/903/roland-garros",
+      "url": "https://www.wtatennis.com/tournaments/903/roland-garros/2026/scores",
       "matches": [
         {
           "round": "R128",
@@ -746,7 +748,7 @@
       "outcome": "Lost in the round of 32",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/253/wtt-w75",
+      "url": "https://www.wtatennis.com/tournaments/253/wtt-w75/2026/scores",
       "matches": [
         {
           "round": "R32",
@@ -779,7 +781,7 @@
       "outcome": "Lost in qualifying",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/609/bnp-paribas-open",
+      "url": "https://www.wtatennis.com/tournaments/609/bnp-paribas-open/2026/scores",
       "matches": [
         {
           "round": "R64",
@@ -812,7 +814,7 @@
       "outcome": "Lost in qualifying",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/2082/atx-open",
+      "url": "https://www.wtatennis.com/tournaments/2082/atx-open/2026/scores",
       "matches": [
         {
           "round": "R32",
@@ -858,7 +860,7 @@
       "outcome": "Lost in the round of 32",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/1153/philippine-womens-open",
+      "url": "https://www.wtatennis.com/tournaments/1153/philippine-womens-open/2026/scores",
       "matches": [
         {
           "round": "R32",
@@ -891,7 +893,7 @@
       "outcome": "Lost in qualifying",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/901/australian-open",
+      "url": "https://www.wtatennis.com/tournaments/901/australian-open/2026/scores",
       "matches": [
         {
           "round": "R128",
@@ -924,7 +926,7 @@
       "outcome": "Champion",
       "champion": true,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/2096/workday-canberra-international",
+      "url": "https://www.wtatennis.com/tournaments/2096/workday-canberra-international/2026/scores",
       "matches": [
         {
           "round": "R32",
@@ -1009,7 +1011,7 @@
       "outcome": "Lost in the semifinal",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/1148/chennai-open",
+      "url": "https://www.wtatennis.com/tournaments/1148/chennai-open/2025/scores",
       "matches": [
         {
           "round": "R32",
@@ -1081,7 +1083,7 @@
       "outcome": "Lost in qualifying",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/1023/guangzhou-open",
+      "url": "https://www.wtatennis.com/tournaments/1023/guangzhou-open/2025/scores",
       "matches": [
         {
           "round": "R32",
@@ -1114,7 +1116,7 @@
       "outcome": "Lost in the round of 32",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/405/kinoshita-group-japan-open",
+      "url": "https://www.wtatennis.com/tournaments/405/kinoshita-group-japan-open/2025/scores",
       "matches": [
         {
           "round": "R32",
@@ -1173,7 +1175,7 @@
       "outcome": "Lost in the round of 16",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/1147/suzhou-wta-125",
+      "url": "https://www.wtatennis.com/tournaments/1147/suzhou-wta-125/2025/scores",
       "matches": [
         {
           "round": "R16",
@@ -1245,7 +1247,7 @@
       "outcome": "Lost in qualifying",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/1020/china-open",
+      "url": "https://www.wtatennis.com/tournaments/1020/china-open/2025/scores",
       "matches": [
         {
           "round": "R64",
@@ -1291,7 +1293,7 @@
       "outcome": "Lost in the round of 16",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/1142/2025-international-womens-tennis-huzhou-open",
+      "url": "https://www.wtatennis.com/tournaments/1142/2025-international-womens-tennis-huzhou-open/scores",
       "matches": [
         {
           "round": "R32",
@@ -1337,7 +1339,7 @@
       "outcome": "Lost in the quarterfinal",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/1141/wta-changsha-open",
+      "url": "https://www.wtatennis.com/tournaments/1141/wta-changsha-open/2025/scores",
       "matches": [
         {
           "round": "R32",
@@ -1396,7 +1398,7 @@
       "outcome": "Lost in qualifying",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/905/us-open",
+      "url": "https://www.wtatennis.com/tournaments/905/us-open/2025/scores",
       "matches": [
         {
           "round": "R128",
@@ -1429,7 +1431,7 @@
       "outcome": "Lost in qualifying",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/904/the-championships-wimbledon",
+      "url": "https://www.wtatennis.com/tournaments/904/the-championships-wimbledon/2025/scores",
       "matches": [
         {
           "round": "R128",
@@ -1488,7 +1490,7 @@
       "outcome": "Lost in the round of 32",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/822/lib-ma-open",
+      "url": "https://www.wtatennis.com/tournaments/822/lib-ma-open/2025/scores",
       "matches": [
         {
           "round": "R32",
@@ -1547,7 +1549,7 @@
       "outcome": "Lost in the round of 64",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/903/roland-garros",
+      "url": "https://www.wtatennis.com/tournaments/903/roland-garros/2025/scores",
       "matches": [
         {
           "round": "R128",
@@ -1632,7 +1634,7 @@
       "outcome": "Lost in the semifinal",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4794/wtt-w50",
+      "url": "https://www.wtatennis.com/tournaments/4794/wtt-w50/2025/scores",
       "matches": [
         {
           "round": "R32",
@@ -1704,7 +1706,7 @@
       "outcome": "Lost in the semifinal",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4792/wtt-w50",
+      "url": "https://www.wtatennis.com/tournaments/4792/wtt-w50/2025/scores",
       "matches": [
         {
           "round": "R32",
@@ -1776,7 +1778,7 @@
       "outcome": "Champion",
       "champion": true,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4057/wtt-w35",
+      "url": "https://www.wtatennis.com/tournaments/4057/wtt-w35/2025/scores",
       "matches": [
         {
           "round": "R32",
@@ -1861,7 +1863,7 @@
       "outcome": "Champion",
       "champion": true,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4050/wtt-w35",
+      "url": "https://www.wtatennis.com/tournaments/4050/wtt-w35/2025/scores",
       "matches": [
         {
           "round": "R32",
@@ -1946,7 +1948,7 @@
       "outcome": "Lost in the round of 16",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/2347/wtt-w35",
+      "url": "https://www.wtatennis.com/tournaments/2347/wtt-w35/2025/scores",
       "matches": [
         {
           "round": "R32",
@@ -1992,7 +1994,7 @@
       "outcome": "Lost in the round of 32",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/3145/wtt-w75",
+      "url": "https://www.wtatennis.com/tournaments/3145/wtt-w75/2025/scores",
       "matches": [
         {
           "round": "R32",
@@ -2025,7 +2027,7 @@
       "outcome": "Lost in the semifinal",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4850/wtt-w35",
+      "url": "https://www.wtatennis.com/tournaments/4850/wtt-w35/2025/scores",
       "matches": [
         {
           "round": "R32",
@@ -2097,7 +2099,7 @@
       "outcome": "Lost in the round of 32",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4786/wtt-w35",
+      "url": "https://www.wtatennis.com/tournaments/4786/wtt-w35/2025/scores",
       "matches": [
         {
           "round": "R32",
@@ -2130,7 +2132,7 @@
       "outcome": "Champion",
       "champion": true,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/734/wtt-w35",
+      "url": "https://www.wtatennis.com/tournaments/734/wtt-w35/2025/scores",
       "matches": [
         {
           "round": "R32",
@@ -2215,7 +2217,7 @@
       "outcome": "Champion",
       "champion": true,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4440/wtt-w35",
+      "url": "https://www.wtatennis.com/tournaments/4440/wtt-w35/2025/scores",
       "matches": [
         {
           "round": "R32",
@@ -2300,7 +2302,7 @@
       "outcome": "Finalist",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/3058/itf-w35",
+      "url": "https://www.wtatennis.com/tournaments/3058/itf-w35/2024/scores",
       "matches": [
         {
           "round": "R32",
@@ -2385,7 +2387,7 @@
       "outcome": "Champion",
       "champion": true,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/3052/itf-w35",
+      "url": "https://www.wtatennis.com/tournaments/3052/itf-w35/2024/scores",
       "matches": [
         {
           "round": "R32",
@@ -2470,7 +2472,7 @@
       "outcome": "Champion",
       "champion": true,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/3051/itf-w15",
+      "url": "https://www.wtatennis.com/tournaments/3051/itf-w15/2024/scores",
       "matches": [
         {
           "round": "R32",
@@ -2555,7 +2557,7 @@
       "outcome": "Champion",
       "champion": true,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4061/itf-tennis-europe-w35",
+      "url": "https://www.wtatennis.com/tournaments/4061/itf-tennis-europe-w35/2024/scores",
       "matches": [
         {
           "round": "R32",
@@ -2640,7 +2642,7 @@
       "outcome": "Champion",
       "champion": true,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4057/itf-tennis-europe-w35",
+      "url": "https://www.wtatennis.com/tournaments/4057/itf-tennis-europe-w35/2024/scores",
       "matches": [
         {
           "round": "R32",
@@ -2725,7 +2727,7 @@
       "outcome": "Champion",
       "champion": true,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4839/itf-tennis-europe-w35-kayseri-2-turkey",
+      "url": "https://www.wtatennis.com/tournaments/4839/itf-tennis-europe-w35-kayseri-2-turkey/2024/scores",
       "matches": [
         {
           "round": "R32",
@@ -2810,7 +2812,7 @@
       "outcome": "Lost in the round of 16",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4837/itf-tennis-europe-w15-kayseri-turkey",
+      "url": "https://www.wtatennis.com/tournaments/4837/itf-tennis-europe-w15-kayseri-turkey/2024/scores",
       "matches": [
         {
           "round": "R32",
@@ -2856,7 +2858,7 @@
       "outcome": "Lost in the quarterfinal",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/3038/itf-w15",
+      "url": "https://www.wtatennis.com/tournaments/3038/itf-w15/2024/scores",
       "matches": [
         {
           "round": "R32",
@@ -2915,7 +2917,7 @@
       "outcome": "Lost in the semifinal",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/3037/itf-w15-sharm-el-sheikh-13-egypt",
+      "url": "https://www.wtatennis.com/tournaments/3037/itf-w15-sharm-el-sheikh-13-egypt/2024/scores",
       "matches": [
         {
           "round": "R32",
@@ -2987,7 +2989,7 @@
       "outcome": "Lost in the round of 32",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4557/itf-tennis-europe-w75-le-neubourg-france",
+      "url": "https://www.wtatennis.com/tournaments/4557/itf-tennis-europe-w75-le-neubourg-france/2024/scores",
       "matches": [
         {
           "round": "R32",
@@ -3020,7 +3022,7 @@
       "outcome": "Lost in the round of 16",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4456/itf-tennis-europe-w35",
+      "url": "https://www.wtatennis.com/tournaments/4456/itf-tennis-europe-w35/2024/scores",
       "matches": [
         {
           "round": "R32",
@@ -3066,7 +3068,7 @@
       "outcome": "Lost in the round of 32",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/3067/itf-tennis-europe-w50",
+      "url": "https://www.wtatennis.com/tournaments/3067/itf-tennis-europe-w50/2024/scores",
       "matches": [
         {
           "round": "R32",
@@ -3099,7 +3101,7 @@
       "outcome": "Lost in the round of 32",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/3036/itf-tennis-europe-w75",
+      "url": "https://www.wtatennis.com/tournaments/3036/itf-tennis-europe-w75/2024/scores",
       "matches": [
         {
           "round": "R32",
@@ -3132,7 +3134,7 @@
       "outcome": "Lost in the round of 32",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/171/itf-60-000",
+      "url": "https://www.wtatennis.com/tournaments/171/itf-60-000/2023/scores",
       "matches": [
         {
           "round": "R32",
@@ -3165,7 +3167,7 @@
       "outcome": "Lost in the semifinal",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/638/itf-60-000",
+      "url": "https://www.wtatennis.com/tournaments/638/itf-60-000/2023/scores",
       "matches": [
         {
           "round": "R32",
@@ -3237,7 +3239,7 @@
       "outcome": "Lost in qualifying",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4778/itf-100-000",
+      "url": "https://www.wtatennis.com/tournaments/4778/itf-100-000/2023/scores",
       "matches": [
         {
           "round": "R32",
@@ -3270,7 +3272,7 @@
       "outcome": "Lost in the round of 16",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/194/itf-60-000",
+      "url": "https://www.wtatennis.com/tournaments/194/itf-60-000/2023/scores",
       "matches": [
         {
           "round": "R32",
@@ -3316,7 +3318,7 @@
       "outcome": "Finalist",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4314/itf-60-000",
+      "url": "https://www.wtatennis.com/tournaments/4314/itf-60-000/2023/scores",
       "matches": [
         {
           "round": "R32",
@@ -3401,7 +3403,7 @@
       "outcome": "Champion",
       "champion": true,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/2997/itf-25-000",
+      "url": "https://www.wtatennis.com/tournaments/2997/itf-25-000/2023/scores",
       "matches": [
         {
           "round": "R32",
@@ -3486,7 +3488,7 @@
       "outcome": "Lost in the quarterfinal",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/2434/itf-25-000",
+      "url": "https://www.wtatennis.com/tournaments/2434/itf-25-000/2023/scores",
       "matches": [
         {
           "round": "R32",
@@ -3545,7 +3547,7 @@
       "outcome": "Lost in the round of 16",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4557/itf-tennis-europe-80-000-le-neubourg-france",
+      "url": "https://www.wtatennis.com/tournaments/4557/itf-tennis-europe-80-000-le-neubourg-france/2023/scores",
       "matches": [
         {
           "round": "R32",
@@ -3591,7 +3593,7 @@
       "outcome": "Lost in the quarterfinal",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4641/itf-tennis-europe-25-000",
+      "url": "https://www.wtatennis.com/tournaments/4641/itf-tennis-europe-25-000/2023/scores",
       "matches": [
         {
           "round": "R32",
@@ -3650,7 +3652,7 @@
       "outcome": "Lost in the quarterfinal",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4456/itf-tennis-europe-25-000",
+      "url": "https://www.wtatennis.com/tournaments/4456/itf-tennis-europe-25-000/2023/scores",
       "matches": [
         {
           "round": "R32",
@@ -3709,7 +3711,7 @@
       "outcome": "Lost in the quarterfinal",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4638/itf-tennis-europe-25-000",
+      "url": "https://www.wtatennis.com/tournaments/4638/itf-tennis-europe-25-000/2023/scores",
       "matches": [
         {
           "round": "R32",
@@ -3768,7 +3770,7 @@
       "outcome": "Lost in qualifying",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/2037/bnp-paribas-warsaw-open",
+      "url": "https://www.wtatennis.com/tournaments/2037/bnp-paribas-warsaw-open/2023/scores",
       "matches": [
         {
           "round": "R16",
@@ -3814,7 +3816,7 @@
       "outcome": "Lost in the round of 16",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4223/itf-tennis-europe-25-000",
+      "url": "https://www.wtatennis.com/tournaments/4223/itf-tennis-europe-25-000/2023/scores",
       "matches": [
         {
           "round": "R32",
@@ -3860,7 +3862,7 @@
       "outcome": "Lost in the semifinal",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4202/itf-tennis-europe-25-000",
+      "url": "https://www.wtatennis.com/tournaments/4202/itf-tennis-europe-25-000/2023/scores",
       "matches": [
         {
           "round": "R32",
@@ -3932,7 +3934,7 @@
       "outcome": "Lost in the round of 32",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/747/itf-tennis-europe-100-000",
+      "url": "https://www.wtatennis.com/tournaments/747/itf-tennis-europe-100-000/2023/scores",
       "matches": [
         {
           "round": "R32",
@@ -3991,7 +3993,7 @@
       "outcome": "Lost in qualifying",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/1080/rothesay-open",
+      "url": "https://www.wtatennis.com/tournaments/1080/rothesay-open/2023/scores",
       "matches": [
         {
           "round": "R32",
@@ -4024,7 +4026,7 @@
       "outcome": "Lost in qualifying",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/882/itf-tennis-europe-100-000",
+      "url": "https://www.wtatennis.com/tournaments/882/itf-tennis-europe-100-000/2023/scores",
       "matches": [
         {
           "round": "R32",
@@ -4070,7 +4072,7 @@
       "outcome": "Lost in qualifying",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/903/roland-garros",
+      "url": "https://www.wtatennis.com/tournaments/903/roland-garros/2023/scores",
       "matches": [
         {
           "round": "R128",
@@ -4103,7 +4105,7 @@
       "outcome": "Lost in the round of 32",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4508/itf-tennis-europe-60-000",
+      "url": "https://www.wtatennis.com/tournaments/4508/itf-tennis-europe-60-000/2023/scores",
       "matches": [
         {
           "round": "R32",
@@ -4136,7 +4138,7 @@
       "outcome": "Lost in the quarterfinal",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4167/itf-60-000",
+      "url": "https://www.wtatennis.com/tournaments/4167/itf-60-000/2023/scores",
       "matches": [
         {
           "round": "R32",
@@ -4195,7 +4197,7 @@
       "outcome": "Champion",
       "champion": true,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4684/itf-25-000",
+      "url": "https://www.wtatennis.com/tournaments/4684/itf-25-000/2023/scores",
       "matches": [
         {
           "round": "R32",
@@ -4280,7 +4282,7 @@
       "outcome": "Lost in the quarterfinal",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4682/itf-25-000",
+      "url": "https://www.wtatennis.com/tournaments/4682/itf-25-000/2023/scores",
       "matches": [
         {
           "round": "R32",
@@ -4339,7 +4341,7 @@
       "outcome": "Lost in the round of 32",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/644/itf-tennis-europe-60-000",
+      "url": "https://www.wtatennis.com/tournaments/644/itf-tennis-europe-60-000/2023/scores",
       "matches": [
         {
           "round": "R32",
@@ -4372,7 +4374,7 @@
       "outcome": "Lost in the round of 32",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/2831/itf-tennis-europe-40-000",
+      "url": "https://www.wtatennis.com/tournaments/2831/itf-tennis-europe-40-000/2023/scores",
       "matches": [
         {
           "round": "R32",
@@ -4405,7 +4407,7 @@
       "outcome": "Lost in the round of 32",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/2815/itf-tennis-europe-25-000",
+      "url": "https://www.wtatennis.com/tournaments/2815/itf-tennis-europe-25-000/2023/scores",
       "matches": [
         {
           "round": "R32",
@@ -4438,7 +4440,7 @@
       "outcome": "Lost in the round of 32",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/1072/open-bls-de-limoges",
+      "url": "https://www.wtatennis.com/tournaments/1072/open-bls-de-limoges/2022/scores",
       "matches": [
         {
           "round": "Q",
@@ -4484,7 +4486,7 @@
       "outcome": "Lost in the round of 32",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/2056/open-p2i-angers-arena-loire",
+      "url": "https://www.wtatennis.com/tournaments/2056/open-p2i-angers-arena-loire/2022/scores",
       "matches": [
         {
           "round": "R16",
@@ -4543,7 +4545,7 @@
       "outcome": "Lost in the quarterfinal",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4496/itf-tennis-europe-25-000",
+      "url": "https://www.wtatennis.com/tournaments/4496/itf-tennis-europe-25-000/2022/scores",
       "matches": [
         {
           "round": "R32",
@@ -4602,7 +4604,7 @@
       "outcome": "Lost in the round of 32",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/2638/itf-tennis-europe-100-000",
+      "url": "https://www.wtatennis.com/tournaments/2638/itf-tennis-europe-100-000/2022/scores",
       "matches": [
         {
           "round": "R32",
@@ -4661,7 +4663,7 @@
       "outcome": "Lost in the round of 32",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/3115/itf-tennis-europe-25-000",
+      "url": "https://www.wtatennis.com/tournaments/3115/itf-tennis-europe-25-000/2022/scores",
       "matches": [
         {
           "round": "R32",
@@ -4694,7 +4696,7 @@
       "outcome": "Lost in the round of 32",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/2737/itf-tennis-europe-60-000",
+      "url": "https://www.wtatennis.com/tournaments/2737/itf-tennis-europe-60-000/2022/scores",
       "matches": [
         {
           "round": "R32",
@@ -4727,7 +4729,7 @@
       "outcome": "Lost in the round of 16",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4067/itf-tennis-europe-60-000",
+      "url": "https://www.wtatennis.com/tournaments/4067/itf-tennis-europe-60-000/2022/scores",
       "matches": [
         {
           "round": "R32",
@@ -4773,7 +4775,7 @@
       "outcome": "Lost in the round of 32",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/2710/itf-tennis-europe-60-000",
+      "url": "https://www.wtatennis.com/tournaments/2710/itf-tennis-europe-60-000/2022/scores",
       "matches": [
         {
           "round": "R32",
@@ -4806,7 +4808,7 @@
       "outcome": "Lost in the semifinal",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4456/itf-tennis-europe-25-000",
+      "url": "https://www.wtatennis.com/tournaments/4456/itf-tennis-europe-25-000/2022/scores",
       "matches": [
         {
           "round": "R32",
@@ -4878,7 +4880,7 @@
       "outcome": "Champion",
       "champion": true,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4641/itf-tennis-europe-25-000",
+      "url": "https://www.wtatennis.com/tournaments/4641/itf-tennis-europe-25-000/2022/scores",
       "matches": [
         {
           "round": "R32",
@@ -4963,7 +4965,7 @@
       "outcome": "Champion",
       "champion": true,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4638/itf-tennis-europe-25-000",
+      "url": "https://www.wtatennis.com/tournaments/4638/itf-tennis-europe-25-000/2022/scores",
       "matches": [
         {
           "round": "R32",
@@ -5048,7 +5050,7 @@
       "outcome": "Lost in the quarterfinal",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4633/itf-tennis-europe-25-000",
+      "url": "https://www.wtatennis.com/tournaments/4633/itf-tennis-europe-25-000/2022/scores",
       "matches": [
         {
           "round": "R32",
@@ -5107,7 +5109,7 @@
       "outcome": "Lost in the quarterfinal",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4223/itf-tennis-europe-25-000",
+      "url": "https://www.wtatennis.com/tournaments/4223/itf-tennis-europe-25-000/2022/scores",
       "matches": [
         {
           "round": "R32",
@@ -5166,7 +5168,7 @@
       "outcome": "Lost in the quarterfinal",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/2915/itf-25-000",
+      "url": "https://www.wtatennis.com/tournaments/2915/itf-25-000/2022/scores",
       "matches": [
         {
           "round": "R32",
@@ -5225,7 +5227,7 @@
       "outcome": "Finalist",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/3190/itf-tennis-europe-25-000",
+      "url": "https://www.wtatennis.com/tournaments/3190/itf-tennis-europe-25-000/2022/scores",
       "matches": [
         {
           "round": "R32",
@@ -5310,7 +5312,7 @@
       "outcome": "Lost in the quarterfinal",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/3067/itf-tennis-europe-25-000",
+      "url": "https://www.wtatennis.com/tournaments/3067/itf-tennis-europe-25-000/2022/scores",
       "matches": [
         {
           "round": "R32",
@@ -5369,7 +5371,7 @@
       "outcome": "Lost in the quarterfinal",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/636/itf-tennis-europe-25-000",
+      "url": "https://www.wtatennis.com/tournaments/636/itf-tennis-europe-25-000/2022/scores",
       "matches": [
         {
           "round": "R32",
@@ -5428,7 +5430,7 @@
       "outcome": "Lost in the round of 16",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/593/itf-tennis-europe-25-000",
+      "url": "https://www.wtatennis.com/tournaments/593/itf-tennis-europe-25-000/2022/scores",
       "matches": [
         {
           "round": "R32",
@@ -5474,7 +5476,7 @@
       "outcome": "Champion",
       "champion": true,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4368/itf-15-000",
+      "url": "https://www.wtatennis.com/tournaments/4368/itf-15-000/2022/scores",
       "matches": [
         {
           "round": "R32",
@@ -5559,7 +5561,7 @@
       "outcome": "Finalist",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4365/itf-15-000",
+      "url": "https://www.wtatennis.com/tournaments/4365/itf-15-000/2022/scores",
       "matches": [
         {
           "round": "R32",
@@ -5644,7 +5646,7 @@
       "outcome": "Lost in the round of 64",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4510/itf-25-000",
+      "url": "https://www.wtatennis.com/tournaments/4510/itf-25-000/2022/scores",
       "matches": [
         {
           "round": "R64",
@@ -5677,7 +5679,7 @@
       "outcome": "Lost in the round of 16",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/557/itf-25-000",
+      "url": "https://www.wtatennis.com/tournaments/557/itf-25-000/2022/scores",
       "matches": [
         {
           "round": "R64",
@@ -5736,7 +5738,7 @@
       "outcome": "Lost in qualifying",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/264/itf-tennis-europe-25-000",
+      "url": "https://www.wtatennis.com/tournaments/264/itf-tennis-europe-25-000/2022/scores",
       "matches": [
         {
           "round": "R32",
@@ -5782,7 +5784,7 @@
       "outcome": "Lost in qualifying",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/857/itf-tennis-europe-25-000",
+      "url": "https://www.wtatennis.com/tournaments/857/itf-tennis-europe-25-000/2022/scores",
       "matches": [
         {
           "round": "R32",
@@ -5828,7 +5830,7 @@
       "outcome": "Lost in the round of 16",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/2815/itf-tennis-europe-25-000",
+      "url": "https://www.wtatennis.com/tournaments/2815/itf-tennis-europe-25-000/2022/scores",
       "matches": [
         {
           "round": "R32",
@@ -5874,7 +5876,7 @@
       "outcome": "Lost in the round of 16",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/118/itf-tennis-europe-25-000",
+      "url": "https://www.wtatennis.com/tournaments/118/itf-tennis-europe-25-000/2022/scores",
       "matches": [
         {
           "round": "R32",
@@ -5920,7 +5922,7 @@
       "outcome": "Lost in qualifying",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/2300/itf-100-000-h",
+      "url": "https://www.wtatennis.com/tournaments/2300/itf-100-000-h/2021/scores",
       "matches": [
         {
           "round": "R32",
@@ -5953,7 +5955,7 @@
       "outcome": "Lost in the round of 32",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/2554/itf-tennis-europe-80-000-h",
+      "url": "https://www.wtatennis.com/tournaments/2554/itf-tennis-europe-80-000-h/2021/scores",
       "matches": [
         {
           "round": "R64",
@@ -6025,7 +6027,7 @@
       "outcome": "Lost in the round of 32",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4562/itf-tennis-europe-25-000",
+      "url": "https://www.wtatennis.com/tournaments/4562/itf-tennis-europe-25-000/2021/scores",
       "matches": [
         {
           "round": "R32",
@@ -6084,7 +6086,7 @@
       "outcome": "Lost in the round of 16",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4561/itf-tennis-europe-25-000",
+      "url": "https://www.wtatennis.com/tournaments/4561/itf-tennis-europe-25-000/2021/scores",
       "matches": [
         {
           "round": "R32",
@@ -6130,7 +6132,7 @@
       "outcome": "Lost in the round of 32",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4262/itf-tennis-europe-25-000",
+      "url": "https://www.wtatennis.com/tournaments/4262/itf-tennis-europe-25-000/2021/scores",
       "matches": [
         {
           "round": "R32",
@@ -6163,7 +6165,7 @@
       "outcome": "Lost in qualifying",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4455/itf-tennis-europe-60-000-h",
+      "url": "https://www.wtatennis.com/tournaments/4455/itf-tennis-europe-60-000-h/2021/scores",
       "matches": [
         {
           "round": "R32",
@@ -6209,7 +6211,7 @@
       "outcome": "Lost in the round of 32",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4485/itf-tennis-europe-25-000",
+      "url": "https://www.wtatennis.com/tournaments/4485/itf-tennis-europe-25-000/2021/scores",
       "matches": [
         {
           "round": "R32",
@@ -6242,7 +6244,7 @@
       "outcome": "Lost in the round of 16",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/2256/itf-tennis-europe-60-000",
+      "url": "https://www.wtatennis.com/tournaments/2256/itf-tennis-europe-60-000/2021/scores",
       "matches": [
         {
           "round": "R32",
@@ -6314,7 +6316,7 @@
       "outcome": "Lost in the round of 32",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/3059/itf-tennis-europe-60-000",
+      "url": "https://www.wtatennis.com/tournaments/3059/itf-tennis-europe-60-000/2021/scores",
       "matches": [
         {
           "round": "R32",
@@ -6373,7 +6375,7 @@
       "outcome": "Lost in the round of 32",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4519/itf-tennis-europe-25-000",
+      "url": "https://www.wtatennis.com/tournaments/4519/itf-tennis-europe-25-000/2021/scores",
       "matches": [
         {
           "round": "R32",
@@ -6432,7 +6434,7 @@
       "outcome": "Lost in the quarterfinal",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/990/itf-tennis-europe-15-000",
+      "url": "https://www.wtatennis.com/tournaments/990/itf-tennis-europe-15-000/2021/scores",
       "matches": [
         {
           "round": "R32",
@@ -6491,7 +6493,7 @@
       "outcome": "Lost in the round of 16",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/104/itf-tennis-europe-25-000",
+      "url": "https://www.wtatennis.com/tournaments/104/itf-tennis-europe-25-000/2021/scores",
       "matches": [
         {
           "round": "R16",
@@ -6550,7 +6552,7 @@
       "outcome": "Champion",
       "champion": true,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/2991/itf-15-000",
+      "url": "https://www.wtatennis.com/tournaments/2991/itf-15-000/2020/scores",
       "matches": [
         {
           "round": "R32",
@@ -6635,7 +6637,7 @@
       "outcome": "Finalist",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/2974/itf-15-000",
+      "url": "https://www.wtatennis.com/tournaments/2974/itf-15-000/2020/scores",
       "matches": [
         {
           "round": "R32",
@@ -6746,7 +6748,7 @@
       "outcome": "Lost in the quarterfinal",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/2971/itf-15-000",
+      "url": "https://www.wtatennis.com/tournaments/2971/itf-15-000/2020/scores",
       "matches": [
         {
           "round": "R32",
@@ -6805,7 +6807,7 @@
       "outcome": "Champion",
       "champion": true,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/2947/itf-15-000",
+      "url": "https://www.wtatennis.com/tournaments/2947/itf-15-000/2020/scores",
       "matches": [
         {
           "round": "R32",
@@ -6890,7 +6892,7 @@
       "outcome": "Finalist",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/2945/itf-15-000",
+      "url": "https://www.wtatennis.com/tournaments/2945/itf-15-000/2020/scores",
       "matches": [
         {
           "round": "R32",
@@ -6975,7 +6977,7 @@
       "outcome": "Lost in the round of 16",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/2944/itf-15-000",
+      "url": "https://www.wtatennis.com/tournaments/2944/itf-15-000/2020/scores",
       "matches": [
         {
           "round": "R32",
@@ -7021,7 +7023,7 @@
       "outcome": "Lost in the round of 16",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/633/itf-tennis-europe-15-000",
+      "url": "https://www.wtatennis.com/tournaments/633/itf-tennis-europe-15-000/2020/scores",
       "matches": [
         {
           "round": "R32",
@@ -7067,7 +7069,7 @@
       "outcome": "Lost in the round of 32",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/141/itf-25-000",
+      "url": "https://www.wtatennis.com/tournaments/141/itf-25-000/2020/scores",
       "matches": [
         {
           "round": "R32",
@@ -7100,7 +7102,7 @@
       "outcome": "Lost in the round of 32",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/264/itf-tennis-europe-25-000",
+      "url": "https://www.wtatennis.com/tournaments/264/itf-tennis-europe-25-000/2020/scores",
       "matches": [
         {
           "round": "R32",
@@ -7159,7 +7161,7 @@
       "outcome": "Lost in the quarterfinal",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/2404/itf-tennis-europe-15-000",
+      "url": "https://www.wtatennis.com/tournaments/2404/itf-tennis-europe-15-000/2020/scores",
       "matches": [
         {
           "round": "R32",
@@ -7218,7 +7220,7 @@
       "outcome": "Lost in the round of 16",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4338/itf-15-000",
+      "url": "https://www.wtatennis.com/tournaments/4338/itf-15-000/2019/scores",
       "matches": [
         {
           "round": "R32",
@@ -7264,7 +7266,7 @@
       "outcome": "Lost in the semifinal",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4295/itf-15-000",
+      "url": "https://www.wtatennis.com/tournaments/4295/itf-15-000/2019/scores",
       "matches": [
         {
           "round": "R32",
@@ -7336,7 +7338,7 @@
       "outcome": "Lost in the round of 32",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/1059/taipei-oec-open",
+      "url": "https://www.wtatennis.com/tournaments/1059/taipei-oec-open/2019/scores",
       "matches": [
         {
           "round": "R32",
@@ -7369,7 +7371,7 @@
       "outcome": "Lost in the quarterfinal",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4232/itf-25-000",
+      "url": "https://www.wtatennis.com/tournaments/4232/itf-25-000/2019/scores",
       "matches": [
         {
           "round": "R32",
@@ -7454,7 +7456,7 @@
       "outcome": "Lost in qualifying",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4291/itf-tennis-europe-25-000-h",
+      "url": "https://www.wtatennis.com/tournaments/4291/itf-tennis-europe-25-000-h/2019/scores",
       "matches": [
         {
           "round": "R32",
@@ -7500,7 +7502,7 @@
       "outcome": "Lost in the round of 16",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4456/itf-tennis-europe-25-000",
+      "url": "https://www.wtatennis.com/tournaments/4456/itf-tennis-europe-25-000/2019/scores",
       "matches": [
         {
           "round": "R32",
@@ -7572,7 +7574,7 @@
       "outcome": "Lost in the quarterfinal",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4223/itf-tennis-europe-25-000",
+      "url": "https://www.wtatennis.com/tournaments/4223/itf-tennis-europe-25-000/2019/scores",
       "matches": [
         {
           "round": "R32",
@@ -7657,7 +7659,7 @@
       "outcome": "Lost in the round of 32",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/2774/itf-tennis-europe-25-000",
+      "url": "https://www.wtatennis.com/tournaments/2774/itf-tennis-europe-25-000/2019/scores",
       "matches": [
         {
           "round": "R32",
@@ -7716,7 +7718,7 @@
       "outcome": "Lost in the round of 32",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/2768/itf-tennis-europe-25-000",
+      "url": "https://www.wtatennis.com/tournaments/2768/itf-tennis-europe-25-000/2019/scores",
       "matches": [
         {
           "round": "R32",
@@ -7775,7 +7777,7 @@
       "outcome": "Lost in the round of 32",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4430/itf-tennis-europe-25-000",
+      "url": "https://www.wtatennis.com/tournaments/4430/itf-tennis-europe-25-000/2019/scores",
       "matches": [
         {
           "round": "R16",
@@ -7821,7 +7823,7 @@
       "outcome": "Lost in qualifying",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/1031/itf-tennis-europe-25-000",
+      "url": "https://www.wtatennis.com/tournaments/1031/itf-tennis-europe-25-000/2019/scores",
       "matches": [
         {
           "round": "R32",
@@ -7854,7 +7856,7 @@
       "outcome": "Lost in the round of 32",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4400/itf-tennis-europe-15-000",
+      "url": "https://www.wtatennis.com/tournaments/4400/itf-tennis-europe-15-000/2019/scores",
       "matches": [
         {
           "round": "R32",
@@ -7887,7 +7889,7 @@
       "outcome": "Lost in the quarterfinal",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4387/itf-25-000",
+      "url": "https://www.wtatennis.com/tournaments/4387/itf-25-000/2019/scores",
       "matches": [
         {
           "round": "R32",
@@ -7972,7 +7974,7 @@
       "outcome": "Lost in the round of 16",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4377/itf-tennis-15-000",
+      "url": "https://www.wtatennis.com/tournaments/4377/itf-tennis-15-000/2019/scores",
       "matches": [
         {
           "round": "R32",
@@ -8018,7 +8020,7 @@
       "outcome": "Lost in the round of 16",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4376/itf-tennis-15-000",
+      "url": "https://www.wtatennis.com/tournaments/4376/itf-tennis-15-000/2019/scores",
       "matches": [
         {
           "round": "R32",
@@ -8064,7 +8066,7 @@
       "outcome": "Lost in the round of 32",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/930/itf-tennis-europe-15-000",
+      "url": "https://www.wtatennis.com/tournaments/930/itf-tennis-europe-15-000/2019/scores",
       "matches": [
         {
           "round": "R32",
@@ -8097,7 +8099,7 @@
       "outcome": "Lost in the round of 16",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4253/itf-tennis-europe-15-000",
+      "url": "https://www.wtatennis.com/tournaments/4253/itf-tennis-europe-15-000/2019/scores",
       "matches": [
         {
           "round": "R32",
@@ -8143,7 +8145,7 @@
       "outcome": "Finalist",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/217/itf-tennis-europe-15-000",
+      "url": "https://www.wtatennis.com/tournaments/217/itf-tennis-europe-15-000/2018/scores",
       "matches": [
         {
           "round": "R32",
@@ -8228,7 +8230,7 @@
       "outcome": "Lost in the round of 16",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4243/itf-15-000",
+      "url": "https://www.wtatennis.com/tournaments/4243/itf-15-000/2018/scores",
       "matches": [
         {
           "round": "R32",
@@ -8274,7 +8276,7 @@
       "outcome": "Lost in the round of 16",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4232/itf-15-000",
+      "url": "https://www.wtatennis.com/tournaments/4232/itf-15-000/2018/scores",
       "matches": [
         {
           "round": "R32",
@@ -8320,7 +8322,7 @@
       "outcome": "Lost in the round of 32",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/1059/taipei-oec-open",
+      "url": "https://www.wtatennis.com/tournaments/1059/taipei-oec-open/2018/scores",
       "matches": [
         {
           "round": "R32",
@@ -8353,7 +8355,7 @@
       "outcome": "Lost in the quarterfinal",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4359/itf-15-000",
+      "url": "https://www.wtatennis.com/tournaments/4359/itf-15-000/2018/scores",
       "matches": [
         {
           "round": "R32",
@@ -8412,7 +8414,7 @@
       "outcome": "Lost in the semifinal",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/2510/itf-15-000",
+      "url": "https://www.wtatennis.com/tournaments/2510/itf-15-000/2018/scores",
       "matches": [
         {
           "round": "R32",
@@ -8484,7 +8486,7 @@
       "outcome": "Lost in the round of 32",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/2693/itf-15-000",
+      "url": "https://www.wtatennis.com/tournaments/2693/itf-15-000/2018/scores",
       "matches": [
         {
           "round": "R32",
@@ -8517,7 +8519,7 @@
       "outcome": "Lost in the round of 16",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/545/itf-15-000",
+      "url": "https://www.wtatennis.com/tournaments/545/itf-15-000/2018/scores",
       "matches": [
         {
           "round": "R32",
@@ -8563,7 +8565,7 @@
       "outcome": "Lost in the round of 16",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4165/itf-15-000",
+      "url": "https://www.wtatennis.com/tournaments/4165/itf-15-000/2018/scores",
       "matches": [
         {
           "round": "R32",
@@ -8609,7 +8611,7 @@
       "outcome": "Lost in the quarterfinal",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/739/itf-15-000",
+      "url": "https://www.wtatennis.com/tournaments/739/itf-15-000/2018/scores",
       "matches": [
         {
           "round": "R32",
@@ -8668,7 +8670,7 @@
       "outcome": "Lost in the quarterfinal",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4253/itf-tennis-europe-15-000",
+      "url": "https://www.wtatennis.com/tournaments/4253/itf-tennis-europe-15-000/2018/scores",
       "matches": [
         {
           "round": "R64",
@@ -8766,7 +8768,7 @@
       "outcome": "Lost in qualifying",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/1096/taiwan-open",
+      "url": "https://www.wtatennis.com/tournaments/1096/taiwan-open/2018/scores",
       "matches": [
         {
           "round": "R32",
@@ -8799,7 +8801,7 @@
       "outcome": "Lost in qualifying",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/4290/itf-15-000",
+      "url": "https://www.wtatennis.com/tournaments/4290/itf-15-000/2017/scores",
       "matches": [
         {
           "round": "R32",
@@ -8832,7 +8834,7 @@
       "outcome": "Lost in the quarterfinal",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/690/itf-tennis-europe-15-000",
+      "url": "https://www.wtatennis.com/tournaments/690/itf-tennis-europe-15-000/2017/scores",
       "matches": [
         {
           "round": "R32",
@@ -8917,7 +8919,7 @@
       "outcome": "Lost in qualifying",
       "champion": false,
       "inProgress": false,
-      "url": "https://www.wtatennis.com/tournaments/2694/itf-tennis-europe-10-000",
+      "url": "https://www.wtatennis.com/tournaments/2694/itf-tennis-europe-10-000/2016/scores",
       "matches": [
         {
           "round": "R32",
