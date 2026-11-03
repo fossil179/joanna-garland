@@ -135,7 +135,7 @@ function renderHeader() {
   const moveClass = movement < 0 ? "down" : movement > 0 ? "up" : "";
   document.querySelector("#rank-block").innerHTML = `
     <span class="number">${esc(player.ranking)}</span>
-    <span class="rank-caption">WTA ranking</span>
+    <span class="rank-caption"><a href="${esc(player.links.wtaRankings || "https://www.wtatennis.com/rankings/singles")}" target="_blank" rel="noreferrer">WTA ranking</a></span>
     <span class="rank-move ${moveClass}">(${esc(movementText(movement, player.rankedAt))})</span>
     <span class="rank-points">${esc(player.points)} pts</span>
   `;
@@ -354,6 +354,21 @@ function renderResults() {
   paintResults();
 }
 
+function renderNews() {
+  const articles = Array.isArray(data.news) ? data.news : [];
+  const items = articles.map((article) => {
+    const meta = [article.source, formatDay(article.published), article.language]
+      .filter(Boolean)
+      .join(" · ");
+    return `<li><a href="${esc(article.url)}" target="_blank" rel="noreferrer"><span class="news-title">${esc(article.title)}</span>${meta ? `<span class="news-meta">${esc(meta)}</span>` : ""}</a></li>`;
+  }).join("");
+  document.querySelector("#news").innerHTML = `
+    <h2 id="news-title">News</h2>
+    <p>Recent articles that mention her name.</p>
+    ${items ? `<ul class="news-list">${items}</ul>` : `<p class="news-empty">No recent articles turned up in the latest check.</p>`}
+  `;
+}
+
 function renderNotes() {
   const player = data.player;
   const notes = (data.notes || []).map((note) => `<li>${esc(note)}</li>`).join("");
@@ -372,6 +387,7 @@ function renderNotes() {
 function render() {
   renderHeader();
   renderSnapshot();
+  renderNews();
   renderSchedule();
   renderResults();
   renderNotes();

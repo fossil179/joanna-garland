@@ -31,6 +31,7 @@ LOOKAHEAD_DAYS = 140
 
 WTA_PROFILE = "https://www.wtatennis.com/players/326512/joanna-garland"
 WTA_MATCHES = "https://www.wtatennis.com/players/326512/joanna-garland/matches"
+WTA_RANKINGS = "https://www.wtatennis.com/rankings/singles"
 ITF_PROFILE = "https://www.world.tennis/en/players/joanna-garland/800446517/tpe/wt/s/overview/"
 ITF_ACTIVITY = "https://www.itftennis.com/en/players/joanna-garland/800446517/tpe/wt/s/activity/"
 ITF_ENTRIES = f"https://itf-entries.netlify.app/api/player/{ITF_ID}"
@@ -1227,8 +1228,172 @@ def merge_live_results(tournaments: list[dict], schedule: list[dict]) -> list[di
     return merged
 
 
+NEWS_LIMIT = 25
+BLOCKED_NEWS_HOSTS = (
+    "joannagarland.com",
+    "google.com",
+    "googleusercontent.com",
+    "bing.com",
+    "gdeltproject.org",
+    "facebook.com",
+    "instagram.com",
+    "twitter.com",
+    "x.com",
+    "tiktok.com",
+    "youtube.com",
+    "youtu.be",
+)
+
+
+def news_host(url: str) -> str:
+    host = urllib.parse.urlsplit(url).netloc.lower()
+    if host.startswith("www."):
+        host = host[4:]
+    return host
+
+
+def news_blocked(host: str) -> bool:
+    return any(host == blocked or host.endswith("." + blocked) for blocked in BLOCKED_NEWS_HOSTS)
+
+
+def news_published(value: str | None) -> str | None:
+    digits = re.sub(r"\D", "", value or "")
+    if len(digits) < 8:
+        return None
+    year, month, day = digits[0:4], digits[4:6], digits[6:8]
+    try:
+        return date(int(year), int(month), int(day)).isoformat()
+    except ValueError:
+        return None
+
+
+def previous_news() -> list[dict]:
+    if not DATA_PATH.exists():
+        return []
+    try:
+        saved = json.loads(DATA_PATH.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return []
+    articles = saved.get("news")
+    return articles if isinstance(articles, list) else []
+
+
+def parse_news(payload: dict) -> list[dict]:
+    seen = set()
+    articles = []
+    for item in payload.get("articles") or []:
+        if not isinstance(item, dict):
+            continue
+        url = str(item.get("url") or "").strip()
+        title = re.sub(r"\s+", " ", str(item.get("title") or "")).strip()
+        parsed = urllib.parse.urlsplit(url)
+        host = news_host(url)
+        if parsed.scheme not in {"http", "https"} or not host or not title or news_blocked(host):
+            continue
+        key = f"{host}{parsed.path.rstrip('/').lower()}"
+        if key in seen:
+            continue
+        seen.add(key)
+        language = str(item.get("language") or "").strip()
+        article = {
+            "title": title,
+            "url": url,
+            "source": host,
+            "published": news_published(item.get("seendate")),
+        }
+        if language and language.lower() != "english":
+            article["language"] = language
+        articles.append(article)
+    articles.sort(key=lambda article: article.get("published") or "", reverse=True)
+    return articles[:NEWS_LIMIT]
+
+
+def news_queries() -> list[dict]:
+    """Recent window, then three earlier 90-day windows.
+
+    Short windows stay within the public index's ordinary request size.
+    Together they cover about a year, which is still recent coverage.
+    """
+    base = {
+        "query": f'"{PLAYER_NAME}"',
+        "mode": "ArtList",
+        "maxrecords": "75",
+        "format": "json",
+        "sort": "DateDesc",
+    }
+    queries = [dict(base)]
+    end = datetime.now(timezone.utc).replace(hour=0, minute=0, second=0, microsecond=0)
+    for _ in range(3):
+        window_end = end - timedelta(days=90)
+        window_start = window_end - timedelta(days=90)
+        queries.append({
+            **base,
+            "startdatetime": window_start.strftime("%Y%m%d%H%M%S"),
+            "enddatetime": window_end.strftime("%Y%m%d%H%M%S"),
+        })
+        end = window_end
+    return queries
+
+
+def load_news_window(params: dict) -> dict:
+    query = urllib.parse.urlencode(params)
+    request = urllib.request.Request(
+        f"https://api.gdeltproject.org/api/v2/doc/doc?{query}",
+        headers={
+            "Accept": "application/json",
+            "User-Agent": "JoannaGarlandTracker/1.0 (personal schedule tracker)",
+        },
+    )
+    with urllib.request.urlopen(request, timeout=45, context=ssl.create_default_context()) as response:
+        payload = json.loads(response.read().decode("utf-8", "replace"))
+    if not isinstance(payload, dict) or "articles" not in payload:
+        raise ValueError("news index returned an unexpected response")
+    return payload
+
+
+def fetch_news() -> tuple[list[dict], str | None]:
+    """Latest articles whose text mentions her name.
+
+    The public news index covers recent coverage, not every story ever published.
+    A failed check keeps the previous list so one outage does not clear the page.
+    """
+    saved = previous_news()
+    collected = []
+    loaded = False
+    for index, params in enumerate(news_queries()):
+        if index:
+            time.sleep(6)
+        attempts = 2 if index == 0 else 1
+        window = None
+        for attempt in range(attempts):
+            try:
+                window = load_news_window(params)
+                break
+            except urllib.error.HTTPError as error:
+                if error.code == 429 and attempt + 1 < attempts:
+                    time.sleep(6)
+                    continue
+                window = None
+                break
+            except (urllib.error.URLError, TimeoutError, json.JSONDecodeError, ValueError):
+                window = None
+                break
+        if window is None:
+            break
+        loaded = True
+        collected.extend(window.get("articles") or [])
+    if loaded:
+        return parse_news({"articles": collected}), None
+    if saved:
+        return saved, "News articles could not be refreshed. The list is from the last successful check."
+    return [], "News articles could not be loaded."
+
+
 def build() -> dict:
     warnings = []
+    news, news_warning = fetch_news()
+    if news_warning:
+        warnings.append(news_warning)
     ranking = fetch_ranking()
     matches = fetch_matches()
     itf_entries, itf_error = fetch_itf_entries()
@@ -1262,6 +1427,7 @@ def build() -> dict:
             "links": {
                 "wta": WTA_PROFILE,
                 "wtaMatches": WTA_MATCHES,
+                "wtaRankings": WTA_RANKINGS,
                 "itf": ITF_PROFILE,
                 "itfActivity": ITF_ACTIVITY,
                 "itfEntries": f"https://itf-entries.netlify.app/player/{ITF_ID}",
@@ -1269,6 +1435,7 @@ def build() -> dict:
         },
         "summary": summary,
         "schedule": schedule,
+        "news": news,
         "tournaments": history,
         "coverage": {
             "wtaTournamentsChecked": len(wta_tournaments),
@@ -1300,6 +1467,7 @@ def main() -> None:
     playing = [item["name"] for item in payload["schedule"] if item["phase"] != "withdrawn"]
     print(f"Updated {DATA_PATH}")
     print(f"Rank {payload['player']['ranking']} · {payload['summary']['careerRecord']['played']} tournaments in the archive")
+    print(f"News: {len(payload.get('news') or [])} articles")
     print("Schedule:", ", ".join(playing) or "no active entries")
     if payload["warnings"]:
         print("Warnings:")
