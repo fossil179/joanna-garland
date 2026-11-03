@@ -407,8 +407,16 @@ def live_round_code(round_id: str, draw_size: int | None, qualifying: bool) -> s
     return "R32"
 
 
-def garland_won_live(match: dict) -> bool:
-    result = match.get("ResultString") or ""
+def garland_won_live(match: dict) -> bool | None:
+    """True or False only when the live feed has a finished result.
+
+    An unplayed match has no result string. That is not a loss.
+    """
+    if (match.get("MatchState") or "").upper() != "F":
+        return None
+    result = (match.get("ResultString") or "").strip()
+    if not result or not (match.get("ScoreString") or "").strip():
+        return None
     lowered = result.lower()
     if "garland d" in lowered or lowered.startswith("j. garland"):
         return True
@@ -419,7 +427,9 @@ def garland_won_live(match: dict) -> bool:
         return True
     if str(match.get("PlayerIDB")) == WTA_ID and winner in {"2", "B"}:
         return False
-    return "garland" in lowered and " d " in f" {lowered} " and lowered.find("garland") < lowered.find(" d ")
+    if "garland" in lowered and " d " in f" {lowered} ":
+        return lowered.find("garland") < lowered.find(" d ")
+    return None
 
 
 def live_opponent(match: dict) -> str:
@@ -1091,7 +1101,10 @@ def build_schedule(wta_entries: list[dict], itf_entries: list[dict], history_ids
                     }
                 )
             parsed.sort(key=lambda match: (match["order"], match["stamp"]))
-            played = [match for match in parsed if match.get("state") == "F" or match.get("score")]
+            played = [
+                match for match in parsed
+                if match.get("won") is not None and (match.get("score") or "").strip()
+            ]
             live_matches = played
             if played and still_in:
                 last = played[-1]

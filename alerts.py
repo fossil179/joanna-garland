@@ -60,6 +60,8 @@ def collect_matches(payload: dict | None) -> dict:
         for match in tournament.get("matches") or []:
             if not (match.get("opponent") or "").strip():
                 continue
+            if not (match.get("score") or "").strip():
+                continue
             found[match_key(tournament["id"], match)] = (tournament, match)
     return found
 
@@ -362,6 +364,7 @@ def _self_check() -> None:
                 "matches": [
                     {"round": "R32", "roundLabel": "Round of 32", "qualifying": False, "opponent": "Jil Teichmann", "won": True, "score": "6-3,6-4"},
                     {"round": "R16", "roundLabel": "Round of 16", "qualifying": False, "opponent": "A Player", "won": False, "score": "3-6,4-6"},
+                    {"round": "SF", "roundLabel": "Semifinal", "qualifying": False, "opponent": "Janice Tjen", "won": False, "score": ""},
                 ],
             }
         ],
