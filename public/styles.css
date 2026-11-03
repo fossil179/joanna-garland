@@ -143,6 +143,8 @@ h1 {
   cursor: pointer;
 }
 
+.update[hidden] { display: none; }
+
 .update {
   display: inline-flex;
   align-items: center;
