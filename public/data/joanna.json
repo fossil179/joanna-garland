@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-03T13:07:31+00:00",
+  "updatedAt": "2026-11-03T13:04:02+00:00",
   "player": {
     "name": "Joanna Garland",
     "country": "TPE",
@@ -117,6 +117,87 @@
       ],
       "historyId": null,
       "url": "https://www.wtatennis.com/tournaments/1148/chennai-open/2026"
+    },
+    {
+      "id": "itf-w-itf-aus-2026-015",
+      "tour": "ITF",
+      "name": "W75 Brisbane",
+      "level": "W75",
+      "city": "",
+      "country": "AUS",
+      "surface": "Hard",
+      "indoor": false,
+      "start": "2026-11-09",
+      "end": "2026-11-15",
+      "datesLabel": "09 Nov to 15 Nov 2026",
+      "phase": "upcoming",
+      "entryStatus": "Main draw direct acceptance",
+      "seed": null,
+      "acceptancePosition": 6,
+      "priority": 1,
+      "note": "",
+      "wtaRankAtEntry": 160,
+      "eliminated": false,
+      "stillIn": true,
+      "nextRound": null,
+      "nextMatch": null,
+      "liveMatches": [],
+      "historyId": null,
+      "url": "https://www.world.tennis/en/tournament/w75-brisbane/aus/2026/w-itf-aus-2026-015/"
+    },
+    {
+      "id": "itf-w-itf-aus-2026-014",
+      "tour": "ITF",
+      "name": "W75 Sydney",
+      "level": "W75",
+      "city": "",
+      "country": "AUS",
+      "surface": "Hard",
+      "indoor": false,
+      "start": "2026-11-16",
+      "end": "2026-11-22",
+      "datesLabel": "16 Nov to 22 Nov 2026",
+      "phase": "upcoming",
+      "entryStatus": "Main draw direct acceptance",
+      "seed": null,
+      "acceptancePosition": 4,
+      "priority": 1,
+      "note": "",
+      "wtaRankAtEntry": 155,
+      "eliminated": false,
+      "stillIn": true,
+      "nextRound": null,
+      "nextMatch": null,
+      "liveMatches": [],
+      "historyId": null,
+      "url": "https://www.world.tennis/en/tournament/w75-sydney/aus/2026/w-itf-aus-2026-014/"
+    },
+    {
+      "id": "itf-w-itf-jpn-2026-023",
+      "tour": "ITF",
+      "name": "W50 Yokohama",
+      "level": "W50",
+      "city": "",
+      "country": "JPN",
+      "surface": "Hard",
+      "indoor": false,
+      "start": "2026-11-09",
+      "end": "2026-11-15",
+      "datesLabel": "09 Nov to 15 Nov 2026",
+      "phase": "withdrawn",
+      "entryStatus": "Withdrawn",
+      "seed": null,
+      "acceptancePosition": 47,
+      "priority": 2,
+      "note": "W 23 Oct 2026",
+      "wtaRankAtEntry": 160,
+      "eliminated": false,
+      "stillIn": false,
+      "nextRound": null,
+      "nextMatch": null,
+      "liveMatches": [],
+      "historyId": null,
+      "url": "https://www.world.tennis/en/tournament/w50-yokohama/jpn/2026/w-itf-jpn-2026-023/"
     }
   ],
   "tournaments": [
@@ -1223,7 +1304,9 @@
           "date": "2025-10-12",
           "matchId": "RS021",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R16",
@@ -1237,7 +1320,9 @@
           "date": "2025-10-13",
           "matchId": "RS010",
           "retirement": false,
-          "order": 2
+          "order": 2,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R32",
@@ -1251,7 +1336,9 @@
           "date": "2025-10-14",
           "matchId": "LS025",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -1285,7 +1372,9 @@
           "date": "2025-09-27",
           "matchId": "RS014",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "Q",
@@ -1299,7 +1388,9 @@
           "date": "2025-09-28",
           "matchId": "RS007",
           "retirement": false,
-          "order": 2
+          "order": 2,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R32",
@@ -1313,7 +1404,9 @@
           "date": "2025-10-01",
           "matchId": "LS023",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R16",
@@ -1327,7 +1420,15 @@
           "date": "2025-10-02",
           "matchId": "LS011",
           "retirement": false,
-          "order": 2
+          "order": 2,
+          "videos": [
+            {
+              "id": "v5K6gtsXTn4",
+              "title": "Caroline Dolehide vs Joanna Garland | Suzhou WTA125 2025",
+              "kind": "full"
+            }
+          ],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -1361,7 +1462,9 @@
           "date": "2025-09-22",
           "matchId": "RS045",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R32",
@@ -1375,7 +1478,9 @@
           "date": "2025-09-23",
           "matchId": "RS022",
           "retirement": false,
-          "order": 2
+          "order": 2,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -1409,7 +1514,9 @@
           "date": "2025-09-09",
           "matchId": "LS031",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R16",
@@ -1423,7 +1530,15 @@
           "date": "2025-09-11",
           "matchId": "LS015",
           "retirement": false,
-          "order": 2
+          "order": 2,
+          "videos": [
+            {
+              "id": "SLLhpn6aUD8",
+              "title": "Carole Monnet vs Joanna Garland | Huzhou Open 2025",
+              "kind": "full"
+            }
+          ],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -1457,7 +1572,9 @@
           "date": "2025-09-02",
           "matchId": "LS031",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R16",
@@ -1471,7 +1588,15 @@
           "date": "2025-09-03",
           "matchId": "LS015",
           "retirement": false,
-          "order": 2
+          "order": 2,
+          "videos": [
+            {
+              "id": "0LRmFFV7EHg",
+              "title": "Sara Saito vs Joanna Garland | Changsha Open 2025",
+              "kind": "full"
+            }
+          ],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "QF",
@@ -1485,7 +1610,15 @@
           "date": "2025-09-04",
           "matchId": "LS007",
           "retirement": false,
-          "order": 3
+          "order": 3,
+          "videos": [
+            {
+              "id": "mAa3vXJggbk",
+              "title": "Ekaterina Reyngold [Q] (RUS) vs Joanna Garland [2] (TPE) // 6-4 6-2 / W125 Changsha / Quarter-final",
+              "kind": "full"
+            }
+          ],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -1519,7 +1652,9 @@
           "date": "2025-08-18",
           "matchId": "RS63017963",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -1553,7 +1688,9 @@
           "date": "2025-06-24",
           "matchId": "RS61428023",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R64",
@@ -1567,7 +1704,9 @@
           "date": "2025-06-25",
           "matchId": "RS61448861",
           "retirement": false,
-          "order": 2
+          "order": 2,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R32",
@@ -1581,7 +1720,9 @@
           "date": "2025-06-26",
           "matchId": "RS61470011",
           "retirement": false,
-          "order": 3
+          "order": 3,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -1615,7 +1756,9 @@
           "date": "2025-06-07",
           "matchId": "RS025",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R16",
@@ -1629,7 +1772,9 @@
           "date": "2025-06-08",
           "matchId": "RS012",
           "retirement": false,
-          "order": 2
+          "order": 2,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R32",
@@ -1643,7 +1788,9 @@
           "date": "2025-06-10",
           "matchId": "LS018",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -1677,7 +1824,9 @@
           "date": "2025-05-19",
           "matchId": "RS60646047",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R64",
@@ -1691,7 +1840,9 @@
           "date": "2025-05-22",
           "matchId": "RS60678917",
           "retirement": false,
-          "order": 2
+          "order": 2,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R32",
@@ -1705,7 +1856,9 @@
           "date": "2025-05-23",
           "matchId": "RS60738285",
           "retirement": false,
-          "order": 3
+          "order": 3,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R128",
@@ -1719,7 +1872,9 @@
           "date": "2025-05-27",
           "matchId": "LS60762863",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R64",
@@ -1733,7 +1888,9 @@
           "date": "2025-05-29",
           "matchId": "LS60690799",
           "retirement": false,
-          "order": 2
+          "order": 2,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -1767,7 +1924,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R16",
@@ -1781,7 +1940,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 2
+          "order": 2,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "QF",
@@ -1795,7 +1956,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 3
+          "order": 3,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "SF",
@@ -1809,7 +1972,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 4
+          "order": 4,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -1843,7 +2008,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R16",
@@ -1857,7 +2024,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 2
+          "order": 2,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "QF",
@@ -1871,7 +2040,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 3
+          "order": 3,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "SF",
@@ -1885,7 +2056,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 4
+          "order": 4,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -1919,7 +2092,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R16",
@@ -1933,7 +2108,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 2
+          "order": 2,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "QF",
@@ -1947,7 +2124,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 3
+          "order": 3,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "SF",
@@ -1961,7 +2140,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 4
+          "order": 4,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "F",
@@ -1975,7 +2156,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 5
+          "order": 5,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -2009,7 +2192,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R16",
@@ -9441,9 +9626,7 @@
     "lookaheadDays": 140,
     "matchCount": 437
   },
-  "warnings": [
-    "ITF acceptance lists could not be loaded: HTTP Error 500: Internal Server Error"
-  ],
+  "warnings": [],
   "notes": [
     "ITF entries are acceptance-list spots. Priority 1 is her first-choice tournament that week. A direct acceptance can still change if players withdraw before the freeze.",
     "WTA entry lists are published tournament by tournament. This check covers WTA and WTA 125 events through the next few months, and only lists an event once her name is on it.",
