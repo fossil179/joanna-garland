@@ -1,0 +1,61 @@
+name: Daily schedule
+
+on:
+  schedule:
+    # 05:00 UTC, about 6:00 in the morning in Central Europe during winter.
+    - cron: "0 5 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Refresh schedule
+        id: refresh
+        run: python3 refresh.py
+        continue-on-error: true
+      - name: Note a missed refresh
+        if: steps.refresh.outcome == 'failure'
+        run: echo "Refresh failed. Publishing the last saved schedule." >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+      - name: Save the new schedule
+        continue-on-error: true
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/data/joanna.json
+          if git diff --staged --quiet; then
+            echo "Schedule is unchanged."
+          else
+            git commit -m "Update schedule"
+            git push
+          fi
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publish website
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Joanna Garland — schedule</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <a class="skip" href="#content">Skip to schedule</a>
+    <header class="top">
+      <div class="identity">
+        <p class="eyebrow">Singles tracker</p>
+        <h1>Joanna Garland</h1>
+        <p class="sub" id="identity-line">Chinese Taipei</p>
+      </div>
+      <div class="rank" id="rank-block" aria-live="polite"></div>
+      <div class="actions">
+        <p class="updated" id="updated">Loading schedule…</p>
+        <p class="cadence">Updates once a day</p>
+        <button type="button" class="update" id="refresh" hidden>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M20 12a8 8 0 1 1-2.2-5.5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <path d="M20 4v5h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+          Update
+        </button>
+      </div>
+    </header>
+
+    <section class="snapshot" id="snapshot" aria-label="Season snapshot"></section>
+
+    <nav class="views" aria-label="Sections">
+      <button type="button" id="tab-schedule" aria-pressed="true">Schedule</button>
+      <button type="button" id="tab-results" aria-pressed="false">Results</button>
+    </nav>
+
+    <main id="content">
+      <section id="schedule-view" aria-labelledby="tab-schedule"></section>
+      <section id="results-view" aria-labelledby="tab-results" hidden></section>
+    </main>
+
+    <footer id="notes"></footer>
+    <p class="status" id="status" role="status"></p>
+    <script src="app.js"></script>
+  </body>
+</html>
