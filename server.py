@@ -11,7 +11,7 @@ from pathlib import Path
 from refresh import DATA_PATH, build
 
 ROOT = Path(__file__).resolve().parent
-PUBLIC = ROOT / "docs"
+PUBLIC = ROOT / "public"
 HOST = "127.0.0.1"
 PORT = 8765
 

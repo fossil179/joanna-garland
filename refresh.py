@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Refresh Joanna Garland's schedule and results into docs/data/joanna.json.
+"""Refresh Joanna Garland's schedule and results into public/data/joanna.json.
 
 Uses the WTA site's public JSON feed for rankings, entry lists, and match
 history, and the public ITF acceptance-list feed for upcoming ITF entries.
@@ -19,7 +19,7 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
-DATA_PATH = ROOT / "docs" / "data" / "joanna.json"
+DATA_PATH = ROOT / "public" / "data" / "joanna.json"
 
 WTA_ID = "326512"
 ITF_ID = "800446517"
