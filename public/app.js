@@ -131,7 +131,6 @@ function movementText(movement, rankedAt) {
 
 function renderHeader() {
   const player = data.player;
-  document.querySelector("#identity-line").textContent = player.countryName;
   const movement = player.movement;
   const moveClass = movement < 0 ? "down" : movement > 0 ? "up" : "";
   document.querySelector("#rank-block").innerHTML = `
