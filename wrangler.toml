@@ -1,0 +1,9 @@
+name = "joanna-garland-alerts"
+main = "worker/index.js"
+compatibility_date = "2026-11-03"
+
+[vars]
+SEGMENT_ID = "1761733b-184b-4d58-a846-af05b8adda8a"
+TOPIC_STARTS = "273783dd-ac3c-45e1-acd3-ac0239dd003f"
+TOPIC_RESULTS = "d24bf9b3-69e6-4f63-9bf1-1da2fbdae7a8"
+SITE_URL = "https://fossil179.github.io/joanna-garland/"

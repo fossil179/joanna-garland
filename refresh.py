@@ -797,7 +797,15 @@ def build() -> dict:
 
 
 def main() -> None:
+    previous = None
+    if DATA_PATH.exists():
+        try:
+            previous = json.loads(DATA_PATH.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            previous = None
     payload = build()
+    import alerts
+    alerts.deliver(previous, payload)
     playing = [item["name"] for item in payload["schedule"] if item["phase"] != "withdrawn"]
     print(f"Updated {DATA_PATH}")
     print(f"Rank {payload['player']['ranking']} · {payload['summary']['careerRecord']['played']} tournaments in the archive")

@@ -43,6 +43,26 @@
 
     <section class="snapshot" id="snapshot" aria-label="Season snapshot"></section>
 
+    <section class="signup" id="alerts" aria-labelledby="alerts-title">
+      <div>
+        <h2 id="alerts-title">Get an email</h2>
+        <p>One note the morning before she starts a tournament, and one email for each singles result.</p>
+      </div>
+      <form id="alert-form">
+        <label class="email-label" for="alert-email">Email</label>
+        <input id="alert-email" name="email" type="email" autocomplete="email" required maxlength="254" placeholder="you@example.com" />
+        <fieldset>
+          <legend>Send me</legend>
+          <label><input type="checkbox" name="starts" /> When a tournament is about to start</label>
+          <label><input type="checkbox" name="results" /> Each result</label>
+        </fieldset>
+        <div class="company" aria-hidden="true">Company <input name="company" tabindex="-1" autocomplete="off" /></div>
+        <button type="submit">Send the confirmation</button>
+        <p class="signup-note" id="alert-message" role="status"></p>
+        <p class="signup-note" id="alert-pending" hidden>The form is ready. Confirmation emails start once a sending address is connected.</p>
+      </form>
+    </section>
+
     <nav class="views" aria-label="Sections">
       <button type="button" id="tab-schedule" aria-pressed="true">Schedule</button>
       <button type="button" id="tab-results" aria-pressed="false">Results</button>
@@ -55,6 +75,7 @@
 
     <footer id="notes"></footer>
     <p class="status" id="status" role="status"></p>
+    <script src="alerts-config.js"></script>
     <script src="app.js"></script>
   </body>
 </html>

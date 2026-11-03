@@ -372,6 +372,50 @@ refreshButton.addEventListener("click", async () => {
   }
 });
 
+const alertForm = document.querySelector("#alert-form");
+const alertMessage = document.querySelector("#alert-message");
+const alertPending = document.querySelector("#alert-pending");
+const alertConfig = window.GARLAND_ALERTS || {};
+if (!alertConfig.subscribeUrl) alertPending.hidden = false;
+
+alertForm.addEventListener("submit", async (event) => {
+  event.preventDefault();
+  const email = alertForm.email.value.trim();
+  const starts = alertForm.starts.checked;
+  const results = alertForm.results.checked;
+  alertMessage.textContent = "";
+  if (!starts && !results) {
+    alertMessage.textContent = "Choose at least one kind of email.";
+    return;
+  }
+  if (!alertConfig.subscribeUrl) {
+    alertMessage.textContent = "Confirmation emails are not connected yet.";
+    return;
+  }
+  const button = alertForm.querySelector("button");
+  button.disabled = true;
+  try {
+    const response = await fetch(alertConfig.subscribeUrl.replace(/\/$/, "") + "/subscribe", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        email,
+        starts,
+        results,
+        company: alertForm.company.value,
+      }),
+    });
+    const payload = await response.json().catch(() => ({}));
+    if (!response.ok) throw new Error(payload.error || "The confirmation email could not be sent.");
+    alertForm.reset();
+    alertMessage.textContent = "Check your email and open the confirmation link. It lasts two days.";
+  } catch (error) {
+    alertMessage.textContent = error.message;
+  } finally {
+    button.disabled = false;
+  }
+});
+
 load().catch((error) => {
   scheduleView.innerHTML = `<div class="empty"><p>${esc(error.message)}</p></div>`;
   updatedLine.textContent = "No saved schedule";

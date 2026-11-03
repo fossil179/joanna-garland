@@ -18,3 +18,5 @@ Official pages remain the source of record:
 - [ITF profile](https://www.world.tennis/en/players/joanna-garland/800446517/tpe/wt/s/overview/)
 
 ITF spots come from the public acceptance-list feed. Priority 1 is her first-choice tournament that week. WTA events show up once the tournament publishes her on the entry list.
+
+The page can send two kinds of email: one the morning before a tournament starts (or that morning, if the day before was missed), and one for each new singles result. Someone has to confirm from their own inbox before they are added. Addresses stay with the email service and are not stored in this repository.

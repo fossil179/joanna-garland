@@ -72,7 +72,7 @@ body {
 
 .skip:focus { top: 12px; }
 
-.top, .snapshot, .views, main, footer {
+.top, .snapshot, .signup, .views, main, footer {
   width: min(1120px, calc(100% - 32px));
   margin-inline: auto;
 }
@@ -169,6 +169,93 @@ h1 {
   grid-template-columns: repeat(4, 1fr);
   gap: 12px;
   margin-bottom: 22px;
+}
+
+.signup {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(16rem, 0.9fr);
+  gap: 28px;
+  align-items: start;
+  margin-bottom: 28px;
+  padding: 22px 24px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+.signup h2 {
+  margin: 0 0 8px;
+  font-family: "Bebas Neue", "Arial Narrow", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+
+.signup p { margin: 0; color: var(--muted); }
+
+.signup form { display: grid; gap: 10px; }
+
+.email-label, .signup legend {
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.signup input[type="email"] {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--bg);
+  color: var(--ink);
+  font: inherit;
+  padding: 12px 14px;
+}
+
+.signup fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.signup fieldset label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+}
+
+.signup input[type="checkbox"] {
+  width: 1.15rem;
+  height: 1.15rem;
+  accent-color: var(--accent);
+}
+
+.signup button {
+  justify-self: start;
+  border: 0;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font: inherit;
+  font-weight: 600;
+  padding: 12px 18px;
+  cursor: pointer;
+}
+
+.signup button:disabled { opacity: 0.7; cursor: progress; }
+
+.signup-note { min-height: 1.2em; font-size: 0.95rem; }
+
+.company {
+  position: absolute;
+  left: -9999px;
+  height: 0;
+  overflow: hidden;
 }
 
 .stat {
@@ -404,7 +491,7 @@ button:focus-visible, a:focus-visible, summary:focus-visible, input:focus-visibl
 }
 
 @media (max-width: 800px) {
-  .top, .snapshot { grid-template-columns: 1fr; }
+  .top, .snapshot, .signup { grid-template-columns: 1fr; }
   .actions, .updated, .cadence { align-items: flex-start; text-align: left; }
   .event { grid-template-columns: 1fr; }
   .when { flex-direction: row; justify-content: space-between; align-items: baseline; text-align: left; }
