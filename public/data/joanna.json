@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-03T12:56:12+00:00",
+  "updatedAt": "2026-11-03T13:07:31+00:00",
   "player": {
     "name": "Joanna Garland",
     "country": "TPE",
@@ -150,7 +150,9 @@
           "date": "2026-11-03",
           "matchId": "LS017",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -184,7 +186,9 @@
           "date": "2026-10-24",
           "matchId": "RS025",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R16",
@@ -198,7 +202,9 @@
           "date": "2026-10-25",
           "matchId": "RS012",
           "retirement": false,
-          "order": 2
+          "order": 2,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -232,7 +238,9 @@
           "date": "2026-09-19",
           "matchId": "RS008",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "Q",
@@ -246,7 +254,9 @@
           "date": "2026-09-20",
           "matchId": "RS004",
           "retirement": false,
-          "order": 2
+          "order": 2,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R32",
@@ -260,7 +270,9 @@
           "date": "2026-09-21",
           "matchId": "LS025",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R16",
@@ -274,7 +286,15 @@
           "date": "2026-09-24",
           "matchId": "LS012",
           "retirement": false,
-          "order": 2
+          "order": 2,
+          "videos": [
+            {
+              "id": "4I6d_2Evv-s",
+              "title": "Wang Xinyu vs. Joanna Garland | 2026 Singapore Round of 16 | WTA Match Highlights",
+              "kind": "highlights"
+            }
+          ],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -308,7 +328,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -342,7 +364,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R16",
@@ -356,7 +380,15 @@
           "date": "",
           "matchId": "",
           "retirement": true,
-          "order": 2
+          "order": 2,
+          "videos": [
+            {
+              "id": "VIAPNuZLq2M",
+              "title": "Joanna Garland vs Anastasia Kulikova Highlights | W75 Tianjin R16",
+              "kind": "highlights"
+            }
+          ],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "QF",
@@ -370,7 +402,20 @@
           "date": "",
           "matchId": "",
           "retirement": true,
-          "order": 3
+          "order": 3,
+          "videos": [
+            {
+              "id": "cM-xLqquiWg",
+              "title": "Joanna Garland vs Viktoria Morvayova Highlights | W75 Tianjin Quarterfinals",
+              "kind": "highlights"
+            },
+            {
+              "id": "fhC0D6ULOas",
+              "title": "Joanna Garland vs Viktoria Morvayova | W75 Tianjin | 04 September 2026",
+              "kind": "full"
+            }
+          ],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "SF",
@@ -384,7 +429,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 4
+          "order": 4,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "F",
@@ -398,7 +445,15 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 5
+          "order": 5,
+          "videos": [
+            {
+              "id": "pSbvhxr9MkU",
+              "title": "Joanna Garland vs Darya Astakhova Highlights | W75 Tianjin Final",
+              "kind": "highlights"
+            }
+          ],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -432,7 +487,9 @@
           "date": "2026-08-25",
           "matchId": "RS73997468",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R64",
@@ -446,7 +503,9 @@
           "date": "2026-08-26",
           "matchId": "RS74071996",
           "retirement": false,
-          "order": 2
+          "order": 2,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R32",
@@ -460,7 +519,9 @@
           "date": "2026-08-28",
           "matchId": "RS74106428",
           "retirement": false,
-          "order": 3
+          "order": 3,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -494,7 +555,9 @@
           "date": "2026-06-23",
           "matchId": "RS72286270",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R64",
@@ -508,7 +571,9 @@
           "date": "2026-06-24",
           "matchId": "RS72304178",
           "retirement": false,
-          "order": 2
+          "order": 2,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -542,7 +607,9 @@
           "date": "2026-06-06",
           "matchId": "RS015",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "Q",
@@ -556,7 +623,9 @@
           "date": "2026-06-07",
           "matchId": "RS007",
           "retirement": false,
-          "order": 2
+          "order": 2,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -590,7 +659,9 @@
           "date": "2026-06-02",
           "matchId": "LS025",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -624,7 +695,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R16",
@@ -638,7 +711,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 2
+          "order": 2,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -672,7 +747,9 @@
           "date": "2026-05-18",
           "matchId": "RS71557804",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -706,7 +783,9 @@
           "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -740,7 +819,15 @@
           "date": "2026-03-02",
           "matchId": "RS047",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [
+            {
+              "id": "vLBlJQkXPBE",
+              "title": "Joanna Garland vs Taylor Townsend \ud83c\udfbeLIVE TENNIS WTA INDIAN WELLS USA OPEN 2026 | Qualifying Round",
+              "kind": "full"
+            }
+          ],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -774,7 +861,9 @@
           "date": "2026-02-21",
           "matchId": "RS026",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R16",
@@ -788,7 +877,9 @@
           "date": "2026-02-22",
           "matchId": "RS013",
           "retirement": false,
-          "order": 2
+          "order": 2,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -822,7 +913,15 @@
           "date": "2026-01-27",
           "matchId": "LS027",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [
+            {
+              "id": "kEMjw5Ky1hw",
+              "title": "Joanna Garland Vs Solana Sierra \ud83c\udfbeLIVE TENNIS WTA 125K Philippine Open 2026 | Round Of 32",
+              "kind": "full"
+            }
+          ],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -856,7 +955,15 @@
           "date": "2026-01-12",
           "matchId": "RS67662464",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [
+            {
+              "id": "B-HWWoPvS44",
+              "title": "Anhelina Kalinina v Joanna Garland Highlights | Australian Open 2026 Qualifying First Round",
+              "kind": "highlights"
+            }
+          ],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -890,7 +997,9 @@
           "date": "2026-01-05",
           "matchId": "LS023",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R16",
@@ -904,7 +1013,9 @@
           "date": "2026-01-07",
           "matchId": "LS011",
           "retirement": true,
-          "order": 2
+          "order": 2,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "QF",
@@ -918,7 +1029,9 @@
           "date": "2026-01-08",
           "matchId": "LS005",
           "retirement": false,
-          "order": 3
+          "order": 3,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "SF",
@@ -932,7 +1045,9 @@
           "date": "2026-01-08",
           "matchId": "LS002",
           "retirement": false,
-          "order": 4
+          "order": 4,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "F",
@@ -946,7 +1061,15 @@
           "date": "2026-01-10",
           "matchId": "LS001",
           "retirement": false,
-          "order": 5
+          "order": 5,
+          "videos": [
+            {
+              "id": "65Ld8vn6n1o",
+              "title": "Final Match: Polina Kudermetova vs Joanna Garland | Finals | Canberra International - Australia",
+              "kind": "full"
+            }
+          ],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -980,7 +1103,9 @@
           "date": "2025-10-29",
           "matchId": "LS030",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "R16",
@@ -994,7 +1119,9 @@
           "date": "2025-10-30",
           "matchId": "LS015",
           "retirement": false,
-          "order": 2
+          "order": 2,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "QF",
@@ -1008,7 +1135,9 @@
           "date": "2025-10-31",
           "matchId": "LS007",
           "retirement": false,
-          "order": 3
+          "order": 3,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         },
         {
           "round": "SF",
@@ -1022,7 +1151,9 @@
           "date": "2025-11-01",
           "matchId": "LS003",
           "retirement": false,
-          "order": 4
+          "order": 4,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         }
       ]
     },
@@ -1056,7 +1187,9 @@
           "date": "2025-10-19",
           "matchId": "RS017",
           "retirement": false,
-          "order": 1
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-03"
         }
       ]
     },

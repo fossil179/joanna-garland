@@ -13,6 +13,7 @@ import re
 import ssl
 import time
 import urllib.error
+import urllib.parse
 import urllib.request
 from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor
@@ -694,6 +695,230 @@ def dates_by_opponent(year: str, number: str) -> dict:
     return found
 
 
+VIDEO_REJECT = (
+    "simulation", "gameplay", "preview", "interview", "reaction", "practice",
+    "sit-down", "sit down", "live score", "breaks silence", "speechless",
+    "shocks", "shocked", "unbelievable", "point slam", "hottest", "beauties",
+)
+VIDEO_GENERIC = {
+    "open", "international", "tennis", "presented", "championships", "workday",
+    "women", "womens", "the", "wta", "itf", "bnp", "paribas", "lexus", "group",
+}
+VIDEO_OFFICIAL = {
+    "wta", "australian open", "roland-garros", "roland garros", "us open",
+    "wimbledon", "tennis channel", "tennis tv",
+}
+
+
+def tournament_tokens(tournament: dict) -> list[str]:
+    text = f"{tournament.get('name') or ''} {tournament.get('city') or ''}"
+    tokens = []
+    for word in re.findall(r"[A-Za-z]{4,}", text):
+        token = word.casefold()
+        if token not in VIDEO_GENERIC:
+            tokens.append(token)
+    return tokens
+
+
+def duration_seconds(value: str) -> int:
+    parts = (value or "").split(":")
+    if not parts or any(not part.isdigit() for part in parts):
+        return 0
+    total = 0
+    for part in parts:
+        total = total * 60 + int(part)
+    return total
+
+
+def youtube_search(query: str) -> list[dict]:
+    url = "https://www.youtube.com/results?search_query=" + urllib.parse.quote(query)
+    request = urllib.request.Request(
+        url,
+        headers={"User-Agent": "Mozilla/5.0", "Accept-Language": "en"},
+    )
+    with urllib.request.urlopen(request, timeout=25, context=ssl.create_default_context()) as response:
+        html = response.read().decode("utf-8", "replace")
+    match = re.search(r"ytInitialData\s*=\s*(\{.*?\});</script>", html)
+    if not match:
+        return []
+    payload = json.loads(match.group(1))
+    found = []
+    seen = set()
+
+    def walk(node):
+        if isinstance(node, dict):
+            renderer = node.get("videoRenderer")
+            if isinstance(renderer, dict) and renderer.get("videoId"):
+                video_id = renderer["videoId"]
+                if video_id not in seen:
+                    seen.add(video_id)
+                    title_node = renderer.get("title") or {}
+                    if title_node.get("runs"):
+                        title = "".join(part.get("text") or "" for part in title_node["runs"])
+                    else:
+                        title = title_node.get("simpleText") or ""
+                    owner_node = renderer.get("ownerText") or {}
+                    if owner_node.get("runs"):
+                        owner = "".join(part.get("text") or "" for part in owner_node["runs"])
+                    else:
+                        owner = owner_node.get("simpleText") or ""
+                    length = (renderer.get("lengthText") or {}).get("simpleText") or ""
+                    found.append(
+                        {
+                            "id": video_id,
+                            "title": title,
+                            "author": owner,
+                            "seconds": duration_seconds(length),
+                        }
+                    )
+            for value in node.values():
+                walk(value)
+        elif isinstance(node, list):
+            for value in node:
+                walk(value)
+
+    walk(payload)
+    return found
+
+
+def video_kind(item: dict) -> str:
+    title = item["title"].casefold()
+    if "highlight" in title:
+        return "highlights"
+    if "full match" in title:
+        return "full"
+    if item["seconds"] >= 20 * 60 and " vs " in f" {title} ":
+        return "full"
+    if "game, set, match" in title or "game set match" in title:
+        return "highlights"
+    return ""
+
+
+def video_matches(item: dict, tournament: dict, match: dict) -> bool:
+    title = item["title"].casefold()
+    if "garland" not in title:
+        return False
+    if any(phrase in title for phrase in VIDEO_REJECT):
+        return False
+    if not video_kind(item):
+        return False
+    last = last_name(match.get("opponent") or "")
+    if len(last) < 4 or not re.search(rf"\b{re.escape(last)}\b", title):
+        return False
+    years = {int(year) for year in re.findall(r"\b20\d{2}\b", item["title"])}
+    match_year = int(tournament["year"]) if str(tournament.get("year") or "").isdigit() else None
+    if years and match_year not in years:
+        return False
+    tokens = tournament_tokens(tournament)
+    name = (tournament.get("name") or "").casefold()
+    if "us open" in name:
+        tokens.append("us open")
+    if tokens and not any(token in title for token in tokens):
+        return False
+    if not tokens and not years:
+        return False
+    return True
+
+
+def choose_videos(results: list[dict], tournament: dict, match: dict) -> list[dict]:
+    ranked = {"highlights": [], "full": []}
+    for index, item in enumerate(results):
+        if not video_matches(item, tournament, match):
+            continue
+        kind = video_kind(item)
+        official = item["author"].casefold() in VIDEO_OFFICIAL
+        score = (2 if official else 0) - index
+        ranked[kind].append((score, item))
+    chosen = []
+    for kind in ("highlights", "full"):
+        if not ranked[kind]:
+            continue
+        ranked[kind].sort(key=lambda pair: pair[0], reverse=True)
+        item = ranked[kind][0][1]
+        chosen.append({"id": item["id"], "title": item["title"], "kind": kind})
+    return chosen
+
+
+def saved_videos() -> dict:
+    if not DATA_PATH.exists():
+        return {}
+    try:
+        saved = json.loads(DATA_PATH.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return {}
+    found = {}
+    for tournament in saved.get("tournaments") or []:
+        for match in tournament.get("matches") or []:
+            if "videosChecked" not in match:
+                continue
+            key = (
+                tournament.get("id"),
+                match.get("round"),
+                (match.get("opponent") or "").casefold(),
+                bool(match.get("qualifying")),
+            )
+            found[key] = {
+                "videos": match.get("videos") or [],
+                "videosChecked": match.get("videosChecked") or "",
+            }
+    return found
+
+
+def attach_videos(tournaments: list[dict], limit: int = 40) -> None:
+    known = saved_videos()
+    pending = []
+    for tournament in tournaments:
+        for match in tournament.get("matches") or []:
+            key = (
+                tournament.get("id"),
+                match.get("round"),
+                (match.get("opponent") or "").casefold(),
+                bool(match.get("qualifying")),
+            )
+            saved = known.get(key)
+            if saved:
+                match["videos"] = saved["videos"]
+                match["videosChecked"] = saved["videosChecked"]
+            played = parse_date(match.get("date")) or parse_date(tournament.get("start"))
+            recent = played is not None and (TODAY - played).days <= 14
+            checked = match.get("videosChecked")
+            has_video = bool(match.get("videos"))
+            if checked and has_video:
+                continue
+            if checked and not recent:
+                continue
+            if checked == TODAY.isoformat() and not has_video:
+                continue
+            pending.append((played or date.min, tournament, match))
+    pending.sort(key=lambda item: item[0], reverse=True)
+    for _, tournament, match in pending[:limit]:
+        opponent = match.get("opponent") or ""
+        query = " ".join(
+            part for part in ("Joanna Garland", opponent, str(tournament.get("year") or "")) if part
+        )
+        try:
+            results = youtube_search(query)
+        except (urllib.error.URLError, TimeoutError, json.JSONDecodeError, ValueError):
+            continue
+        match["videos"] = choose_videos(results, tournament, match)
+        match["videosChecked"] = TODAY.isoformat()
+        time.sleep(0.3)
+
+
+def copy_videos_to_schedule(tournaments: list[dict], schedule: list[dict]) -> None:
+    found = {}
+    for tournament in tournaments:
+        for match in tournament.get("matches") or []:
+            if match.get("videos"):
+                found[(tournament.get("id"), (match.get("opponent") or "").casefold(), match.get("round"))] = match["videos"]
+    for event in schedule:
+        history_id = str(event.get("id") or "").replace("wta-", "")
+        for match in event.get("liveMatches") or []:
+            videos = found.get((history_id, (match.get("opponent") or "").casefold(), match.get("round")))
+            if videos:
+                match["videos"] = videos
+
+
 def attach_match_dates(tournaments: list[dict]) -> None:
     known = saved_match_dates()
     pending = []
@@ -978,6 +1203,8 @@ def build() -> dict:
     schedule = build_schedule(wta_entries, itf_entries, history_ids)
     history = merge_live_results(history, schedule)
     attach_match_dates(history)
+    attach_videos(history)
+    copy_videos_to_schedule(history, schedule)
     summary = summarize(history, TODAY.year)
     dob = "2001-07-16"
     payload = {
