@@ -15,6 +15,7 @@ import time
 import urllib.error
 import urllib.request
 from collections import defaultdict
+from concurrent.futures import ThreadPoolExecutor
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
@@ -456,6 +457,7 @@ def build_history(matches: list[dict]) -> list[dict]:
                     "opponentRank": rank,
                     "score": format_score(match, won),
                     "won": won,
+                    "date": "",
                     "retirement": match.get("reason_code") == "R",
                     "order": int(match.get("tourn_round") or 0),
                 }
@@ -545,6 +547,183 @@ def entry_status_label(code: str, entry_type: str | None = None) -> str:
     return cleaned or typed or "Entered"
 
 
+def name_parts(name: str) -> list[str]:
+    return [part for part in (name or "").replace(",", " ").split() if part]
+
+
+def last_name(name: str) -> str:
+    parts = name_parts(name)
+    return parts[-1].casefold() if parts else ""
+
+
+def name_keys(name: str) -> list[str]:
+    parts = [part.casefold() for part in name_parts(name)]
+    keys = []
+    for length in range(1, min(3, len(parts)) + 1):
+        keys.append(" ".join(parts[-length:]))
+    return keys
+
+
+def as_list(value):
+    if value is None:
+        return []
+    if isinstance(value, list):
+        return value
+    return [value]
+
+
+def upcoming_match(group_id: int, year: int, finished_names: set[str]) -> dict | None:
+    try:
+        payload = http_json(f"https://api.wtatennis.com/tennis/tournaments/{group_id}/{year}/oop")
+    except (urllib.error.URLError, TimeoutError, json.JSONDecodeError):
+        return None
+    raw = payload.get("orderOfPlay") or []
+    if not raw or not isinstance(raw[0], str):
+        return None
+    try:
+        schedule = json.loads(raw[0])
+    except json.JSONDecodeError:
+        return None
+    days = as_list((((schedule.get("OOP") or {}).get("Schedule") or {}).get("Day")))
+    found = []
+    for day in days:
+        for court in as_list(day.get("Court")):
+            matches = as_list((court.get("Matches") or {}).get("Match"))
+            for match in matches:
+                players = as_list(match.get("Players"))
+                names = []
+                ids = set()
+                for side in players:
+                    player = side.get("Player") or {}
+                    ids.add(str(player.get("id") or ""))
+                    names.append(player.get("PlayerDisplayLine") or player.get("SurName") or "")
+                possible = as_list((match.get("PossiblePlayersIdsInMatch") or {}).get("playerid"))
+                ids.update(str(item) for item in possible)
+                if WTA_ID not in ids:
+                    continue
+                opponent = ""
+                for side in players:
+                    player = side.get("Player") or {}
+                    if str(player.get("id") or "") != WTA_ID:
+                        opponent = " ".join(
+                            part for part in (player.get("FirstName") or "", player.get("SurName") or "") if part
+                        )
+                if not opponent:
+                    line = match.get("MatchupDisplayLine") or ""
+                    opponent = line
+                if last_name(opponent) in finished_names:
+                    continue
+                if (match.get("Status") or "").lower() == "completed":
+                    continue
+                found.append(
+                    {
+                        "date": day.get("ISODate") or "",
+                        "time": match.get("NotBefore") or "",
+                        "court": court.get("CourtName") or "",
+                        "opponent": opponent,
+                    }
+                )
+    found.sort(key=lambda item: item.get("date") or "9999")
+    return found[0] if found else None
+
+
+def saved_match_dates() -> dict:
+    if not DATA_PATH.exists():
+        return {}
+    try:
+        saved = json.loads(DATA_PATH.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return {}
+    found = {}
+    for tournament in saved.get("tournaments") or []:
+        for match in tournament.get("matches") or []:
+            if match.get("date"):
+                key = (
+                    tournament.get("id"),
+                    match.get("round"),
+                    (match.get("opponent") or "").casefold(),
+                    bool(match.get("qualifying")),
+                )
+                found[key] = match["date"]
+    return found
+
+
+def dates_by_opponent(year: str, number: str) -> dict:
+    year = str(year).strip()
+    number = str(number).strip()
+    if not year.isdigit() or not number.isdigit():
+        return {}
+    try:
+        payload = http_json(
+            f"https://api.wtatennis.com/tennis/tournaments/{number}/{year}/matches",
+            timeout=20,
+        )
+    except (urllib.error.URLError, TimeoutError, json.JSONDecodeError, ValueError):
+        return {}
+    found = {}
+    for match in payload.get("matches") or []:
+        ids = {str(match.get("PlayerIDA") or ""), str(match.get("PlayerIDB") or "")}
+        if WTA_ID not in ids:
+            continue
+        if str(match.get("PlayerIDB") or "") == WTA_ID:
+            name = match.get("PlayerNameLastA") or ""
+        else:
+            name = match.get("PlayerNameLastB") or ""
+        played = iso_date(match.get("MatchTimeStamp"))
+        if name and played:
+            for key in name_keys(name):
+                found.setdefault(key, []).append(played)
+    for dates in found.values():
+        dates.sort()
+    return found
+
+
+def attach_match_dates(tournaments: list[dict]) -> None:
+    known = saved_match_dates()
+    pending = []
+    for tournament in tournaments:
+        for match in tournament.get("matches") or []:
+            key = (
+                tournament.get("id"),
+                match.get("round"),
+                (match.get("opponent") or "").casefold(),
+                bool(match.get("qualifying")),
+            )
+            if key in known and not match.get("date"):
+                match["date"] = known[key]
+        if any(not match.get("date") for match in tournament.get("matches") or []):
+            pending.append(tournament)
+    if not pending:
+        return
+
+    def load(tournament: dict):
+        parts = str(tournament["id"]).split("-", 1)
+        if len(parts) != 2:
+            return tournament["id"], {}
+        return tournament["id"], dates_by_opponent(parts[0], parts[1])
+
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        looked_up = dict(pool.map(load, pending))
+    for tournament in pending:
+        used = {}
+        for match in tournament.get("matches") or []:
+            if match.get("date"):
+                continue
+            lookup = looked_up.get(tournament["id"], {})
+            keys = name_keys(match.get("opponent") or "")
+            chosen = ""
+            dates = []
+            for key in reversed(keys):
+                if lookup.get(key):
+                    chosen = key
+                    dates = lookup[key]
+                    break
+            index = used.get(chosen, 0)
+            if chosen and index < len(dates):
+                match["date"] = dates[index]
+                used[chosen] = index + 1
+
+
 def build_schedule(wta_entries: list[dict], itf_entries: list[dict], history_ids: set[str]) -> list[dict]:
     schedule = []
     seen_wta = set()
@@ -567,6 +746,7 @@ def build_schedule(wta_entries: list[dict], itf_entries: list[dict], history_ids
         seen_wta.add((year, group_id))
         live_matches = []
         next_round = None
+        next_match = None
         still_in = not bool(entry.get("eliminated"))
         if phase == "now":
             try:
@@ -595,6 +775,7 @@ def build_schedule(wta_entries: list[dict], itf_entries: list[dict], history_ids
                         "state": match.get("MatchState") or "",
                         "order": int(match.get("RoundID") or 0),
                         "stamp": match.get("MatchTimeStamp") or "",
+                        "date": iso_date(match.get("MatchTimeStamp")) or "",
                     }
                 )
             parsed.sort(key=lambda match: (match["order"], match["stamp"]))
@@ -607,6 +788,13 @@ def build_schedule(wta_entries: list[dict], itf_entries: list[dict], history_ids
                         index = ladder.index(last["round"])
                         if index + 1 < len(ladder):
                             next_round = ROUND_LABEL[ladder[index + 1]]
+            if still_in:
+                finished = {
+                    last_name(match["opponent"])
+                    for match in parsed
+                    if match.get("state") == "F" or match.get("score")
+                }
+                next_match = upcoming_match(group_id, year, finished)
         seed = (entry.get("seed") or "").strip() or None
         schedule.append(
             {
@@ -629,6 +817,7 @@ def build_schedule(wta_entries: list[dict], itf_entries: list[dict], history_ids
                 "eliminated": bool(entry.get("eliminated")),
                 "stillIn": still_in,
                 "nextRound": next_round,
+                "nextMatch": next_match,
                 "liveMatches": live_matches,
                 "historyId": f"{year}-{group_id}" if f"{year}-{group_id}" in history_ids else None,
                 "url": wta_tournament_url(group_id, tournament.get("title") or ""),
@@ -674,6 +863,7 @@ def build_schedule(wta_entries: list[dict], itf_entries: list[dict], history_ids
                 "eliminated": False,
                 "stillIn": phase != "withdrawn",
                 "nextRound": None,
+                "nextMatch": None,
                 "liveMatches": [],
                 "historyId": None,
                 "url": f"https://www.world.tennis{link}" if link else ITF_PROFILE,
@@ -705,6 +895,7 @@ def merge_live_results(tournaments: list[dict], schedule: list[dict]) -> list[di
                     "opponentRank": None,
                     "score": match.get("score") or "",
                     "won": match["won"],
+                    "date": match.get("date") or "",
                     "retirement": "ret" in (match.get("score") or "").lower(),
                     "order": match["order"],
                 }
@@ -756,6 +947,7 @@ def build() -> dict:
     history_ids = {item["id"] for item in history}
     schedule = build_schedule(wta_entries, itf_entries, history_ids)
     history = merge_live_results(history, schedule)
+    attach_match_dates(history)
     summary = summarize(history, TODAY.year)
     dob = "2001-07-16"
     payload = {

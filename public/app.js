@@ -40,7 +40,7 @@ function countryName(code) {
 }
 
 function parseDate(value) {
-  if (!value) return null;
+  if (!value || typeof value !== "string") return null;
   const [year, month, day] = value.slice(0, 10).split("-").map(Number);
   return new Date(year, month - 1, day);
 }
@@ -107,21 +107,38 @@ function percent(item) {
   return `${Math.round((wins / total) * 100)}%`;
 }
 
-function movementText(movement) {
-  if (movement === 0 || movement == null) return "No move";
-  if (movement < 0) return `Down ${Math.abs(movement)}`;
-  return `Up ${movement}`;
+function formatDay(value) {
+  const parsed = parseDate(value);
+  if (!parsed) return "";
+  return `${parsed.getDate()} ${MONTHS[parsed.getMonth()]} ${parsed.getFullYear()}`;
+}
+
+function previousRankingDay(rankedAt) {
+  const parsed = parseDate(rankedAt);
+  if (!parsed) return "";
+  parsed.setDate(parsed.getDate() - 7);
+  return `${parsed.getDate()} ${MONTHS[parsed.getMonth()]} ${parsed.getFullYear()}`;
+}
+
+function movementText(movement, rankedAt) {
+  const from = previousRankingDay(rankedAt);
+  const when = from ? ` from ${from}` : "";
+  if (movement === 0 || movement == null) return `unchanged${when}`;
+  const places = `${Math.abs(movement)} place${Math.abs(movement) === 1 ? "" : "s"}`;
+  if (movement < 0) return `down ${places}${when}`;
+  return `up ${places}${when}`;
 }
 
 function renderHeader() {
   const player = data.player;
-  document.querySelector("#identity-line").textContent =
-    `${player.countryName} · ${player.handed} · ${player.age}`;
+  document.querySelector("#identity-line").textContent = player.countryName;
   const movement = player.movement;
   const moveClass = movement < 0 ? "down" : movement > 0 ? "up" : "";
   document.querySelector("#rank-block").innerHTML = `
     <span class="number">${esc(player.ranking)}</span>
-    <span class="label"><span>WTA · ${esc(player.points)} pts</span><span class="${moveClass}">${esc(movementText(movement))}</span></span>
+    <span class="rank-caption">WTA ranking</span>
+    <span class="rank-move ${moveClass}">(${esc(movementText(movement, player.rankedAt))})</span>
+    <span class="rank-points">${esc(player.points)} pts</span>
   `;
   const when = new Date(data.updatedAt);
   updatedLine.textContent = `Updated ${when.toLocaleString(undefined, { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" })}`;
@@ -130,14 +147,10 @@ function renderHeader() {
 function renderSnapshot() {
   const season = data.summary.seasonRecord;
   const career = data.summary.careerRecord;
-  const surfaces = data.summary.seasonSurfaces || {};
-  const hard = surfaces.Hard || { wins: 0, losses: 0 };
-  const best = Object.entries(surfaces).sort((a, b) => (b[1].wins - b[1].losses) - (a[1].wins - a[1].losses))[0];
   document.querySelector("#snapshot").innerHTML = `
     <article class="stat"><span>${esc(data.summary.season)} record</span><strong>${record(season)}</strong><em>${esc(percent(season))} · published matches</em></article>
     <article class="stat"><span>${esc(data.summary.season)} titles</span><strong>${esc(season.titles)}</strong><em>${esc(data.tournaments.filter((item) => item.champion && item.year === data.summary.season).map((item) => item.city || item.name).join(" · ") || "WTA and ITF")}</em></article>
     <article class="stat"><span>Career</span><strong>${record(career)}</strong><em>${esc(career.titles)} titles · ${esc(career.played)} events</em></article>
-    <article class="stat"><span>This year on hard</span><strong>${record(hard)}</strong><em>${best ? `${esc(best[0])} leads the season` : "Surface split"}</em></article>
   `;
 }
 
@@ -146,7 +159,7 @@ function matchList(matches) {
   return `<ul class="matches">${matches.map((match) => `
     <li>
       <span class="mark ${match.won ? "win" : "loss"}">${match.won ? "W" : "L"}</span>
-      <span><strong>${esc(match.roundLabel)}</strong> vs ${esc(match.opponent)}${match.opponentCountry ? ` (${esc(match.opponentCountry)})` : ""}${match.opponentRank ? ` · No. ${esc(match.opponentRank)}` : ""}</span>
+      <span><strong>${esc(match.roundLabel)}</strong>${match.date ? ` · ${esc(formatDay(match.date))}` : ""} vs ${esc(match.opponent)}${match.opponentCountry ? ` (${esc(match.opponentCountry)})` : ""}${match.opponentRank ? ` · No. ${esc(match.opponentRank)}` : ""}</span>
       <span class="score">${esc(match.score)}</span>
     </li>`).join("")}</ul>`;
 }
@@ -164,6 +177,13 @@ function eventCard(event) {
   let extra = "";
   if (event.phase === "now" && event.stillIn && event.nextRound) {
     extra = `<p class="detail">Through to the ${esc(event.nextRound.toLowerCase())}</p>`;
+    if (event.nextMatch) {
+      const next = event.nextMatch;
+      const when = [formatDay(next.date), next.time, next.court, next.opponent ? `vs ${next.opponent}` : ""].filter(Boolean);
+      extra += `<p class="detail">Next match: ${esc(when.join(" · "))}</p>`;
+    } else {
+      extra += `<p class="detail">Next match: the ${esc(event.nextRound.toLowerCase())} is not on the order of play yet.</p>`;
+    }
   } else if (event.phase === "now" && event.eliminated) {
     extra = `<p class="detail">Out of the tournament</p>`;
   } else if (event.phase === "withdrawn" && event.note) {
@@ -245,6 +265,7 @@ function resultCards(filtered) {
         </div>
         <h3>${esc(item.name)}</h3>
         <p class="meta">${esc([item.city, countryName(item.country), formatRange(item.start, item.end)].filter(Boolean).join(" · "))}</p>
+        <p class="expand-hint">${item.matches.length} match${item.matches.length === 1 ? "" : "es"}</p>
       </summary>
       ${matchList(item.matches)}
       <p class="links"><a href="${esc(item.url)}" target="_blank" rel="noreferrer">Tournament page</a></p>
