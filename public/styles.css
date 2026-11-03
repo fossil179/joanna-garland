@@ -314,6 +314,8 @@ h1 {
   margin-bottom: 18px;
 }
 
+main { margin-bottom: 28px; }
+
 .views button {
   border: 1px solid var(--line);
   background: transparent;

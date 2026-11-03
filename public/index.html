@@ -41,6 +41,16 @@
       </div>
     </header>
 
+    <nav class="views" aria-label="Sections">
+      <button type="button" id="tab-schedule" aria-pressed="true">Schedule</button>
+      <button type="button" id="tab-results" aria-pressed="false">Results</button>
+    </nav>
+
+    <main id="content">
+      <section id="schedule-view" aria-labelledby="tab-schedule"></section>
+      <section id="results-view" aria-labelledby="tab-results" hidden></section>
+    </main>
+
     <section class="snapshot" id="snapshot" aria-label="Season snapshot"></section>
 
     <section class="signup" id="alerts" aria-labelledby="alerts-title">
@@ -62,16 +72,6 @@
         <p class="signup-note" id="alert-pending" hidden>The form is ready. Confirmation emails start once a sending address is connected.</p>
       </form>
     </section>
-
-    <nav class="views" aria-label="Sections">
-      <button type="button" id="tab-schedule" aria-pressed="true">Schedule</button>
-      <button type="button" id="tab-results" aria-pressed="false">Results</button>
-    </nav>
-
-    <main id="content">
-      <section id="schedule-view" aria-labelledby="tab-schedule"></section>
-      <section id="results-view" aria-labelledby="tab-results" hidden></section>
-    </main>
 
     <footer id="notes"></footer>
     <p class="status" id="status" role="status"></p>
