@@ -708,6 +708,9 @@ VIDEO_OFFICIAL = {
     "wta", "australian open", "roland-garros", "roland garros", "us open",
     "wimbledon", "tennis channel", "tennis tv",
 }
+VIDEO_BLOCKED_CHANNELS = {"pointbeaconlive"}
+VIDEO_BLOCKED_CHANNEL_IDS = {"UCRXTPqn_tgjwHw8zHletD9g"}
+VIDEO_BLOCKED_IDS = {"vLBlJQkXPBE", "kEMjw5Ky1hw"}
 
 
 def tournament_tokens(tournament: dict) -> list[str]:
@@ -728,6 +731,34 @@ def duration_seconds(value: str) -> int:
     for part in parts:
         total = total * 60 + int(part)
     return total
+
+
+def channel_key(value: str) -> str:
+    return re.sub(r"[^a-z0-9]", "", (value or "").casefold())
+
+
+def video_blocked(item: dict) -> bool:
+    if item.get("id") in VIDEO_BLOCKED_IDS:
+        return True
+    if (item.get("channelId") or "") in VIDEO_BLOCKED_CHANNEL_IDS:
+        return True
+    handle = (item.get("channel") or "").casefold().lstrip("@")
+    if handle in VIDEO_BLOCKED_CHANNELS:
+        return True
+    return channel_key(item.get("author") or "") in VIDEO_BLOCKED_CHANNELS
+
+
+def owner_details(renderer: dict) -> tuple[str, str, str]:
+    owner_node = renderer.get("ownerText") or {}
+    runs = owner_node.get("runs") or []
+    run = runs[0] if runs else {}
+    if runs:
+        owner = "".join(part.get("text") or "" for part in runs)
+    else:
+        owner = owner_node.get("simpleText") or ""
+    endpoint = (run.get("navigationEndpoint") or {}).get("browseEndpoint") or {}
+    handle = (endpoint.get("canonicalBaseUrl") or "").rstrip("/").split("/")[-1].lstrip("@")
+    return owner, handle, endpoint.get("browseId") or ""
 
 
 def youtube_search(query: str) -> list[dict]:
@@ -757,17 +788,15 @@ def youtube_search(query: str) -> list[dict]:
                         title = "".join(part.get("text") or "" for part in title_node["runs"])
                     else:
                         title = title_node.get("simpleText") or ""
-                    owner_node = renderer.get("ownerText") or {}
-                    if owner_node.get("runs"):
-                        owner = "".join(part.get("text") or "" for part in owner_node["runs"])
-                    else:
-                        owner = owner_node.get("simpleText") or ""
+                    owner, handle, channel_id = owner_details(renderer)
                     length = (renderer.get("lengthText") or {}).get("simpleText") or ""
                     found.append(
                         {
                             "id": video_id,
                             "title": title,
                             "author": owner,
+                            "channel": handle,
+                            "channelId": channel_id,
                             "seconds": duration_seconds(length),
                         }
                     )
@@ -795,6 +824,8 @@ def video_kind(item: dict) -> str:
 
 
 def video_matches(item: dict, tournament: dict, match: dict) -> bool:
+    if video_blocked(item):
+        return False
     title = item["title"].casefold()
     if "garland" not in title:
         return False
@@ -835,7 +866,14 @@ def choose_videos(results: list[dict], tournament: dict, match: dict) -> list[di
             continue
         ranked[kind].sort(key=lambda pair: pair[0], reverse=True)
         item = ranked[kind][0][1]
-        chosen.append({"id": item["id"], "title": item["title"], "kind": kind})
+        chosen.append(
+            {
+                "id": item["id"],
+                "title": item["title"],
+                "kind": kind,
+                "channel": item.get("channel") or "",
+            }
+        )
     return chosen
 
 
@@ -877,8 +915,10 @@ def attach_videos(tournaments: list[dict], limit: int = 40) -> None:
             )
             saved = known.get(key)
             if saved:
-                match["videos"] = saved["videos"]
-                match["videosChecked"] = saved["videosChecked"]
+                kept = [video for video in saved["videos"] if not video_blocked(video)]
+                match["videos"] = kept
+                if len(kept) == len(saved["videos"]):
+                    match["videosChecked"] = saved["videosChecked"]
             played = parse_date(match.get("date")) or parse_date(tournament.get("start"))
             recent = played is not None and (TODAY - played).days <= 14
             checked = match.get("videosChecked")

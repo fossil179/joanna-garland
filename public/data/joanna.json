@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-03T13:04:02+00:00",
+  "updatedAt": "2026-11-03T13:15:17+00:00",
   "player": {
     "name": "Joanna Garland",
     "country": "TPE",
@@ -901,13 +901,7 @@
           "matchId": "RS047",
           "retirement": false,
           "order": 1,
-          "videos": [
-            {
-              "id": "vLBlJQkXPBE",
-              "title": "Joanna Garland vs Taylor Townsend \ud83c\udfbeLIVE TENNIS WTA INDIAN WELLS USA OPEN 2026 | Qualifying Round",
-              "kind": "full"
-            }
-          ],
+          "videos": [],
           "videosChecked": "2026-11-03"
         }
       ]
@@ -995,13 +989,7 @@
           "matchId": "LS027",
           "retirement": false,
           "order": 1,
-          "videos": [
-            {
-              "id": "kEMjw5Ky1hw",
-              "title": "Joanna Garland Vs Solana Sierra \ud83c\udfbeLIVE TENNIS WTA 125K Philippine Open 2026 | Round Of 32",
-              "kind": "full"
-            }
-          ],
+          "videos": [],
           "videosChecked": "2026-11-03"
         }
       ]
@@ -1425,7 +1413,8 @@
             {
               "id": "v5K6gtsXTn4",
               "title": "Caroline Dolehide vs Joanna Garland | Suzhou WTA125 2025",
-              "kind": "full"
+              "kind": "full",
+              "channel": "ImbaTennisTV"
             }
           ],
           "videosChecked": "2026-11-03"
@@ -1535,7 +1524,8 @@
             {
               "id": "SLLhpn6aUD8",
               "title": "Carole Monnet vs Joanna Garland | Huzhou Open 2025",
-              "kind": "full"
+              "kind": "full",
+              "channel": "ImbaTennisTV"
             }
           ],
           "videosChecked": "2026-11-03"
@@ -1593,7 +1583,8 @@
             {
               "id": "0LRmFFV7EHg",
               "title": "Sara Saito vs Joanna Garland | Changsha Open 2025",
-              "kind": "full"
+              "kind": "full",
+              "channel": "ImbaTennisTV"
             }
           ],
           "videosChecked": "2026-11-03"
@@ -1615,7 +1606,8 @@
             {
               "id": "mAa3vXJggbk",
               "title": "Ekaterina Reyngold [Q] (RUS) vs Joanna Garland [2] (TPE) // 6-4 6-2 / W125 Changsha / Quarter-final",
-              "kind": "full"
+              "kind": "full",
+              "channel": "NextTennisGems"
             }
           ],
           "videosChecked": "2026-11-03"
