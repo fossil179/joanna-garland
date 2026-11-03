@@ -2,7 +2,7 @@
 
 A small website for Joanna Garland’s upcoming WTA and ITF entries, plus her singles results.
 
-The public page refreshes once a day, around 6:00 in the morning Central European time. GitHub sometimes starts that job a little later.
+The public page is [joannagarland.com](https://joannagarland.com). It refreshes once a day, around 6:00 in the morning Central European time. GitHub sometimes starts that job a little later.
 
 On this computer you can still open a local copy:
 

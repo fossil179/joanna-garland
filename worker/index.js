@@ -7,6 +7,8 @@
  */
 
 const DEFAULT_ORIGINS = [
+  "https://joannagarland.com",
+  "https://www.joannagarland.com",
   "https://fossil179.github.io",
   "http://127.0.0.1:8765",
   "http://localhost:8765",
@@ -152,7 +154,7 @@ async function sendConfirmation(env, email, link, starts, results) {
   if (starts) choices.push("when a tournament is about to start");
   if (results) choices.push("for each singles result");
   const address = (env.MAILING_ADDRESS || "").trim();
-  const site = (env.SITE_URL || "https://fossil179.github.io/joanna-garland").replace(/\/$/, "");
+  const site = (env.SITE_URL || "https://joannagarland.com").replace(/\/$/, "");
   const text = [
     "Confirm Joanna Garland alerts",
     "",
