@@ -226,7 +226,7 @@ def deliver() -> bool:
     api_key = os.environ.get("RESEND_API_KEY", "").strip()
     from_email = os.environ.get("FROM_EMAIL", "").strip()
     owner = os.environ.get("STATUS_EMAIL", "").strip()
-    if not api_key or not from_email or not owner:
+    if not api_key or not from_email or not owner or "@" not in from_email:
         print("Status note skipped: mail is not configured.")
         return False
     now = datetime.now(timezone.utc)
@@ -243,7 +243,7 @@ def deliver() -> bool:
             "html": html,
             "text": text,
         },
-        f"site-status/{now.astimezone(ZONE).date().isoformat()}",
+        f"site-status/{now.astimezone(ZONE).date().isoformat()}/v2",
     )
     print(f"Status note {'sent' if sent else 'not sent'}. {len(people)} subscriber(s).")
     return sent
