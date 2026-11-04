@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-03T17:09:40+00:00",
+  "updatedAt": "2026-11-04T12:48:22+00:00",
   "player": {
     "name": "Joanna Garland",
     "country": "TPE",
@@ -139,7 +139,7 @@
       "phase": "upcoming",
       "entryStatus": "Main draw direct acceptance",
       "seed": null,
-      "acceptancePosition": 6,
+      "acceptancePosition": 5,
       "priority": 1,
       "note": "",
       "wtaRankAtEntry": 160,
@@ -271,7 +271,7 @@
           "retirement": false,
           "order": 1,
           "videos": [],
-          "videosChecked": "2026-11-03"
+          "videosChecked": "2026-11-04"
         }
       ]
     },
@@ -307,7 +307,7 @@
           "retirement": false,
           "order": 1,
           "videos": [],
-          "videosChecked": "2026-11-03"
+          "videosChecked": "2026-11-04"
         },
         {
           "round": "R16",
@@ -323,7 +323,7 @@
           "retirement": false,
           "order": 2,
           "videos": [],
-          "videosChecked": "2026-11-03"
+          "videosChecked": "2026-11-04"
         }
       ]
     },
@@ -10362,7 +10362,9 @@
     "lookaheadDays": 140,
     "matchCount": 437
   },
-  "warnings": [],
+  "warnings": [
+    "News articles could not be refreshed. The list is from the last successful check."
+  ],
   "notes": [
     "ITF entries are acceptance-list spots. Priority 1 is her first-choice tournament that week. A direct acceptance can still change if players withdraw before the freeze.",
     "WTA entry lists are published tournament by tournament. This check covers WTA and WTA 125 events through the next few months, and only lists an event once her name is on it.",
