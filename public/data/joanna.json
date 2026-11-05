@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-04T12:48:22+00:00",
+  "updatedAt": "2026-11-05T12:58:00+00:00",
   "player": {
     "name": "Joanna Garland",
     "country": "TPE",
@@ -27,20 +27,20 @@
     "season": 2026,
     "seasonRecord": {
       "wins": 21,
-      "losses": 14,
+      "losses": 15,
       "titles": 2,
       "played": 17
     },
     "careerRecord": {
       "wins": 293,
-      "losses": 140,
+      "losses": 141,
       "titles": 18,
       "played": 156
     },
     "seasonSurfaces": {
       "Hard": {
         "wins": 18,
-        "losses": 8
+        "losses": 9
       },
       "Grass": {
         "wins": 2,
@@ -54,7 +54,7 @@
     "seasonLevels": {
       "WTA 250": {
         "wins": 4,
-        "losses": 3
+        "losses": 4
       },
       "WTA 500": {
         "wins": 3,
@@ -96,15 +96,10 @@
       "acceptancePosition": null,
       "priority": null,
       "note": "",
-      "eliminated": false,
-      "stillIn": true,
-      "nextRound": "Round of 16",
-      "nextMatch": {
-        "date": "2026-11-04",
-        "time": "Followed By",
-        "court": "Centre Court",
-        "opponent": "Janice Tjen"
-      },
+      "eliminated": true,
+      "stillIn": false,
+      "nextRound": null,
+      "nextMatch": null,
       "liveMatches": [
         {
           "round": "R32",
@@ -119,6 +114,28 @@
           "stamp": "2026-11-03T05:13:32.17+00:00",
           "date": "2026-11-03",
           "matchId": "LS017"
+        },
+        {
+          "round": "R16",
+          "roundLabel": "Round of 16",
+          "qualifying": false,
+          "opponent": "Janice Tjen",
+          "opponentCountry": "INA",
+          "score": "6-7(1), 1-6",
+          "won": false,
+          "state": "F",
+          "order": 2,
+          "stamp": "2026-11-04T12:45:33.06+00:00",
+          "date": "2026-11-04",
+          "matchId": "LS008",
+          "videos": [
+            {
+              "id": "ChtcTAjwqlA",
+              "title": "Janice Tjen vs. Joanna Garland | 2026 Chennai Round of 16 | WTA Match Highlights",
+              "kind": "highlights",
+              "channel": "WTA"
+            }
+          ]
         }
       ],
       "historyId": null,
@@ -139,7 +156,7 @@
       "phase": "upcoming",
       "entryStatus": "Main draw direct acceptance",
       "seed": null,
-      "acceptancePosition": 5,
+      "acceptancePosition": 4,
       "priority": 1,
       "note": "",
       "wtaRankAtEntry": 160,
@@ -251,8 +268,8 @@
       "start": "2026-11-02",
       "end": "2026-11-08",
       "wins": 1,
-      "losses": 0,
-      "outcome": "In the round of 16",
+      "losses": 1,
+      "outcome": "Round of 16",
       "champion": false,
       "inProgress": true,
       "url": "https://www.wtatennis.com/tournaments/1148/chennai-open/2026",
@@ -271,7 +288,30 @@
           "retirement": false,
           "order": 1,
           "videos": [],
-          "videosChecked": "2026-11-04"
+          "videosChecked": "2026-11-05"
+        },
+        {
+          "round": "R16",
+          "roundLabel": "Round of 16",
+          "qualifying": false,
+          "opponent": "Janice Tjen",
+          "opponentCountry": "INA",
+          "opponentRank": null,
+          "score": "6-7(1), 1-6",
+          "won": false,
+          "date": "2026-11-04",
+          "matchId": "LS008",
+          "retirement": false,
+          "order": 2,
+          "videos": [
+            {
+              "id": "ChtcTAjwqlA",
+              "title": "Janice Tjen vs. Joanna Garland | 2026 Chennai Round of 16 | WTA Match Highlights",
+              "kind": "highlights",
+              "channel": "WTA"
+            }
+          ],
+          "videosChecked": "2026-11-05"
         }
       ]
     },
@@ -307,7 +347,7 @@
           "retirement": false,
           "order": 1,
           "videos": [],
-          "videosChecked": "2026-11-04"
+          "videosChecked": "2026-11-05"
         },
         {
           "round": "R16",
@@ -323,7 +363,7 @@
           "retirement": false,
           "order": 2,
           "videos": [],
-          "videosChecked": "2026-11-04"
+          "videosChecked": "2026-11-05"
         }
       ]
     },
@@ -10362,9 +10402,7 @@
     "lookaheadDays": 140,
     "matchCount": 437
   },
-  "warnings": [
-    "News articles could not be refreshed. The list is from the last successful check."
-  ],
+  "warnings": [],
   "notes": [
     "ITF entries are acceptance-list spots. Priority 1 is her first-choice tournament that week. A direct acceptance can still change if players withdraw before the freeze.",
     "WTA entry lists are published tournament by tournament. This check covers WTA and WTA 125 events through the next few months, and only lists an event once her name is on it.",
