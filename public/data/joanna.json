@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-05T12:58:00+00:00",
+  "updatedAt": "2026-11-06T12:44:51+00:00",
   "player": {
     "name": "Joanna Garland",
     "country": "TPE",
@@ -196,6 +196,31 @@
       "url": "https://www.world.tennis/en/tournament/w75-sydney/aus/2026/w-itf-aus-2026-014/"
     },
     {
+      "id": "wta-2026-2056",
+      "tour": "WTA",
+      "name": "Open Angers Loire Tr\u00e9laz\u00e9",
+      "level": "WTA 125",
+      "city": "Angers",
+      "country": "FRA",
+      "surface": "Hard",
+      "indoor": true,
+      "start": "2026-11-30",
+      "end": "2026-12-06",
+      "phase": "upcoming",
+      "entryStatus": "M",
+      "seed": null,
+      "acceptancePosition": null,
+      "priority": null,
+      "note": "",
+      "eliminated": false,
+      "stillIn": true,
+      "nextRound": null,
+      "nextMatch": null,
+      "liveMatches": [],
+      "historyId": null,
+      "url": "https://www.wtatennis.com/tournaments/2056/open-angers-loire-tr-laz/2026"
+    },
+    {
       "id": "itf-w-itf-jpn-2026-023",
       "tour": "ITF",
       "name": "W50 Yokohama",
@@ -288,7 +313,7 @@
           "retirement": false,
           "order": 1,
           "videos": [],
-          "videosChecked": "2026-11-05"
+          "videosChecked": "2026-11-06"
         },
         {
           "round": "R16",
@@ -347,7 +372,7 @@
           "retirement": false,
           "order": 1,
           "videos": [],
-          "videosChecked": "2026-11-05"
+          "videosChecked": "2026-11-06"
         },
         {
           "round": "R16",
@@ -363,7 +388,7 @@
           "retirement": false,
           "order": 2,
           "videos": [],
-          "videosChecked": "2026-11-05"
+          "videosChecked": "2026-11-06"
         }
       ]
     },
