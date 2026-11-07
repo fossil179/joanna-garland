@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-06T12:44:51+00:00",
+  "updatedAt": "2026-11-07T11:32:48+00:00",
   "player": {
     "name": "Joanna Garland",
     "country": "TPE",
@@ -196,6 +196,33 @@
       "url": "https://www.world.tennis/en/tournament/w75-sydney/aus/2026/w-itf-aus-2026-014/"
     },
     {
+      "id": "itf-w-itf-aus-2026-013",
+      "tour": "ITF",
+      "name": "W75 Playford",
+      "level": "W75",
+      "city": "",
+      "country": "AUS",
+      "surface": "Hard",
+      "indoor": false,
+      "start": "2026-11-23",
+      "end": "2026-11-29",
+      "datesLabel": "23 Nov to 29 Nov 2026",
+      "phase": "upcoming",
+      "entryStatus": "Main draw direct acceptance",
+      "seed": null,
+      "acceptancePosition": 6,
+      "priority": 1,
+      "note": "",
+      "wtaRankAtEntry": 196,
+      "eliminated": false,
+      "stillIn": true,
+      "nextRound": null,
+      "nextMatch": null,
+      "liveMatches": [],
+      "historyId": null,
+      "url": "https://www.world.tennis/en/tournament/w75-playford/aus/2026/w-itf-aus-2026-013/"
+    },
+    {
       "id": "wta-2026-2056",
       "tour": "WTA",
       "name": "Open Angers Loire Tr\u00e9laz\u00e9",
@@ -313,7 +340,7 @@
           "retirement": false,
           "order": 1,
           "videos": [],
-          "videosChecked": "2026-11-06"
+          "videosChecked": "2026-11-07"
         },
         {
           "round": "R16",
@@ -372,7 +399,7 @@
           "retirement": false,
           "order": 1,
           "videos": [],
-          "videosChecked": "2026-11-06"
+          "videosChecked": "2026-11-07"
         },
         {
           "round": "R16",
@@ -388,7 +415,7 @@
           "retirement": false,
           "order": 2,
           "videos": [],
-          "videosChecked": "2026-11-06"
+          "videosChecked": "2026-11-07"
         }
       ]
     },
@@ -10427,7 +10454,9 @@
     "lookaheadDays": 140,
     "matchCount": 437
   },
-  "warnings": [],
+  "warnings": [
+    "News articles could not be refreshed. The list is from the last successful check."
+  ],
   "notes": [
     "ITF entries are acceptance-list spots. Priority 1 is her first-choice tournament that week. A direct acceptance can still change if players withdraw before the freeze.",
     "WTA entry lists are published tournament by tournament. This check covers WTA and WTA 125 events through the next few months, and only lists an event once her name is on it.",
