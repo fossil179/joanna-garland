@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-09T13:39:31+00:00",
+  "updatedAt": "2026-11-10T13:16:53+00:00",
   "player": {
     "name": "Joanna Garland",
     "country": "TPE",
@@ -243,12 +243,6 @@
       "url": "https://www.prokerala.com/news/articles/a1815449.html",
       "source": "prokerala.com",
       "published": "2026-09-22"
-    },
-    {
-      "title": "Million - dollar 1 Point Slam set to return to Aussie Open",
-      "url": "http://europe.chinadaily.com.cn/a/202608/06/WS6a73d59ea310986e2b4692e2.html",
-      "source": "europe.chinadaily.com.cn",
-      "published": "2026-08-06"
     }
   ],
   "tournaments": [
@@ -284,7 +278,7 @@
           "retirement": false,
           "order": 1,
           "videos": [],
-          "videosChecked": "2026-11-09"
+          "videosChecked": "2026-11-10"
         },
         {
           "round": "R16",
