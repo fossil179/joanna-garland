@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-12T13:33:24+00:00",
+  "updatedAt": "2026-11-13T09:31:59+00:00",
   "player": {
     "name": "Joanna Garland",
     "country": "TPE",
@@ -26,20 +26,20 @@
   "summary": {
     "season": 2026,
     "seasonRecord": {
-      "wins": 21,
+      "wins": 24,
       "losses": 15,
       "titles": 2,
-      "played": 17
+      "played": 18
     },
     "careerRecord": {
-      "wins": 293,
+      "wins": 296,
       "losses": 141,
       "titles": 18,
-      "played": 156
+      "played": 157
     },
     "seasonSurfaces": {
       "Hard": {
-        "wins": 18,
+        "wins": 21,
         "losses": 9
       },
       "Grass": {
@@ -52,6 +52,10 @@
       }
     },
     "seasonLevels": {
+      "ITF": {
+        "wins": 9,
+        "losses": 3
+      },
       "WTA 250": {
         "wins": 4,
         "losses": 4
@@ -59,10 +63,6 @@
       "WTA 500": {
         "wins": 3,
         "losses": 1
-      },
-      "ITF": {
-        "wins": 6,
-        "losses": 3
       },
       "Grand Slam": {
         "wins": 3,
@@ -100,9 +100,65 @@
       "wtaRankAtEntry": 160,
       "eliminated": false,
       "stillIn": true,
-      "nextRound": null,
-      "nextMatch": null,
-      "liveMatches": [],
+      "nextRound": "Semifinal",
+      "nextMatch": {
+        "date": "",
+        "time": "",
+        "court": "",
+        "opponent": "E. Jones"
+      },
+      "liveMatches": [
+        {
+          "round": "R32",
+          "roundLabel": "Round of 32",
+          "qualifying": false,
+          "opponent": "H. Sato",
+          "opponentCountry": "",
+          "score": "6-2 6-3",
+          "won": true,
+          "state": "F",
+          "order": 3,
+          "stamp": "2026-11-11",
+          "date": "2026-11-11",
+          "matchId": ""
+        },
+        {
+          "round": "R16",
+          "roundLabel": "Round of 16",
+          "qualifying": false,
+          "opponent": "S. Wei",
+          "opponentCountry": "",
+          "score": "6-4 6-2",
+          "won": true,
+          "state": "F",
+          "order": 4,
+          "stamp": "2026-11-12",
+          "date": "2026-11-12",
+          "matchId": ""
+        },
+        {
+          "round": "QF",
+          "roundLabel": "Quarterfinal",
+          "qualifying": false,
+          "opponent": "O. Gadecki",
+          "opponentCountry": "",
+          "score": "6-3 6-2",
+          "won": true,
+          "state": "F",
+          "order": 5,
+          "stamp": "2026-11-13",
+          "date": "2026-11-13",
+          "matchId": "",
+          "videos": [
+            {
+              "id": "RVQaaIpja1I",
+              "title": "Joanna Garland vs Olivia Gadecki Highlights | W75 Brisbane Quarterfinals",
+              "kind": "highlights",
+              "channel": "asdfwomenstennis"
+            }
+          ]
+        }
+      ],
       "historyId": null,
       "url": "https://www.world.tennis/en/tournament/w75-brisbane/aus/2026/w-itf-aus-2026-015/"
     },
@@ -211,6 +267,33 @@
       "liveMatches": [],
       "historyId": null,
       "url": "https://www.world.tennis/en/tournament/w75-playford/aus/2026/w-itf-aus-2026-013/"
+    },
+    {
+      "id": "itf-w-itf-ita-2026-031",
+      "tour": "ITF",
+      "name": "W50 Selva Gardena",
+      "level": "W50",
+      "city": "",
+      "country": "ITA",
+      "surface": "Hard",
+      "indoor": true,
+      "start": "2026-11-30",
+      "end": "2026-12-06",
+      "datesLabel": "30 Nov to 06 Dec 2026",
+      "phase": "withdrawn",
+      "entryStatus": "Withdrawn",
+      "seed": null,
+      "acceptancePosition": 29,
+      "priority": 1,
+      "note": "W 02 Nov 2026",
+      "wtaRankAtEntry": null,
+      "eliminated": false,
+      "stillIn": false,
+      "nextRound": null,
+      "nextMatch": null,
+      "liveMatches": [],
+      "historyId": null,
+      "url": "https://www.world.tennis/en/tournament/w50-selva-gardena/ita/2026/w-itf-ita-2026-031/"
     }
   ],
   "news": [
@@ -247,6 +330,81 @@
   ],
   "tournaments": [
     {
+      "id": "itf-w-itf-aus-2026-015",
+      "year": 2026,
+      "name": "W75 Brisbane",
+      "level": "ITF",
+      "surface": "Hard",
+      "indoor": false,
+      "city": "",
+      "country": "AUS",
+      "start": "2026-11-09",
+      "end": "2026-11-15",
+      "wins": 3,
+      "losses": 0,
+      "outcome": "In the semifinal",
+      "champion": false,
+      "inProgress": true,
+      "url": "https://www.world.tennis/en/tournament/w75-brisbane/aus/2026/w-itf-aus-2026-015/",
+      "matches": [
+        {
+          "round": "R32",
+          "roundLabel": "Round of 32",
+          "qualifying": false,
+          "opponent": "H. Sato",
+          "opponentCountry": "",
+          "opponentRank": null,
+          "score": "6-2 6-3",
+          "won": true,
+          "date": "2026-11-11",
+          "matchId": "",
+          "retirement": false,
+          "order": 3,
+          "videos": [],
+          "videosChecked": "2026-11-13"
+        },
+        {
+          "round": "R16",
+          "roundLabel": "Round of 16",
+          "qualifying": false,
+          "opponent": "S. Wei",
+          "opponentCountry": "",
+          "opponentRank": null,
+          "score": "6-4 6-2",
+          "won": true,
+          "date": "2026-11-12",
+          "matchId": "",
+          "retirement": false,
+          "order": 4,
+          "videos": [],
+          "videosChecked": "2026-11-13"
+        },
+        {
+          "round": "QF",
+          "roundLabel": "Quarterfinal",
+          "qualifying": false,
+          "opponent": "O. Gadecki",
+          "opponentCountry": "",
+          "opponentRank": null,
+          "score": "6-3 6-2",
+          "won": true,
+          "date": "2026-11-13",
+          "matchId": "",
+          "retirement": false,
+          "order": 5,
+          "videos": [
+            {
+              "id": "RVQaaIpja1I",
+              "title": "Joanna Garland vs Olivia Gadecki Highlights | W75 Brisbane Quarterfinals",
+              "kind": "highlights",
+              "channel": "asdfwomenstennis"
+            }
+          ],
+          "videosChecked": "2026-11-13"
+        }
+      ]
+    },
+    {
       "id": "2026-1148",
       "year": 2026,
       "name": "Chennai Open",
@@ -278,7 +436,7 @@
           "retirement": false,
           "order": 1,
           "videos": [],
-          "videosChecked": "2026-11-12"
+          "videosChecked": "2026-11-13"
         },
         {
           "round": "R16",
@@ -10392,7 +10550,9 @@
     "lookaheadDays": 140,
     "matchCount": 439
   },
-  "warnings": [],
+  "warnings": [
+    "News articles could not be refreshed. The list is from the last successful check."
+  ],
   "notes": [
     "ITF entries are acceptance-list spots. Priority 1 is her first-choice tournament that week. A direct acceptance can still change if players withdraw before the freeze.",
     "WTA entry lists are published tournament by tournament. This check covers WTA and WTA 125 events through the next few months, and only lists an event once her name is on it.",
