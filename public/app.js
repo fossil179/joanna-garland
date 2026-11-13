@@ -305,7 +305,9 @@ function wtaScoresUrl(item) {
 function resultLinks(item) {
   const links = [];
   const scores = wtaScoresUrl(item);
-  if (scores) links.push(`<a href="${esc(scores)}" target="_blank" rel="noreferrer">WTA scores</a>`);
+  if ((item.url || "").includes("wtatennis.com/tournaments/")) {
+    links.push(`<a href="${esc(scores)}" target="_blank" rel="noreferrer">WTA scores</a>`);
+  }
   if (item.level === "ITF" && data.player.links.itfActivity) {
     links.push(`<a href="${esc(data.player.links.itfActivity)}" target="_blank" rel="noreferrer">ITF results</a>`);
   }

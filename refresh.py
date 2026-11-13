@@ -1045,6 +1045,142 @@ def attach_match_dates(tournaments: list[dict]) -> None:
             used[chosen] = index + 1
 
 
+def itf_results_slug(name: str) -> str:
+    slug = re.sub(r"[^a-z0-9]+", "-", (name or "").lower()).strip("-")
+    if slug.startswith("itf-"):
+        return slug
+    return f"itf-{slug}"
+
+
+def display_short_name(value: str) -> str:
+    text = re.sub(r"\s+", " ", value or "").strip()
+    matched = re.match(r"^(.+?)\s+([A-Z])\.$", text)
+    if matched:
+        return f"{matched.group(2)}. {matched.group(1)}"
+    return text
+
+
+def plain_score(value: str) -> str:
+    text = (value or "").replace("\u2013", "-").replace("\u2014", "-").replace("\u2060", "")
+    text = text.replace("–", "-").replace("—", "-")
+    parts = [part.strip() for part in re.split(r"\s+", text) if part.strip()]
+    return " ".join(parts)
+
+
+def http_text(url: str, timeout: int = 30) -> str:
+    request = urllib.request.Request(url, headers={
+        "Accept": "text/html",
+        "User-Agent": "Mozilla/5.0",
+    })
+    with urllib.request.urlopen(request, timeout=timeout, context=ssl.create_default_context()) as response:
+        return response.read().decode("utf-8", "replace")
+
+
+def parse_itf_scoreboard(html: str) -> dict:
+    """Finished singles matches from a public ITF draw page.
+
+    The official ITF pages block this check. The draw page is the source that
+    lists the current week's scores before they reach the WTA match archive.
+    """
+    matches = []
+    seen = set()
+    rows = re.findall(r'<a class="(?:pv|vt)-radek"[^>]*href="([^"]+)"[^>]*>(.*?)</a>', html, re.S)
+    for href, inner in rows:
+        if "Garland" not in inner:
+            continue
+        round_match = re.search(r"-(r128|r64|r32|r16|qf|sf|f|q1|q2|q3)(?:$|\?)", href)
+        code = round_match.group(1).upper() if round_match else ""
+        if code in {"Q1", "Q2", "Q3"}:
+            qualifying = True
+            stored_code = "Q"
+        elif code in ROUND_LABEL:
+            qualifying = False
+            stored_code = code
+        else:
+            continue
+        winner_text = re.search(r'(?:pv|vt)-vitez">[\s\S]*?<span>([^<]+)</span>', inner)
+        loser_text = re.search(r'(?:pv|vt)-porazeny">[\s\S]*?<span>([^<]+)</span>', inner)
+        score_text = re.search(r'class="(?:pv|vt)-skore">([^<]+)', inner)
+        date_text = re.search(r"/match/(\d{4}-\d{2}-\d{2})/", href)
+        winner = winner_text.group(1).strip() if winner_text else ""
+        loser = loser_text.group(1).strip() if loser_text else ""
+        won = "Garland" in winner
+        opponent = display_short_name(loser if won else winner)
+        score = plain_score(score_text.group(1) if score_text else "")
+        if not opponent or not score or "Garland" in opponent:
+            continue
+        key = (date_text.group(1) if date_text else "", opponent.casefold(), stored_code)
+        if key in seen:
+            continue
+        seen.add(key)
+        matches.append(
+            {
+                "round": stored_code,
+                "roundLabel": round_label(stored_code, qualifying),
+                "qualifying": qualifying,
+                "opponent": opponent,
+                "opponentCountry": "",
+                "score": score,
+                "won": won,
+                "state": "F",
+                "order": ROUND_RANK.get(stored_code, 0),
+                "stamp": date_text.group(1) if date_text else "",
+                "date": date_text.group(1) if date_text else "",
+                "matchId": "",
+            }
+        )
+    matches.sort(key=lambda match: (match.get("date") or "", match.get("order") or 0))
+    next_opponent = ""
+    for marker in re.finditer(r'class="pk-p">TBD', html):
+        window = html[max(0, marker.start() - 1500):marker.start()]
+        names = re.findall(r'class="pk-j"><span>([^<]+)</span>', window)
+        if any("Garland" in name for name in names):
+            others = [display_short_name(name) for name in names if "Garland" not in name]
+            if others:
+                next_opponent = others[-1]
+    return {"matches": matches, "nextOpponent": next_opponent}
+
+
+def attach_itf_results(schedule: list[dict]) -> list[str]:
+    warnings = []
+    for event in schedule:
+        if event.get("tour") != "ITF" or event.get("phase") != "now":
+            continue
+        slug = itf_results_slug(event.get("name") or "")
+        url = f"https://umpiry.com/tournaments/{slug}"
+        try:
+            html = http_text(url)
+        except (urllib.error.URLError, TimeoutError):
+            warnings.append(f"ITF scores for {event.get('name')} could not be loaded.")
+            continue
+        parsed = parse_itf_scoreboard(html)
+        matches = parsed["matches"]
+        if not matches:
+            if "Garland" not in html:
+                warnings.append(f"ITF scores for {event.get('name')} could not be loaded.")
+            continue
+        event["liveMatches"] = matches
+        last = matches[-1]
+        event["stillIn"] = bool(last["won"]) and last["round"] != "F"
+        event["eliminated"] = not event["stillIn"]
+        event["nextRound"] = None
+        event["nextMatch"] = None
+        if event["stillIn"]:
+            ladder = DRAW_LADDER[32 if any(match["round"] == "R32" for match in matches) else 16]
+            if last["round"] in ladder:
+                index = ladder.index(last["round"])
+                if index + 1 < len(ladder):
+                    event["nextRound"] = ROUND_LABEL[ladder[index + 1]]
+            if parsed["nextOpponent"]:
+                event["nextMatch"] = {
+                    "date": "",
+                    "time": "",
+                    "court": "",
+                    "opponent": parsed["nextOpponent"],
+                }
+    return warnings
+
+
 def build_schedule(wta_entries: list[dict], itf_entries: list[dict], history_ids: set[str]) -> list[dict]:
     schedule = []
     seen_wta = set()
@@ -1200,9 +1336,12 @@ def build_schedule(wta_entries: list[dict], itf_entries: list[dict], history_ids
 def merge_live_results(tournaments: list[dict], schedule: list[dict]) -> list[dict]:
     by_id = {item["id"]: item for item in tournaments}
     for event in schedule:
-        if event["tour"] != "WTA" or not event["liveMatches"]:
+        if not event.get("liveMatches"):
             continue
-        history_id = event["id"].replace("wta-", "")
+        if event["tour"] == "WTA":
+            history_id = event["id"].replace("wta-", "")
+        else:
+            history_id = event["id"]
         if history_id in by_id:
             continue
         matches = []
@@ -1235,7 +1374,7 @@ def merge_live_results(tournaments: list[dict], schedule: list[dict]) -> list[di
             "id": history_id,
             "year": int(event["start"][:4]) if event.get("start") else TODAY.year,
             "name": event["name"],
-            "level": event["level"],
+            "level": "ITF" if event["tour"] == "ITF" else event["level"],
             "surface": event["surface"],
             "indoor": event["indoor"],
             "city": event["city"],
@@ -1433,6 +1572,7 @@ def build() -> dict:
     history = build_history(matches)
     history_ids = {item["id"] for item in history}
     schedule = build_schedule(wta_entries, itf_entries, history_ids)
+    warnings.extend(attach_itf_results(schedule))
     history = merge_live_results(history, schedule)
     attach_match_dates(history)
     attach_videos(history)
