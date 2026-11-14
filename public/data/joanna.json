@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-13T12:53:09+00:00",
+  "updatedAt": "2026-11-14T11:57:21+00:00",
   "player": {
     "name": "Joanna Garland",
     "country": "TPE",
@@ -26,20 +26,20 @@
   "summary": {
     "season": 2026,
     "seasonRecord": {
-      "wins": 24,
+      "wins": 25,
       "losses": 15,
       "titles": 2,
       "played": 18
     },
     "careerRecord": {
-      "wins": 296,
+      "wins": 297,
       "losses": 141,
       "titles": 18,
       "played": 157
     },
     "seasonSurfaces": {
       "Hard": {
-        "wins": 21,
+        "wins": 22,
         "losses": 9
       },
       "Grass": {
@@ -53,7 +53,7 @@
     },
     "seasonLevels": {
       "ITF": {
-        "wins": 9,
+        "wins": 10,
         "losses": 3
       },
       "WTA 250": {
@@ -100,12 +100,12 @@
       "wtaRankAtEntry": 160,
       "eliminated": false,
       "stillIn": true,
-      "nextRound": "Semifinal",
+      "nextRound": "Final",
       "nextMatch": {
         "date": "",
         "time": "",
         "court": "",
-        "opponent": "E. Jones"
+        "opponent": "C. Lee"
       },
       "liveMatches": [
         {
@@ -153,6 +153,28 @@
             {
               "id": "RVQaaIpja1I",
               "title": "Joanna Garland vs Olivia Gadecki Highlights | W75 Brisbane Quarterfinals",
+              "kind": "highlights",
+              "channel": "asdfwomenstennis"
+            }
+          ]
+        },
+        {
+          "round": "SF",
+          "roundLabel": "Semifinal",
+          "qualifying": false,
+          "opponent": "E. Jones",
+          "opponentCountry": "",
+          "score": "6-4 6-2",
+          "won": true,
+          "state": "F",
+          "order": 6,
+          "stamp": "2026-11-14",
+          "date": "2026-11-14",
+          "matchId": "",
+          "videos": [
+            {
+              "id": "wwIjsHbfKBU",
+              "title": "Joanna Garland vs Emerson Jones Highlights | W75 Brisbane Semifinals",
               "kind": "highlights",
               "channel": "asdfwomenstennis"
             }
@@ -340,9 +362,9 @@
       "country": "AUS",
       "start": "2026-11-09",
       "end": "2026-11-15",
-      "wins": 3,
+      "wins": 4,
       "losses": 0,
-      "outcome": "In the semifinal",
+      "outcome": "In the final",
       "champion": false,
       "inProgress": true,
       "url": "https://www.world.tennis/en/tournament/w75-brisbane/aus/2026/w-itf-aus-2026-015/",
@@ -361,7 +383,7 @@
           "retirement": false,
           "order": 3,
           "videos": [],
-          "videosChecked": "2026-11-13"
+          "videosChecked": "2026-11-14"
         },
         {
           "round": "R16",
@@ -377,7 +399,7 @@
           "retirement": false,
           "order": 4,
           "videos": [],
-          "videosChecked": "2026-11-13"
+          "videosChecked": "2026-11-14"
         },
         {
           "round": "QF",
@@ -401,6 +423,29 @@
             }
           ],
           "videosChecked": "2026-11-13"
+        },
+        {
+          "round": "SF",
+          "roundLabel": "Semifinal",
+          "qualifying": false,
+          "opponent": "E. Jones",
+          "opponentCountry": "",
+          "opponentRank": null,
+          "score": "6-4 6-2",
+          "won": true,
+          "date": "2026-11-14",
+          "matchId": "",
+          "retirement": false,
+          "order": 6,
+          "videos": [
+            {
+              "id": "wwIjsHbfKBU",
+              "title": "Joanna Garland vs Emerson Jones Highlights | W75 Brisbane Semifinals",
+              "kind": "highlights",
+              "channel": "asdfwomenstennis"
+            }
+          ],
+          "videosChecked": "2026-11-14"
         }
       ]
     },
@@ -436,7 +481,7 @@
           "retirement": false,
           "order": 1,
           "videos": [],
-          "videosChecked": "2026-11-13"
+          "videosChecked": "2026-11-14"
         },
         {
           "round": "R16",
