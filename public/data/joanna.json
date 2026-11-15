@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-14T11:57:21+00:00",
+  "updatedAt": "2026-11-15T12:31:40+00:00",
   "player": {
     "name": "Joanna Garland",
     "country": "TPE",
@@ -26,20 +26,20 @@
   "summary": {
     "season": 2026,
     "seasonRecord": {
-      "wins": 25,
+      "wins": 21,
       "losses": 15,
       "titles": 2,
-      "played": 18
+      "played": 17
     },
     "careerRecord": {
-      "wins": 297,
+      "wins": 293,
       "losses": 141,
       "titles": 18,
-      "played": 157
+      "played": 156
     },
     "seasonSurfaces": {
       "Hard": {
-        "wins": 22,
+        "wins": 18,
         "losses": 9
       },
       "Grass": {
@@ -52,10 +52,6 @@
       }
     },
     "seasonLevels": {
-      "ITF": {
-        "wins": 10,
-        "losses": 3
-      },
       "WTA 250": {
         "wins": 4,
         "losses": 4
@@ -63,6 +59,10 @@
       "WTA 500": {
         "wins": 3,
         "losses": 1
+      },
+      "ITF": {
+        "wins": 6,
+        "losses": 3
       },
       "Grand Slam": {
         "wins": 3,
@@ -79,111 +79,6 @@
     }
   },
   "schedule": [
-    {
-      "id": "itf-w-itf-aus-2026-015",
-      "tour": "ITF",
-      "name": "W75 Brisbane",
-      "level": "W75",
-      "city": "",
-      "country": "AUS",
-      "surface": "Hard",
-      "indoor": false,
-      "start": "2026-11-09",
-      "end": "2026-11-15",
-      "datesLabel": "09 Nov to 15 Nov 2026",
-      "phase": "now",
-      "entryStatus": "Main draw direct acceptance",
-      "seed": null,
-      "acceptancePosition": 4,
-      "priority": 1,
-      "note": "",
-      "wtaRankAtEntry": 160,
-      "eliminated": false,
-      "stillIn": true,
-      "nextRound": "Final",
-      "nextMatch": {
-        "date": "",
-        "time": "",
-        "court": "",
-        "opponent": "C. Lee"
-      },
-      "liveMatches": [
-        {
-          "round": "R32",
-          "roundLabel": "Round of 32",
-          "qualifying": false,
-          "opponent": "H. Sato",
-          "opponentCountry": "",
-          "score": "6-2 6-3",
-          "won": true,
-          "state": "F",
-          "order": 3,
-          "stamp": "2026-11-11",
-          "date": "2026-11-11",
-          "matchId": ""
-        },
-        {
-          "round": "R16",
-          "roundLabel": "Round of 16",
-          "qualifying": false,
-          "opponent": "S. Wei",
-          "opponentCountry": "",
-          "score": "6-4 6-2",
-          "won": true,
-          "state": "F",
-          "order": 4,
-          "stamp": "2026-11-12",
-          "date": "2026-11-12",
-          "matchId": ""
-        },
-        {
-          "round": "QF",
-          "roundLabel": "Quarterfinal",
-          "qualifying": false,
-          "opponent": "O. Gadecki",
-          "opponentCountry": "",
-          "score": "6-3 6-2",
-          "won": true,
-          "state": "F",
-          "order": 5,
-          "stamp": "2026-11-13",
-          "date": "2026-11-13",
-          "matchId": "",
-          "videos": [
-            {
-              "id": "RVQaaIpja1I",
-              "title": "Joanna Garland vs Olivia Gadecki Highlights | W75 Brisbane Quarterfinals",
-              "kind": "highlights",
-              "channel": "asdfwomenstennis"
-            }
-          ]
-        },
-        {
-          "round": "SF",
-          "roundLabel": "Semifinal",
-          "qualifying": false,
-          "opponent": "E. Jones",
-          "opponentCountry": "",
-          "score": "6-4 6-2",
-          "won": true,
-          "state": "F",
-          "order": 6,
-          "stamp": "2026-11-14",
-          "date": "2026-11-14",
-          "matchId": "",
-          "videos": [
-            {
-              "id": "wwIjsHbfKBU",
-              "title": "Joanna Garland vs Emerson Jones Highlights | W75 Brisbane Semifinals",
-              "kind": "highlights",
-              "channel": "asdfwomenstennis"
-            }
-          ]
-        }
-      ],
-      "historyId": null,
-      "url": "https://www.world.tennis/en/tournament/w75-brisbane/aus/2026/w-itf-aus-2026-015/"
-    },
     {
       "id": "itf-w-itf-aus-2026-014",
       "tour": "ITF",
@@ -235,33 +130,6 @@
       "liveMatches": [],
       "historyId": null,
       "url": "https://www.wtatennis.com/tournaments/2056/open-angers-loire-tr-laz/2026"
-    },
-    {
-      "id": "itf-w-itf-jpn-2026-023",
-      "tour": "ITF",
-      "name": "W50 Yokohama",
-      "level": "W50",
-      "city": "",
-      "country": "JPN",
-      "surface": "Hard",
-      "indoor": false,
-      "start": "2026-11-09",
-      "end": "2026-11-15",
-      "datesLabel": "09 Nov to 15 Nov 2026",
-      "phase": "withdrawn",
-      "entryStatus": "Withdrawn",
-      "seed": null,
-      "acceptancePosition": 47,
-      "priority": 2,
-      "note": "W 23 Oct 2026",
-      "wtaRankAtEntry": 160,
-      "eliminated": false,
-      "stillIn": false,
-      "nextRound": null,
-      "nextMatch": null,
-      "liveMatches": [],
-      "historyId": null,
-      "url": "https://www.world.tennis/en/tournament/w50-yokohama/jpn/2026/w-itf-jpn-2026-023/"
     },
     {
       "id": "itf-w-itf-aus-2026-013",
@@ -352,104 +220,6 @@
   ],
   "tournaments": [
     {
-      "id": "itf-w-itf-aus-2026-015",
-      "year": 2026,
-      "name": "W75 Brisbane",
-      "level": "ITF",
-      "surface": "Hard",
-      "indoor": false,
-      "city": "",
-      "country": "AUS",
-      "start": "2026-11-09",
-      "end": "2026-11-15",
-      "wins": 4,
-      "losses": 0,
-      "outcome": "In the final",
-      "champion": false,
-      "inProgress": true,
-      "url": "https://www.world.tennis/en/tournament/w75-brisbane/aus/2026/w-itf-aus-2026-015/",
-      "matches": [
-        {
-          "round": "R32",
-          "roundLabel": "Round of 32",
-          "qualifying": false,
-          "opponent": "H. Sato",
-          "opponentCountry": "",
-          "opponentRank": null,
-          "score": "6-2 6-3",
-          "won": true,
-          "date": "2026-11-11",
-          "matchId": "",
-          "retirement": false,
-          "order": 3,
-          "videos": [],
-          "videosChecked": "2026-11-14"
-        },
-        {
-          "round": "R16",
-          "roundLabel": "Round of 16",
-          "qualifying": false,
-          "opponent": "S. Wei",
-          "opponentCountry": "",
-          "opponentRank": null,
-          "score": "6-4 6-2",
-          "won": true,
-          "date": "2026-11-12",
-          "matchId": "",
-          "retirement": false,
-          "order": 4,
-          "videos": [],
-          "videosChecked": "2026-11-14"
-        },
-        {
-          "round": "QF",
-          "roundLabel": "Quarterfinal",
-          "qualifying": false,
-          "opponent": "O. Gadecki",
-          "opponentCountry": "",
-          "opponentRank": null,
-          "score": "6-3 6-2",
-          "won": true,
-          "date": "2026-11-13",
-          "matchId": "",
-          "retirement": false,
-          "order": 5,
-          "videos": [
-            {
-              "id": "RVQaaIpja1I",
-              "title": "Joanna Garland vs Olivia Gadecki Highlights | W75 Brisbane Quarterfinals",
-              "kind": "highlights",
-              "channel": "asdfwomenstennis"
-            }
-          ],
-          "videosChecked": "2026-11-13"
-        },
-        {
-          "round": "SF",
-          "roundLabel": "Semifinal",
-          "qualifying": false,
-          "opponent": "E. Jones",
-          "opponentCountry": "",
-          "opponentRank": null,
-          "score": "6-4 6-2",
-          "won": true,
-          "date": "2026-11-14",
-          "matchId": "",
-          "retirement": false,
-          "order": 6,
-          "videos": [
-            {
-              "id": "wwIjsHbfKBU",
-              "title": "Joanna Garland vs Emerson Jones Highlights | W75 Brisbane Semifinals",
-              "kind": "highlights",
-              "channel": "asdfwomenstennis"
-            }
-          ],
-          "videosChecked": "2026-11-14"
-        }
-      ]
-    },
-    {
       "id": "2026-1148",
       "year": 2026,
       "name": "Chennai Open",
@@ -481,7 +251,7 @@
           "retirement": false,
           "order": 1,
           "videos": [],
-          "videosChecked": "2026-11-14"
+          "videosChecked": "2026-11-15"
         },
         {
           "round": "R16",
@@ -10591,7 +10361,7 @@
     }
   ],
   "coverage": {
-    "wtaTournamentsChecked": 26,
+    "wtaTournamentsChecked": 25,
     "lookaheadDays": 140,
     "matchCount": 439
   },
