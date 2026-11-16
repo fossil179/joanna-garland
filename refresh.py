@@ -1333,6 +1333,51 @@ def build_schedule(wta_entries: list[dict], itf_entries: list[dict], history_ids
     return schedule
 
 
+def keep_recent_itf(schedule: list[dict], previous: dict | None) -> None:
+    """Keep an ITF event for two days after the acceptance list drops it.
+
+    The list can drop the event on the final day. The last match is still
+    fetched and emailed on the next check.
+    """
+    if not previous:
+        return
+    present = {event.get("id") for event in schedule}
+    for event in previous.get("schedule") or []:
+        if event.get("tour") != "ITF" or event.get("phase") == "withdrawn":
+            continue
+        if event.get("id") in present:
+            continue
+        end = parse_date(event.get("end")) or parse_date(event.get("start"))
+        if end is None or end.toordinal() + 2 < TODAY.toordinal():
+            continue
+        kept = dict(event)
+        kept["phase"] = "now"
+        kept["liveMatches"] = []
+        schedule.append(kept)
+        present.add(kept.get("id"))
+
+
+def same_week_recorded(tournaments: list[dict], event: dict, matches: list[dict]) -> bool:
+    start = parse_date(event.get("start"))
+    incoming = {opponent_surname(match.get("opponent") or "") for match in matches}
+    incoming.discard("")
+    if not incoming:
+        return False
+    for item in tournaments:
+        other = parse_date(item.get("start"))
+        if start and other and abs((start - other).days) > 14:
+            continue
+        recorded = {opponent_surname(match.get("opponent") or "") for match in item.get("matches") or []}
+        if incoming <= recorded:
+            return True
+    return False
+
+
+def opponent_surname(name: str) -> str:
+    parts = [part.strip(".") for part in (name or "").casefold().split() if part.strip(".")]
+    return parts[-1] if parts else ""
+
+
 def merge_live_results(tournaments: list[dict], schedule: list[dict]) -> list[dict]:
     by_id = {item["id"]: item for item in tournaments}
     for event in schedule:
@@ -1342,7 +1387,7 @@ def merge_live_results(tournaments: list[dict], schedule: list[dict]) -> list[di
             history_id = event["id"].replace("wta-", "")
         else:
             history_id = event["id"]
-        if history_id in by_id:
+        if history_id in by_id or same_week_recorded(list(by_id.values()), event, event["liveMatches"]):
             continue
         matches = []
         for match in event["liveMatches"]:
@@ -1555,7 +1600,7 @@ def fetch_news() -> tuple[list[dict], str | None]:
     return [], "News articles could not be loaded."
 
 
-def build() -> dict:
+def build(previous: dict | None = None) -> dict:
     warnings = []
     news, news_warning = fetch_news()
     if news_warning:
@@ -1572,6 +1617,7 @@ def build() -> dict:
     history = build_history(matches)
     history_ids = {item["id"] for item in history}
     schedule = build_schedule(wta_entries, itf_entries, history_ids)
+    keep_recent_itf(schedule, previous)
     warnings.extend(attach_itf_results(schedule))
     history = merge_live_results(history, schedule)
     attach_match_dates(history)
@@ -1628,7 +1674,7 @@ def main() -> None:
             previous = json.loads(DATA_PATH.read_text(encoding="utf-8"))
         except json.JSONDecodeError:
             previous = None
-    payload = build()
+    payload = build(previous)
     import alerts
     alerts.deliver(previous, payload)
     playing = [item["name"] for item in payload["schedule"] if item["phase"] != "withdrawn"]

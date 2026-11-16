@@ -54,6 +54,33 @@ def match_key(tournament_id: str, match: dict) -> str:
     return f"{tournament_id}|{match.get('round')}|{qualifying}|{opponent}"
 
 
+def opponent_surname(name: str) -> str:
+    parts = [part.strip(".") for part in (name or "").casefold().split() if part.strip(".")]
+    return parts[-1] if parts else ""
+
+
+def result_signature(year: str, round_code: str, qualifying: str, opponent: str) -> tuple:
+    return (year, round_code, qualifying, opponent_surname(opponent))
+
+
+def signature_from_key(key: str) -> tuple | None:
+    tournament_id, round_code, qualifying, opponent = (key.split("|", 3) + ["", "", "", ""])[:4]
+    if not round_code or not opponent:
+        return None
+    year = ""
+    for token in tournament_id.split("-"):
+        if len(token) == 4 and token.isdigit():
+            year = token
+            break
+    return result_signature(year, round_code, qualifying, opponent)
+
+
+def signature_from_match(tournament: dict, match: dict) -> tuple:
+    year = str(tournament.get("year") or (tournament.get("start") or "")[:4])
+    qualifying = "q" if match.get("qualifying") else "m"
+    return result_signature(year, str(match.get("round") or ""), qualifying, match.get("opponent") or "")
+
+
 def collect_matches(payload: dict | None) -> dict:
     found = {}
     for tournament in (payload or {}).get("tournaments") or []:
@@ -85,10 +112,20 @@ def plan_alerts(previous: dict | None, current: dict, sent: dict, today=None) ->
     sent_results = set(sent.get("results") or [])
     results = []
     if previous is not None:
-        earlier = set(collect_matches(previous))
+        earlier = collect_matches(previous)
+        known = set()
+        for key in list(earlier) + list(sent_results):
+            signature = signature_from_key(key)
+            if signature and signature[-1]:
+                known.add(signature)
         for key, (tournament, match) in collect_matches(current).items():
             if key in earlier or key in sent_results:
                 continue
+            signature = signature_from_match(tournament, match)
+            if signature[-1] and signature in known:
+                continue
+            if signature[-1]:
+                known.add(signature)
             results.append((key, tournament, match))
     return starts, results
 
@@ -331,6 +368,7 @@ def deliver(previous: dict | None, current: dict) -> None:
                 sent["results"].append(key)
                 changed = True
                 save_sent(sent)
+                print(f"Alerts: sent result {match.get('opponent')}.")
     if not changed and (starts or results):
         print("Alerts were not marked sent.")
 
@@ -376,6 +414,26 @@ def _self_check() -> None:
     assert again == []
     no_archive, _ = plan_alerts(None, current, {"starts": [], "results": []}, today)
     assert len(no_archive) == 1
+    copied = {
+        "tournaments": [
+            {
+                "id": "2026-4999",
+                "year": 2026,
+                "start": "2026-11-09",
+                "matches": [
+                    {"round": "R32", "qualifying": False, "opponent": "Hikaru Sato", "won": True, "score": "6-2 6-3"},
+                    {"round": "F", "qualifying": False, "opponent": "Carol Young Suh Lee", "won": True, "score": "5-7 6-1 6-2"},
+                ],
+            }
+        ],
+    }
+    _, copied_results = plan_alerts(
+        {"tournaments": []},
+        copied,
+        {"starts": [], "results": ["itf-w-itf-aus-2026-015|R32|m|h. sato"]},
+        date(2026, 11, 16),
+    )
+    assert [item[0] for item in copied_results] == ["2026-4999|F|m|carol young suh lee"], copied_results
     subject, html_body, _text = result_message(current["tournaments"][0], current["tournaments"][0]["matches"][1])
     assert subject == "Joanna Garland lost to A Player"
     assert "{{{RESEND_UNSUBSCRIBE_URL}}}" in html_body
