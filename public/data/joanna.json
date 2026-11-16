@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-15T12:31:40+00:00",
+  "updatedAt": "2026-11-16T13:23:45+00:00",
   "player": {
     "name": "Joanna Garland",
     "country": "TPE",
@@ -9,11 +9,11 @@
     "handed": "Right-handed",
     "wtaId": 326512,
     "itfId": "800446517",
-    "ranking": 182,
-    "points": 420,
-    "movement": 14,
-    "rankedAt": "2026-11-09",
-    "tournamentsPlayed": 17,
+    "ranking": 152,
+    "points": 495,
+    "movement": 30,
+    "rankedAt": "2026-11-16",
+    "tournamentsPlayed": 18,
     "links": {
       "wta": "https://www.wtatennis.com/players/326512/joanna-garland",
       "wtaMatches": "https://www.wtatennis.com/players/326512/joanna-garland/matches",
@@ -26,20 +26,20 @@
   "summary": {
     "season": 2026,
     "seasonRecord": {
-      "wins": 21,
+      "wins": 26,
       "losses": 15,
-      "titles": 2,
-      "played": 17
+      "titles": 3,
+      "played": 18
     },
     "careerRecord": {
-      "wins": 293,
+      "wins": 298,
       "losses": 141,
-      "titles": 18,
-      "played": 156
+      "titles": 19,
+      "played": 157
     },
     "seasonSurfaces": {
       "Hard": {
-        "wins": 18,
+        "wins": 23,
         "losses": 9
       },
       "Grass": {
@@ -52,6 +52,10 @@
       }
     },
     "seasonLevels": {
+      "ITF": {
+        "wins": 11,
+        "losses": 3
+      },
       "WTA 250": {
         "wins": 4,
         "losses": 4
@@ -59,10 +63,6 @@
       "WTA 500": {
         "wins": 3,
         "losses": 1
-      },
-      "ITF": {
-        "wins": 6,
-        "losses": 3
       },
       "Grand Slam": {
         "wins": 3,
@@ -91,7 +91,7 @@
       "start": "2026-11-16",
       "end": "2026-11-22",
       "datesLabel": "16 Nov to 22 Nov 2026",
-      "phase": "upcoming",
+      "phase": "now",
       "entryStatus": "Main draw direct acceptance",
       "seed": null,
       "acceptancePosition": 4,
@@ -220,6 +220,132 @@
   ],
   "tournaments": [
     {
+      "id": "2026-4999",
+      "year": 2026,
+      "name": "Brisbane 6",
+      "level": "ITF",
+      "surface": "Hard",
+      "indoor": false,
+      "city": "",
+      "country": "AUS",
+      "start": "2026-11-09",
+      "end": "2026-11-15",
+      "wins": 5,
+      "losses": 0,
+      "outcome": "Champion",
+      "champion": true,
+      "inProgress": false,
+      "url": "https://www.wtatennis.com/tournaments/4999/wtt-w75/2026/scores",
+      "matches": [
+        {
+          "round": "R32",
+          "roundLabel": "Round of 32",
+          "qualifying": false,
+          "opponent": "Hikaru Sato",
+          "opponentCountry": "JPN",
+          "opponentRank": 353,
+          "score": "6-2 6-3",
+          "won": true,
+          "date": "",
+          "matchId": "",
+          "retirement": false,
+          "order": 1,
+          "videos": [],
+          "videosChecked": "2026-11-16"
+        },
+        {
+          "round": "R16",
+          "roundLabel": "Round of 16",
+          "qualifying": false,
+          "opponent": "Sijia Wei",
+          "opponentCountry": "CHN",
+          "opponentRank": 362,
+          "score": "6-4 6-2",
+          "won": true,
+          "date": "",
+          "matchId": "",
+          "retirement": false,
+          "order": 2,
+          "videos": [],
+          "videosChecked": "2026-11-16"
+        },
+        {
+          "round": "QF",
+          "roundLabel": "Quarterfinal",
+          "qualifying": false,
+          "opponent": "Olivia Gadecki",
+          "opponentCountry": "AUS",
+          "opponentRank": 526,
+          "score": "6-3 6-2",
+          "won": true,
+          "date": "",
+          "matchId": "",
+          "retirement": false,
+          "order": 3,
+          "videos": [
+            {
+              "id": "RVQaaIpja1I",
+              "title": "Joanna Garland vs Olivia Gadecki Highlights | W75 Brisbane Quarterfinals",
+              "kind": "highlights",
+              "channel": "asdfwomenstennis"
+            },
+            {
+              "id": "HTRxeVGjhvY",
+              "title": "Joanna Garland vs Olivia Gadecki | W75 Brisbane | 13 November 2026",
+              "kind": "full",
+              "channel": "ImbaTennisTV"
+            }
+          ],
+          "videosChecked": "2026-11-16"
+        },
+        {
+          "round": "SF",
+          "roundLabel": "Semifinal",
+          "qualifying": false,
+          "opponent": "Emerson Jones",
+          "opponentCountry": "AUS",
+          "opponentRank": 134,
+          "score": "6-4 6-2",
+          "won": true,
+          "date": "",
+          "matchId": "",
+          "retirement": false,
+          "order": 4,
+          "videos": [
+            {
+              "id": "wwIjsHbfKBU",
+              "title": "Joanna Garland vs Emerson Jones Highlights | W75 Brisbane Semifinals",
+              "kind": "highlights",
+              "channel": "asdfwomenstennis"
+            },
+            {
+              "id": "Z2lEF53Ni1w",
+              "title": "Joanna Garland vs Emerson Jones | W75 Brisbane | 14 November 2026",
+              "kind": "full",
+              "channel": "ImbaTennisTV"
+            }
+          ],
+          "videosChecked": "2026-11-16"
+        },
+        {
+          "round": "F",
+          "roundLabel": "Final",
+          "qualifying": false,
+          "opponent": "Carol Young Suh Lee",
+          "opponentCountry": "USA",
+          "opponentRank": 156,
+          "score": "5-7 6-1 6-2",
+          "won": true,
+          "date": "",
+          "matchId": "",
+          "retirement": false,
+          "order": 5,
+          "videos": [],
+          "videosChecked": "2026-11-16"
+        }
+      ]
+    },
+    {
       "id": "2026-1148",
       "year": 2026,
       "name": "Chennai Open",
@@ -251,7 +377,7 @@
           "retirement": false,
           "order": 1,
           "videos": [],
-          "videosChecked": "2026-11-15"
+          "videosChecked": "2026-11-16"
         },
         {
           "round": "R16",
@@ -10363,10 +10489,11 @@
   "coverage": {
     "wtaTournamentsChecked": 25,
     "lookaheadDays": 140,
-    "matchCount": 439
+    "matchCount": 444
   },
   "warnings": [
-    "News articles could not be refreshed. The list is from the last successful check."
+    "News articles could not be refreshed. The list is from the last successful check.",
+    "ITF scores for W75 Sydney could not be loaded."
   ],
   "notes": [
     "ITF entries are acceptance-list spots. Priority 1 is her first-choice tournament that week. A direct acceptance can still change if players withdraw before the freeze.",
