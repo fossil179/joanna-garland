@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-17T14:08:49+00:00",
+  "updatedAt": "2026-11-18T13:41:39+00:00",
   "player": {
     "name": "Joanna Garland",
     "country": "TPE",
@@ -26,20 +26,20 @@
   "summary": {
     "season": 2026,
     "seasonRecord": {
-      "wins": 26,
+      "wins": 27,
       "losses": 15,
       "titles": 3,
-      "played": 18
+      "played": 19
     },
     "careerRecord": {
-      "wins": 298,
+      "wins": 299,
       "losses": 141,
       "titles": 19,
-      "played": 157
+      "played": 158
     },
     "seasonSurfaces": {
       "Hard": {
-        "wins": 23,
+        "wins": 24,
         "losses": 9
       },
       "Grass": {
@@ -53,7 +53,7 @@
     },
     "seasonLevels": {
       "ITF": {
-        "wins": 11,
+        "wins": 12,
         "losses": 3
       },
       "WTA 250": {
@@ -100,9 +100,29 @@
       "wtaRankAtEntry": 155,
       "eliminated": false,
       "stillIn": true,
-      "nextRound": null,
-      "nextMatch": null,
-      "liveMatches": [],
+      "nextRound": "Round of 16",
+      "nextMatch": {
+        "date": "",
+        "time": "",
+        "court": "",
+        "opponent": "E. Jones"
+      },
+      "liveMatches": [
+        {
+          "round": "R32",
+          "roundLabel": "Round of 32",
+          "qualifying": false,
+          "opponent": "W. Zheng",
+          "opponentCountry": "",
+          "score": "6-3 6-3",
+          "won": true,
+          "state": "F",
+          "order": 3,
+          "stamp": "2026-11-18",
+          "date": "2026-11-18",
+          "matchId": ""
+        }
+      ],
       "historyId": null,
       "url": "https://www.world.tennis/en/tournament/w75-sydney/aus/2026/w-itf-aus-2026-014/"
     },
@@ -220,6 +240,42 @@
   ],
   "tournaments": [
     {
+      "id": "itf-w-itf-aus-2026-014",
+      "year": 2026,
+      "name": "W75 Sydney",
+      "level": "ITF",
+      "surface": "Hard",
+      "indoor": false,
+      "city": "",
+      "country": "AUS",
+      "start": "2026-11-16",
+      "end": "2026-11-22",
+      "wins": 1,
+      "losses": 0,
+      "outcome": "In the round of 16",
+      "champion": false,
+      "inProgress": true,
+      "url": "https://www.world.tennis/en/tournament/w75-sydney/aus/2026/w-itf-aus-2026-014/",
+      "matches": [
+        {
+          "round": "R32",
+          "roundLabel": "Round of 32",
+          "qualifying": false,
+          "opponent": "W. Zheng",
+          "opponentCountry": "",
+          "opponentRank": null,
+          "score": "6-3 6-3",
+          "won": true,
+          "date": "2026-11-18",
+          "matchId": "",
+          "retirement": false,
+          "order": 3,
+          "videos": [],
+          "videosChecked": "2026-11-18"
+        }
+      ]
+    },
+    {
       "id": "2026-4999",
       "year": 2026,
       "name": "Brisbane 6",
@@ -251,7 +307,7 @@
           "retirement": false,
           "order": 1,
           "videos": [],
-          "videosChecked": "2026-11-17"
+          "videosChecked": "2026-11-18"
         },
         {
           "round": "R16",
@@ -267,7 +323,7 @@
           "retirement": false,
           "order": 2,
           "videos": [],
-          "videosChecked": "2026-11-17"
+          "videosChecked": "2026-11-18"
         },
         {
           "round": "QF",
@@ -341,7 +397,7 @@
           "retirement": false,
           "order": 5,
           "videos": [],
-          "videosChecked": "2026-11-17"
+          "videosChecked": "2026-11-18"
         }
       ]
     },
@@ -10492,8 +10548,7 @@
     "matchCount": 444
   },
   "warnings": [
-    "News articles could not be refreshed. The list is from the last successful check.",
-    "ITF scores for W75 Sydney could not be loaded."
+    "News articles could not be refreshed. The list is from the last successful check."
   ],
   "notes": [
     "ITF entries are acceptance-list spots. Priority 1 is her first-choice tournament that week. A direct acceptance can still change if players withdraw before the freeze.",
