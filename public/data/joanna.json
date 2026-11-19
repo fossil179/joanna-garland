@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-18T13:41:39+00:00",
+  "updatedAt": "2026-11-19T14:09:23+00:00",
   "player": {
     "name": "Joanna Garland",
     "country": "TPE",
@@ -105,7 +105,7 @@
         "date": "",
         "time": "",
         "court": "",
-        "opponent": "E. Jones"
+        "opponent": "S. Broadus"
       },
       "liveMatches": [
         {
@@ -271,7 +271,7 @@
           "retirement": false,
           "order": 3,
           "videos": [],
-          "videosChecked": "2026-11-18"
+          "videosChecked": "2026-11-19"
         }
       ]
     },
@@ -307,7 +307,7 @@
           "retirement": false,
           "order": 1,
           "videos": [],
-          "videosChecked": "2026-11-18"
+          "videosChecked": "2026-11-19"
         },
         {
           "round": "R16",
@@ -323,7 +323,7 @@
           "retirement": false,
           "order": 2,
           "videos": [],
-          "videosChecked": "2026-11-18"
+          "videosChecked": "2026-11-19"
         },
         {
           "round": "QF",
@@ -397,7 +397,7 @@
           "retirement": false,
           "order": 5,
           "videos": [],
-          "videosChecked": "2026-11-18"
+          "videosChecked": "2026-11-19"
         }
       ]
     },
