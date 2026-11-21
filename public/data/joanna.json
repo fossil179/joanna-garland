@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-20T13:51:22+00:00",
+  "updatedAt": "2026-11-21T13:15:51+00:00",
   "player": {
     "name": "Joanna Garland",
     "country": "TPE",
@@ -26,20 +26,20 @@
   "summary": {
     "season": 2026,
     "seasonRecord": {
-      "wins": 29,
+      "wins": 30,
       "losses": 15,
       "titles": 3,
       "played": 19
     },
     "careerRecord": {
-      "wins": 301,
+      "wins": 302,
       "losses": 141,
       "titles": 19,
       "played": 158
     },
     "seasonSurfaces": {
       "Hard": {
-        "wins": 26,
+        "wins": 27,
         "losses": 9
       },
       "Grass": {
@@ -53,7 +53,7 @@
     },
     "seasonLevels": {
       "ITF": {
-        "wins": 14,
+        "wins": 15,
         "losses": 3
       },
       "WTA 250": {
@@ -100,12 +100,12 @@
       "wtaRankAtEntry": 155,
       "eliminated": false,
       "stillIn": true,
-      "nextRound": "Semifinal",
+      "nextRound": "Final",
       "nextMatch": {
         "date": "",
         "time": "",
         "court": "",
-        "opponent": "K. Swan"
+        "opponent": "O. Gadecki"
       },
       "liveMatches": [
         {
@@ -157,6 +157,28 @@
               "channel": "asdfwomenstennis"
             }
           ]
+        },
+        {
+          "round": "SF",
+          "roundLabel": "Semifinal",
+          "qualifying": false,
+          "opponent": "K. Swan",
+          "opponentCountry": "",
+          "score": "4-6 6-2 7-6(5)",
+          "won": true,
+          "state": "F",
+          "order": 6,
+          "stamp": "2026-11-21",
+          "date": "2026-11-21",
+          "matchId": "",
+          "videos": [
+            {
+              "id": "eXvLpbqFo1Y",
+              "title": "Katie Swan vs Joanna Garland Highlights | W75 Sydney Semifinals",
+              "kind": "highlights",
+              "channel": "asdfwomenstennis"
+            }
+          ]
         }
       ],
       "historyId": null,
@@ -186,6 +208,33 @@
       "liveMatches": [],
       "historyId": null,
       "url": "https://www.wtatennis.com/tournaments/2056/open-angers-loire-tr-laz/2026"
+    },
+    {
+      "id": "itf-w-itf-egy-2026-037",
+      "tour": "ITF",
+      "name": "W35 Sharm ElSheikh",
+      "level": "W35",
+      "city": "",
+      "country": "EGY",
+      "surface": "Hard",
+      "indoor": false,
+      "start": "2026-12-07",
+      "end": "2026-12-13",
+      "datesLabel": "07 Dec to 13 Dec 2026",
+      "phase": "upcoming",
+      "entryStatus": "Main draw direct acceptance",
+      "seed": null,
+      "acceptancePosition": 1,
+      "priority": 1,
+      "note": "",
+      "wtaRankAtEntry": 152,
+      "eliminated": false,
+      "stillIn": true,
+      "nextRound": null,
+      "nextMatch": null,
+      "liveMatches": [],
+      "historyId": null,
+      "url": "https://www.world.tennis/en/tournament/w35-sharm-elsheikh/egy/2026/w-itf-egy-2026-037/"
     },
     {
       "id": "itf-w-itf-aus-2026-013",
@@ -240,6 +289,33 @@
       "liveMatches": [],
       "historyId": null,
       "url": "https://www.world.tennis/en/tournament/w50-selva-gardena/ita/2026/w-itf-ita-2026-031/"
+    },
+    {
+      "id": "itf-w-itf-sgp-2026-005",
+      "tour": "ITF",
+      "name": "W35 Singapore",
+      "level": "W35",
+      "city": "",
+      "country": "SGP",
+      "surface": "Hard",
+      "indoor": true,
+      "start": "2026-12-07",
+      "end": "2026-12-13",
+      "datesLabel": "07 Dec to 13 Dec 2026",
+      "phase": "withdrawn",
+      "entryStatus": "Withdrawn",
+      "seed": null,
+      "acceptancePosition": 66,
+      "priority": 2,
+      "note": "W 07 Nov 2026",
+      "wtaRankAtEntry": null,
+      "eliminated": false,
+      "stillIn": false,
+      "nextRound": null,
+      "nextMatch": null,
+      "liveMatches": [],
+      "historyId": null,
+      "url": "https://www.world.tennis/en/tournament/w35-singapore/sgp/2026/w-itf-sgp-2026-005/"
     }
   ],
   "news": [
@@ -286,9 +362,9 @@
       "country": "AUS",
       "start": "2026-11-16",
       "end": "2026-11-22",
-      "wins": 3,
+      "wins": 4,
       "losses": 0,
-      "outcome": "In the semifinal",
+      "outcome": "In the final",
       "champion": false,
       "inProgress": true,
       "url": "https://www.world.tennis/en/tournament/w75-sydney/aus/2026/w-itf-aus-2026-014/",
@@ -307,7 +383,7 @@
           "retirement": false,
           "order": 3,
           "videos": [],
-          "videosChecked": "2026-11-20"
+          "videosChecked": "2026-11-21"
         },
         {
           "round": "R16",
@@ -323,7 +399,7 @@
           "retirement": false,
           "order": 4,
           "videos": [],
-          "videosChecked": "2026-11-20"
+          "videosChecked": "2026-11-21"
         },
         {
           "round": "QF",
@@ -347,6 +423,29 @@
             }
           ],
           "videosChecked": "2026-11-20"
+        },
+        {
+          "round": "SF",
+          "roundLabel": "Semifinal",
+          "qualifying": false,
+          "opponent": "K. Swan",
+          "opponentCountry": "",
+          "opponentRank": null,
+          "score": "4-6 6-2 7-6(5)",
+          "won": true,
+          "date": "2026-11-21",
+          "matchId": "",
+          "retirement": false,
+          "order": 6,
+          "videos": [
+            {
+              "id": "eXvLpbqFo1Y",
+              "title": "Katie Swan vs Joanna Garland Highlights | W75 Sydney Semifinals",
+              "kind": "highlights",
+              "channel": "asdfwomenstennis"
+            }
+          ],
+          "videosChecked": "2026-11-21"
         }
       ]
     },
@@ -382,7 +481,7 @@
           "retirement": false,
           "order": 1,
           "videos": [],
-          "videosChecked": "2026-11-20"
+          "videosChecked": "2026-11-21"
         },
         {
           "round": "R16",
@@ -398,7 +497,7 @@
           "retirement": false,
           "order": 2,
           "videos": [],
-          "videosChecked": "2026-11-20"
+          "videosChecked": "2026-11-21"
         },
         {
           "round": "QF",
@@ -472,7 +571,7 @@
           "retirement": false,
           "order": 5,
           "videos": [],
-          "videosChecked": "2026-11-20"
+          "videosChecked": "2026-11-21"
         }
       ]
     },
