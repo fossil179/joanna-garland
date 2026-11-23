@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-22T13:06:34+00:00",
+  "updatedAt": "2026-11-23T15:43:59+00:00",
   "player": {
     "name": "Joanna Garland",
     "country": "TPE",
@@ -9,11 +9,11 @@
     "handed": "Right-handed",
     "wtaId": 326512,
     "itfId": "800446517",
-    "ranking": 152,
-    "points": 495,
-    "movement": 30,
-    "rankedAt": "2026-11-16",
-    "tournamentsPlayed": 18,
+    "ranking": 136,
+    "points": 569,
+    "movement": 16,
+    "rankedAt": "2026-11-23",
+    "tournamentsPlayed": 19,
     "links": {
       "wta": "https://www.wtatennis.com/players/326512/joanna-garland",
       "wtaMatches": "https://www.wtatennis.com/players/326512/joanna-garland/matches",
@@ -28,13 +28,13 @@
     "seasonRecord": {
       "wins": 31,
       "losses": 15,
-      "titles": 3,
+      "titles": 4,
       "played": 19
     },
     "careerRecord": {
       "wins": 303,
       "losses": 141,
-      "titles": 19,
+      "titles": 20,
       "played": 158
     },
     "seasonSurfaces": {
@@ -276,15 +276,7 @@
           "order": 5,
           "stamp": "2026-11-20",
           "date": "2026-11-20",
-          "matchId": "",
-          "videos": [
-            {
-              "id": "0hhvphfYb80",
-              "title": "Joanna Garland vs Emerson Jones Highlights | W75 Sydney Quarterfinals",
-              "kind": "highlights",
-              "channel": "asdfwomenstennis"
-            }
-          ]
+          "matchId": ""
         },
         {
           "round": "SF",
@@ -298,15 +290,7 @@
           "order": 6,
           "stamp": "2026-11-21",
           "date": "2026-11-21",
-          "matchId": "",
-          "videos": [
-            {
-              "id": "eXvLpbqFo1Y",
-              "title": "Katie Swan vs Joanna Garland Highlights | W75 Sydney Semifinals",
-              "kind": "highlights",
-              "channel": "asdfwomenstennis"
-            }
-          ]
+          "matchId": ""
         },
         {
           "round": "F",
@@ -320,15 +304,7 @@
           "order": 7,
           "stamp": "2026-11-22",
           "date": "2026-11-22",
-          "matchId": "",
-          "videos": [
-            {
-              "id": "7NikmNKGXiw",
-              "title": "Olivia Gadecki vs Joanna Garland Highlights | W75 Sydney Final",
-              "kind": "highlights",
-              "channel": "asdfwomenstennis"
-            }
-          ]
+          "matchId": ""
         }
       ],
       "historyId": null,
@@ -369,9 +345,9 @@
   ],
   "tournaments": [
     {
-      "id": "itf-w-itf-aus-2026-014",
+      "id": "2026-5005",
       "year": 2026,
-      "name": "W75 Sydney",
+      "name": "Sydney 3",
       "level": "ITF",
       "surface": "Hard",
       "indoor": false,
@@ -381,102 +357,101 @@
       "end": "2026-11-22",
       "wins": 5,
       "losses": 0,
-      "outcome": "Final",
-      "champion": false,
-      "inProgress": true,
-      "url": "https://www.world.tennis/en/tournament/w75-sydney/aus/2026/w-itf-aus-2026-014/",
+      "outcome": "Champion",
+      "champion": true,
+      "inProgress": false,
+      "url": "https://www.wtatennis.com/tournaments/5005/wtt-w75/2026/scores",
       "matches": [
         {
           "round": "R32",
           "roundLabel": "Round of 32",
           "qualifying": false,
-          "opponent": "W. Zheng",
-          "opponentCountry": "",
-          "opponentRank": null,
-          "score": "6-3 6-3",
+          "opponent": "Wushuang Zheng",
+          "opponentCountry": "CHN",
+          "opponentRank": 423,
+          "score": "",
           "won": true,
-          "date": "2026-11-18",
+          "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 3,
+          "order": 1,
           "videos": [],
-          "videosChecked": "2026-11-22"
+          "videosChecked": "2026-11-23"
         },
         {
           "round": "R16",
           "roundLabel": "Round of 16",
           "qualifying": false,
-          "opponent": "S. Broadus",
-          "opponentCountry": "",
-          "opponentRank": null,
+          "opponent": "Savannah Broadus",
+          "opponentCountry": "USA",
+          "opponentRank": 301,
           "score": "6-1 7-6(4)",
           "won": true,
-          "date": "2026-11-19",
+          "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 4,
+          "order": 2,
           "videos": [],
-          "videosChecked": "2026-11-22"
+          "videosChecked": "2026-11-23"
         },
         {
           "round": "QF",
           "roundLabel": "Quarterfinal",
           "qualifying": false,
-          "opponent": "E. Jones",
-          "opponentCountry": "",
-          "opponentRank": null,
+          "opponent": "Emerson Jones",
+          "opponentCountry": "AUS",
+          "opponentRank": 133,
           "score": "6-4 6-3",
           "won": true,
-          "date": "2026-11-20",
+          "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 5,
-          "videos": [
-            {
-              "id": "0hhvphfYb80",
-              "title": "Joanna Garland vs Emerson Jones Highlights | W75 Sydney Quarterfinals",
-              "kind": "highlights",
-              "channel": "asdfwomenstennis"
-            }
-          ],
-          "videosChecked": "2026-11-20"
+          "order": 3,
+          "videos": [],
+          "videosChecked": "2026-11-23"
         },
         {
           "round": "SF",
           "roundLabel": "Semifinal",
           "qualifying": false,
-          "opponent": "K. Swan",
-          "opponentCountry": "",
-          "opponentRank": null,
+          "opponent": "Katie Swan",
+          "opponentCountry": "GBR",
+          "opponentRank": 165,
           "score": "4-6 6-2 7-6(5)",
           "won": true,
-          "date": "2026-11-21",
+          "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 6,
+          "order": 4,
           "videos": [
             {
               "id": "eXvLpbqFo1Y",
               "title": "Katie Swan vs Joanna Garland Highlights | W75 Sydney Semifinals",
               "kind": "highlights",
               "channel": "asdfwomenstennis"
+            },
+            {
+              "id": "AdGv_tSbGDk",
+              "title": "Katie Swan vs Joanna Garland | W75 Sydney | 21 November 2026",
+              "kind": "full",
+              "channel": "ImbaTennisTV"
             }
           ],
-          "videosChecked": "2026-11-21"
+          "videosChecked": "2026-11-23"
         },
         {
           "round": "F",
           "roundLabel": "Final",
           "qualifying": false,
-          "opponent": "O. Gadecki",
-          "opponentCountry": "",
-          "opponentRank": null,
+          "opponent": "Olivia Gadecki",
+          "opponentCountry": "AUS",
+          "opponentRank": 478,
           "score": "5-7 7-6(4) 7-5",
           "won": true,
-          "date": "2026-11-22",
+          "date": "",
           "matchId": "",
           "retirement": false,
-          "order": 7,
+          "order": 5,
           "videos": [
             {
               "id": "7NikmNKGXiw",
@@ -485,7 +460,7 @@
               "channel": "asdfwomenstennis"
             }
           ],
-          "videosChecked": "2026-11-22"
+          "videosChecked": "2026-11-23"
         }
       ]
     },
@@ -521,7 +496,7 @@
           "retirement": false,
           "order": 1,
           "videos": [],
-          "videosChecked": "2026-11-22"
+          "videosChecked": "2026-11-23"
         },
         {
           "round": "R16",
@@ -537,7 +512,7 @@
           "retirement": false,
           "order": 2,
           "videos": [],
-          "videosChecked": "2026-11-22"
+          "videosChecked": "2026-11-23"
         },
         {
           "round": "QF",
@@ -611,7 +586,7 @@
           "retirement": false,
           "order": 5,
           "videos": [],
-          "videosChecked": "2026-11-22"
+          "videosChecked": "2026-11-23"
         }
       ]
     },
@@ -10757,13 +10732,11 @@
     }
   ],
   "coverage": {
-    "wtaTournamentsChecked": 25,
+    "wtaTournamentsChecked": 37,
     "lookaheadDays": 140,
-    "matchCount": 444
+    "matchCount": 449
   },
-  "warnings": [
-    "News articles could not be refreshed. The list is from the last successful check."
-  ],
+  "warnings": [],
   "notes": [
     "ITF entries are acceptance-list spots. Priority 1 is her first-choice tournament that week. A direct acceptance can still change if players withdraw before the freeze.",
     "WTA entry lists are published tournament by tournament. This check covers WTA and WTA 125 events through the next few months, and only lists an event once her name is on it.",
