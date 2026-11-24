@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T15:43:59+00:00",
+  "updatedAt": "2026-11-24T15:34:27+00:00",
   "player": {
     "name": "Joanna Garland",
     "country": "TPE",
@@ -376,7 +376,7 @@
           "retirement": false,
           "order": 1,
           "videos": [],
-          "videosChecked": "2026-11-23"
+          "videosChecked": "2026-11-24"
         },
         {
           "round": "R16",
@@ -392,7 +392,7 @@
           "retirement": false,
           "order": 2,
           "videos": [],
-          "videosChecked": "2026-11-23"
+          "videosChecked": "2026-11-24"
         },
         {
           "round": "QF",
@@ -407,8 +407,21 @@
           "matchId": "",
           "retirement": false,
           "order": 3,
-          "videos": [],
-          "videosChecked": "2026-11-23"
+          "videos": [
+            {
+              "id": "0hhvphfYb80",
+              "title": "Joanna Garland vs Emerson Jones Highlights | W75 Sydney Quarterfinals",
+              "kind": "highlights",
+              "channel": "asdfwomenstennis"
+            },
+            {
+              "id": "9Yo9Ljy32QM",
+              "title": "Joanna Garland vs Emerson Jones | W75 Sydney | 20 November 2026",
+              "kind": "full",
+              "channel": "ImbaTennisTV"
+            }
+          ],
+          "videosChecked": "2026-11-24"
         },
         {
           "round": "SF",
@@ -10736,7 +10749,9 @@
     "lookaheadDays": 140,
     "matchCount": 449
   },
-  "warnings": [],
+  "warnings": [
+    "News articles could not be refreshed. The list is from the last successful check."
+  ],
   "notes": [
     "ITF entries are acceptance-list spots. Priority 1 is her first-choice tournament that week. A direct acceptance can still change if players withdraw before the freeze.",
     "WTA entry lists are published tournament by tournament. This check covers WTA and WTA 125 events through the next few months, and only lists an event once her name is on it.",
