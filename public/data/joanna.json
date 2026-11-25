@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T15:34:27+00:00",
+  "updatedAt": "2026-11-25T15:19:48+00:00",
   "player": {
     "name": "Joanna Garland",
     "country": "TPE",
@@ -105,33 +105,6 @@
       "url": "https://www.wtatennis.com/tournaments/2056/open-angers-loire-tr-laz/2026"
     },
     {
-      "id": "itf-w-itf-egy-2026-037",
-      "tour": "ITF",
-      "name": "W35 Sharm ElSheikh",
-      "level": "W35",
-      "city": "",
-      "country": "EGY",
-      "surface": "Hard",
-      "indoor": false,
-      "start": "2026-12-07",
-      "end": "2026-12-13",
-      "datesLabel": "07 Dec to 13 Dec 2026",
-      "phase": "upcoming",
-      "entryStatus": "Main draw direct acceptance",
-      "seed": null,
-      "acceptancePosition": 1,
-      "priority": 1,
-      "note": "",
-      "wtaRankAtEntry": 152,
-      "eliminated": false,
-      "stillIn": true,
-      "nextRound": null,
-      "nextMatch": null,
-      "liveMatches": [],
-      "historyId": null,
-      "url": "https://www.world.tennis/en/tournament/w35-sharm-elsheikh/egy/2026/w-itf-egy-2026-037/"
-    },
-    {
       "id": "itf-w-itf-aus-2026-013",
       "tour": "ITF",
       "name": "W75 Playford",
@@ -186,6 +159,33 @@
       "url": "https://www.world.tennis/en/tournament/w50-selva-gardena/ita/2026/w-itf-ita-2026-031/"
     },
     {
+      "id": "itf-w-itf-egy-2026-037",
+      "tour": "ITF",
+      "name": "W35 Sharm ElSheikh",
+      "level": "W35",
+      "city": "",
+      "country": "EGY",
+      "surface": "Hard",
+      "indoor": false,
+      "start": "2026-12-07",
+      "end": "2026-12-13",
+      "datesLabel": "07 Dec to 13 Dec 2026",
+      "phase": "withdrawn",
+      "entryStatus": "Withdrawn",
+      "seed": null,
+      "acceptancePosition": 189,
+      "priority": 1,
+      "note": "W 24 Nov 2026",
+      "wtaRankAtEntry": 152,
+      "eliminated": false,
+      "stillIn": false,
+      "nextRound": null,
+      "nextMatch": null,
+      "liveMatches": [],
+      "historyId": null,
+      "url": "https://www.world.tennis/en/tournament/w35-sharm-elsheikh/egy/2026/w-itf-egy-2026-037/"
+    },
+    {
       "id": "itf-w-itf-sgp-2026-005",
       "tour": "ITF",
       "name": "W35 Singapore",
@@ -211,104 +211,6 @@
       "liveMatches": [],
       "historyId": null,
       "url": "https://www.world.tennis/en/tournament/w35-singapore/sgp/2026/w-itf-sgp-2026-005/"
-    },
-    {
-      "id": "itf-w-itf-aus-2026-014",
-      "tour": "ITF",
-      "name": "W75 Sydney",
-      "level": "W75",
-      "city": "",
-      "country": "AUS",
-      "surface": "Hard",
-      "indoor": false,
-      "start": "2026-11-16",
-      "end": "2026-11-22",
-      "datesLabel": "16 Nov to 22 Nov 2026",
-      "phase": "now",
-      "entryStatus": "Main draw direct acceptance",
-      "seed": null,
-      "acceptancePosition": 4,
-      "priority": 1,
-      "note": "",
-      "wtaRankAtEntry": 155,
-      "eliminated": true,
-      "stillIn": false,
-      "nextRound": null,
-      "nextMatch": null,
-      "liveMatches": [
-        {
-          "round": "R32",
-          "roundLabel": "Round of 32",
-          "qualifying": false,
-          "opponent": "W. Zheng",
-          "opponentCountry": "",
-          "score": "6-3 6-3",
-          "won": true,
-          "state": "F",
-          "order": 3,
-          "stamp": "2026-11-18",
-          "date": "2026-11-18",
-          "matchId": ""
-        },
-        {
-          "round": "R16",
-          "roundLabel": "Round of 16",
-          "qualifying": false,
-          "opponent": "S. Broadus",
-          "opponentCountry": "",
-          "score": "6-1 7-6(4)",
-          "won": true,
-          "state": "F",
-          "order": 4,
-          "stamp": "2026-11-19",
-          "date": "2026-11-19",
-          "matchId": ""
-        },
-        {
-          "round": "QF",
-          "roundLabel": "Quarterfinal",
-          "qualifying": false,
-          "opponent": "E. Jones",
-          "opponentCountry": "",
-          "score": "6-4 6-3",
-          "won": true,
-          "state": "F",
-          "order": 5,
-          "stamp": "2026-11-20",
-          "date": "2026-11-20",
-          "matchId": ""
-        },
-        {
-          "round": "SF",
-          "roundLabel": "Semifinal",
-          "qualifying": false,
-          "opponent": "K. Swan",
-          "opponentCountry": "",
-          "score": "4-6 6-2 7-6(5)",
-          "won": true,
-          "state": "F",
-          "order": 6,
-          "stamp": "2026-11-21",
-          "date": "2026-11-21",
-          "matchId": ""
-        },
-        {
-          "round": "F",
-          "roundLabel": "Final",
-          "qualifying": false,
-          "opponent": "O. Gadecki",
-          "opponentCountry": "",
-          "score": "5-7 7-6(4) 7-5",
-          "won": true,
-          "state": "F",
-          "order": 7,
-          "stamp": "2026-11-22",
-          "date": "2026-11-22",
-          "matchId": ""
-        }
-      ],
-      "historyId": null,
-      "url": "https://www.world.tennis/en/tournament/w75-sydney/aus/2026/w-itf-aus-2026-014/"
     }
   ],
   "news": [
@@ -376,7 +278,7 @@
           "retirement": false,
           "order": 1,
           "videos": [],
-          "videosChecked": "2026-11-24"
+          "videosChecked": "2026-11-25"
         },
         {
           "round": "R16",
@@ -392,7 +294,7 @@
           "retirement": false,
           "order": 2,
           "videos": [],
-          "videosChecked": "2026-11-24"
+          "videosChecked": "2026-11-25"
         },
         {
           "round": "QF",
