@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T14:45:49+00:00",
+  "updatedAt": "2026-11-27T14:44:08+00:00",
   "player": {
     "name": "Joanna Garland",
     "country": "TPE",
@@ -211,6 +211,33 @@
       "liveMatches": [],
       "historyId": null,
       "url": "https://www.world.tennis/en/tournament/w35-singapore/sgp/2026/w-itf-sgp-2026-005/"
+    },
+    {
+      "id": "itf-w-itf-nzl-2026-003",
+      "tour": "ITF",
+      "name": "W50 Tauranga",
+      "level": "W50",
+      "city": "",
+      "country": "NZL",
+      "surface": "Hard",
+      "indoor": false,
+      "start": "2026-12-14",
+      "end": "2026-12-20",
+      "datesLabel": "14 Dec to 20 Dec 2026",
+      "phase": "withdrawn",
+      "entryStatus": "Withdrawn",
+      "seed": null,
+      "acceptancePosition": 31,
+      "priority": 1,
+      "note": "W 07 Nov 2026",
+      "wtaRankAtEntry": null,
+      "eliminated": false,
+      "stillIn": false,
+      "nextRound": null,
+      "nextMatch": null,
+      "liveMatches": [],
+      "historyId": null,
+      "url": "https://www.world.tennis/en/tournament/w50-tauranga/nzl/2026/w-itf-nzl-2026-003/"
     }
   ],
   "news": [
@@ -278,7 +305,7 @@
           "retirement": false,
           "order": 1,
           "videos": [],
-          "videosChecked": "2026-11-26"
+          "videosChecked": "2026-11-27"
         },
         {
           "round": "R16",
@@ -294,7 +321,7 @@
           "retirement": false,
           "order": 2,
           "videos": [],
-          "videosChecked": "2026-11-26"
+          "videosChecked": "2026-11-27"
         },
         {
           "round": "QF",
